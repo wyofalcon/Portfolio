@@ -34,6 +34,66 @@
         .border-accent {
             border-color: #38bdf8;
         }
+
+        /* Hide placeholder text when image loads */
+        img:not(.hidden) + .img-placeholder {
+            display: none;
+        }
+
+        /* Architecture diagram modal */
+        .diagram-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(4px);
+        }
+        .diagram-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .diagram-modal-content {
+            width: 90vw;
+            height: 85vh;
+            background: #1f2937;
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        .diagram-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.25rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .diagram-modal iframe {
+            width: 100%;
+            height: calc(100% - 3.5rem);
+            border: none;
+        }
+        .btn-architecture {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            cursor: pointer;
+            transition: color 0.2s;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+        .btn-architecture:hover {
+            color: #38bdf8;
+        }
+        .btn-architecture.disabled {
+            opacity: 0.4;
+            cursor: default;
+        }
     </style>
 </head>
 
@@ -49,7 +109,7 @@
                 <a href="#skills" class="hover:text-sky-400 transition-colors">Skills</a>
                 <a href="#contact" class="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition-colors">Contact</a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-white">
+            <button id="mobile-menu-button" type="button" class="md:hidden text-white" title="Toggle navigation menu">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
@@ -67,7 +127,12 @@
 
     <main class="container mx-auto px-6 py-8 pt-24">
         <!-- Hero Section -->
-        <section id="home" class="min-h-[80vh] flex flex-col justify-center items-center text-center">
+        <section id="home" class="min-h-[80vh] flex flex-col justify-center items-center text-center relative">
+            <!-- Hero background image -->
+            <div class="absolute inset-0 -z-10 overflow-hidden">
+                <img src="images/hero-bg.jpg" alt="" class="w-full h-full object-cover opacity-20 hidden" onload="this.classList.remove('hidden')">
+                <div class="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-900"></div>
+            </div>
             <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
                 From Hands-On Hardware<br>to AI-Powered Automation
             </h1>
@@ -83,7 +148,15 @@
         <!-- About Section -->
         <section id="about" class="py-20">
             <h2 class="text-3xl font-bold text-center text-white mb-12">About Me</h2>
-            <div class="glassmorphism p-8 rounded-2xl max-w-4xl mx-auto">
+            <div class="glassmorphism p-8 rounded-2xl max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+                <!-- Headshot -->
+                <div class="flex-shrink-0">
+                    <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-sky-500/50 bg-gray-700/50 flex items-center justify-center">
+                        <img src="images/headshot.jpg" alt="Nolan McIntyre" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')">
+                        <span class="text-gray-500 text-xs img-placeholder">headshot.jpg</span>
+                    </div>
+                </div>
+                <div>
                 <p class="text-lg leading-relaxed">
                     I'm a results-driven AI Automation Specialist with a proven ability to architect, build, and deploy intelligent automation systems from the ground up. I expertly combine full-stack development skills with a deep knowledge of LLM application design to
                     transform complex manual processes into efficient, AI-powered workflows. My journey has been unconventional, rooted in years of self-directed projects that have honed a deep technical expertise—now formally validated by the IBM Systems
@@ -93,6 +166,7 @@
                 <p class="text-lg leading-relaxed mt-4">
                     I developed the DIRTEE methodology—Design In Real Time, Early Engagement—to capture how I build. It’s a rapid, collaborative approach that turns ideas into working solutions quickly, while ensuring trust, transparency, and alignment from the very first step.
                 </p>
+                </div>
             </div>
         </section>
 
@@ -209,78 +283,331 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- GitHub Repositories Section -->
         <section id="projects" class="py-20">
-            <h2 class="text-3xl font-bold text-center text-white mb-12">Featured AI Projects</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project 1: Ainsworth -->
-                <div class="glassmorphism p-6 rounded-2xl flex flex-col">
-                    <h3 class="text-2xl font-bold text-white mb-3">(Ai)nsworth</h3>
-                    <p class="text-sky-400 font-semibold mb-4">AI Conversational Mediator</p>
-                    <p class="flex-grow mb-4">
-                        A full-stack web app that serves as an empathetic mediator, utilizing the Gemini LLM to analyze conversational dynamics. The name is a nod to Attachment Theory pioneer Mary Ainsworth.
-                        <br><br> Currently in a closed beta to ensure user privacy and regulatory compliance. For a deeper dive into the project's architecture and progress, please see my <a href="https://www.linkedin.com/in/Nolan-McIntyre" target="_blank"
-                            class="text-sky-400 hover:underline">LinkedIn profile</a>.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Full-Stack Dev</span>
-                        <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Gemini API</span>
-                        <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Firebase Auth</span>
-                        <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Rapid Prototyping</span>
+            <h2 class="text-3xl font-bold text-center text-white mb-4">GitHub Repositories</h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">A look at what I'm building — from AI-powered apps to hardware controllers. Private repos are included to show the full scope of my work.</p>
+
+            <!-- Featured Repos -->
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <!-- NoteXT (Featured) -->
+                <div class="glassmorphism rounded-2xl flex flex-col group hover:border-sky-500/30 transition-colors overflow-hidden">
+                    <div class="w-full h-48 bg-gray-700/50 flex items-center justify-center">
+                        <img src="images/noteXT.png" alt="NoteXT screenshot" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')">
+                        <span class="text-gray-500 text-sm img-placeholder">Screenshot: images/noteXT.png</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-2xl font-bold text-white">NoteXT</h3>
+                            <span class="bg-yellow-500/20 text-yellow-300 text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i data-lucide="lock" class="w-3 h-3"></i> Private
+                            </span>
+                        </div>
+                        <p class="text-sky-400 font-semibold mb-3">SMS-First AI Personal Assistant</p>
+                        <p class="flex-grow mb-4 text-sm">
+                            Text anything to your NoteXT number — the system understands intent, learns your daily routine via passive location context, and delivers perfectly-timed, location-aware reminders. It calculates travel time, store visit duration, and your patterns to tell you exactly when to leave.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Twilio</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Vertex AI / Gemini</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Google Maps API</span>
+                            <span class="flex items-center gap-1 text-xs text-gray-400"><span class="w-3 h-3 rounded-full bg-yellow-300 inline-block"></span> JavaScript</span>
+                        </div>
+                        <button type="button" onclick="openDiagram('NoteXT', 'noteXT.drawio')" class="btn-architecture mt-3">
+                            <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Architecture
+                        </button>
                     </div>
                 </div>
-                <!-- Project 2: CVstomize -->
-                <div class="glassmorphism p-6 rounded-2xl flex flex-col">
-                    <h3 class="text-2xl font-bold text-white mb-3">CVstomize.com</h3>
-                    <p class="text-sky-400 font-semibold mb-4">AI-Powered Resume Platform</p>
-                    <p class="flex-grow mb-4">An end-to-end automation platform that transforms resume tailoring into a streamlined, AI-driven system. Implemented a rule-based engine to parse job descriptions and generate targeted, ATS-optimized resumes from user-provided stories
-                        and experience.</p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Process Automation</span>
-                        <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Generative AI</span>
-                        <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Web App</span>
-                        <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">UI/UX</span>
+
+                <!-- CVstomize (Featured) -->
+                <div class="glassmorphism rounded-2xl flex flex-col group hover:border-sky-500/30 transition-colors overflow-hidden">
+                    <div class="w-full h-48 bg-gray-700/50 flex items-center justify-center">
+                        <img src="images/cvstomize.png" alt="CVstomize screenshot" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')">
+                        <span class="text-gray-500 text-sm img-placeholder">Screenshot: images/cvstomize.png</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-2xl font-bold text-white">CVstomize.com</h3>
+                            <span class="bg-yellow-500/20 text-yellow-300 text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i data-lucide="lock" class="w-3 h-3"></i> Private
+                            </span>
+                        </div>
+                        <p class="text-sky-400 font-semibold mb-3">AI-Powered Resume Platform</p>
+                        <p class="flex-grow mb-4 text-sm">
+                            Helping you land your dream job, 1 CV at a time. An end-to-end automation platform that parses job descriptions and generates targeted, ATS-optimized resumes from user-provided stories and experience.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Process Automation</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Generative AI</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">UI/UX</span>
+                            <span class="flex items-center gap-1 text-xs text-gray-400"><span class="w-3 h-3 rounded-full bg-yellow-300 inline-block"></span> HTML</span>
+                            <span class="text-xs text-gray-500">&#9733; 1</span>
+                        </div>
+                        <button type="button" onclick="openDiagram('CVstomize', 'cvstomize.drawio')" class="btn-architecture mt-3">
+                            <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Architecture
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <h3 class="text-2xl font-bold text-center text-white my-12 pt-8">Hands-On Engineering & Lab Projects</h3>
+            <!-- Daemonstrate — Standalone highlight -->
+            <div class="glassmorphism rounded-2xl hover:border-sky-500/30 transition-colors overflow-hidden mb-8">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-2/5 h-48 md:h-auto bg-gray-700/50 flex items-center justify-center">
+                        <img src="images/daemonstrate.png" alt="Daemonstrate diagram output" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')">
+                        <span class="text-gray-500 text-sm img-placeholder">daemonstrate.png</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow md:w-3/5">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-2xl font-bold text-white">Daemonstrate</h3>
+                            <span class="bg-blue-500/20 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i data-lucide="drafting-compass" class="w-3 h-3"></i> In Design
+                            </span>
+                        </div>
+                        <p class="text-sky-400 font-semibold mb-3">Auto-Generated Architecture Diagrams for Claude Code</p>
+                        <p class="text-sm flex-grow mb-4">
+                            A Claude Code skill that analyzes any repository and generates a 9-page draw.io architecture diagram — from presentation layer to infrastructure. A session-end hook automatically regenerates when source files change, so diagrams never go stale. No separate auth, no Mermaid intermediary — direct draw.io XML output.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Claude Code Skill</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Draw.io XML</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Auto-Maintained</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">9-Layer Analysis</span>
+                            <span class="flex items-center gap-1 text-xs text-gray-400"><span class="w-3 h-3 rounded-full bg-yellow-300 inline-block"></span> JavaScript</span>
+                        </div>
+                        <button type="button" onclick="openDiagram('Daemonstrate', 'daemonstrate.drawio')" class="btn-architecture mt-3">
+                            <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Architecture
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All Repos Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Other Project -->
+                <!-- HuminLoop -->
+                <div class="glassmorphism rounded-2xl flex flex-col hover:border-sky-500/30 transition-colors overflow-hidden">
+                    <div class="w-full h-36 bg-gray-700/50 flex items-center justify-center">
+                        <img src="images/huminloop.png" alt="HuminLoop screenshot" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')">
+                        <span class="text-gray-500 text-xs img-placeholder">huminloop.png</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-white text-lg">HuminLoop</h4>
+                            <span class="bg-green-500/20 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i data-lucide="globe" class="w-3 h-3"></i> Public
+                            </span>
+                        </div>
+                        <p class="text-sm flex-grow mb-4">ADHD-friendly AI-powered knowledge capture for developers. Screenshot, annotate, get coding prompts. Built with Electron + Gemini 2.5 Flash.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <div class="flex items-center gap-3">
+                                <span class="flex items-center gap-1 text-xs text-gray-400"><span class="w-3 h-3 rounded-full bg-yellow-300 inline-block"></span> JavaScript</span>
+                                <span class="text-xs text-gray-500">&#9733; 1</span>
+                            </div>
+                            <a href="https://github.com/wyofalcon/HuminLoop" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i> View
+                            </a>
+                        </div>
+                        <button type="button" onclick="openDiagram('HuminLoop', 'huminloop.drawio')" class="btn-architecture mt-3">
+                            <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Architecture
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AInsworth -->
+                <div class="glassmorphism rounded-2xl flex flex-col hover:border-sky-500/30 transition-colors overflow-hidden">
+                    <div class="w-full h-36 bg-gray-700/50 flex items-center justify-center">
+                        <img src="images/ainsworth.png" alt="AInsworth screenshot" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')">
+                        <span class="text-gray-500 text-xs img-placeholder">ainsworth.png</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-white text-lg">(Ai)nsworth</h4>
+                            <span class="bg-yellow-500/20 text-yellow-300 text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i data-lucide="lock" class="w-3 h-3"></i> Private
+                            </span>
+                        </div>
+                        <p class="text-sm flex-grow mb-4">A rapid prototype built using my DIRTEE methodology — a recorded conversation between engineer and client was annotated, summarized, and built with Canvas using Gemini Pro. Worked flawlessly on the first try. AI-powered relationship mediator inspired by Mary Ainsworth.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">DIRTEE Method</span>
+                                <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Gemini Pro</span>
+                                <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Rapid Prototype</span>
+                                <span class="flex items-center gap-1 text-xs text-gray-400"><span class="w-3 h-3 rounded-full bg-yellow-300 inline-block"></span> HTML</span>
+                            </div>
+                        </div>
+                        <button type="button" onclick="openDiagram('AInsworth', 'ainsworth.drawio')" class="btn-architecture mt-3">
+                            <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Architecture
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ai-dev-workflow -->
+                <div class="glassmorphism rounded-2xl flex flex-col hover:border-sky-500/30 transition-colors overflow-hidden">
+                    <div class="w-full h-36 bg-gray-700/50 flex items-center justify-center">
+                        <img src="images/ai-dev-workflow.png" alt="ai-dev-workflow screenshot" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')">
+                        <span class="text-gray-500 text-xs img-placeholder">ai-dev-workflow.png</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-white text-lg">ai-dev-workflow</h4>
+                            <span class="bg-green-500/20 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i data-lucide="globe" class="w-3 h-3"></i> Public
+                            </span>
+                        </div>
+                        <p class="text-sm flex-grow mb-4">Builder/Auditor workflow for AI-assisted development. Gemini or Claude CLI builds, automated checks + GitHub Copilot audits.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <div class="flex items-center gap-3">
+                                <span class="flex items-center gap-1 text-xs text-gray-400"><span class="w-3 h-3 rounded-full bg-[#89e051] inline-block"></span> Shell</span>
+                                <span class="text-xs text-gray-500">&#9733; 1</span>
+                            </div>
+                            <a href="https://github.com/wyofalcon/ai-dev-workflow" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i> View
+                            </a>
+                        </div>
+                        <button type="button" onclick="openDiagram('ai-dev-workflow', 'ai-dev-workflow.drawio')" class="btn-architecture mt-3">
+                            <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Architecture
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PathaDex -->
+                <div class="glassmorphism rounded-2xl flex flex-col hover:border-sky-500/30 transition-colors overflow-hidden">
+                    <div class="w-full h-36 bg-gray-700/50 flex items-center justify-center">
+                        <img src="images/pathadex.png" alt="PathaDex screenshot" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')">
+                        <span class="text-gray-500 text-xs img-placeholder">pathadex.png</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-white text-lg">PathaDex</h4>
+                            <span class="bg-yellow-500/20 text-yellow-300 text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i data-lucide="lock" class="w-3 h-3"></i> Private
+                            </span>
+                        </div>
+                        <p class="text-sm flex-grow mb-4">A dynamic web app to visualize, plan, and track complex career and educational goals. Goes beyond static checklists with a highly visual workspace.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="flex items-center gap-1 text-xs text-gray-400"><span class="w-3 h-3 rounded-full bg-yellow-300 inline-block"></span> HTML</span>
+                        </div>
+                        <button type="button" onclick="openDiagram('PathaDex', 'pathadex.drawio')" class="btn-architecture mt-3">
+                            <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Architecture
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Atrium-Core -->
+                <div class="glassmorphism rounded-2xl flex flex-col hover:border-sky-500/30 transition-colors overflow-hidden">
+                    <div class="w-full h-36 bg-gray-700/50 flex items-center justify-center">
+                        <img src="images/atrium-core.png" alt="Atrium-Core screenshot" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')">
+                        <span class="text-gray-500 text-xs img-placeholder">atrium-core.png</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-white text-lg">Atrium-Core</h4>
+                            <span class="bg-yellow-500/20 text-yellow-300 text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i data-lucide="lock" class="w-3 h-3"></i> Private
+                            </span>
+                        </div>
+                        <p class="text-sm flex-grow mb-4">AI-integrated business solutions for Master Jeweler. Intelligent automation tooling for a real-world retail operation.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="flex items-center gap-1 text-xs text-gray-400"><span class="w-3 h-3 rounded-full bg-[#3572A5] inline-block"></span> Python</span>
+                        </div>
+                        <button type="button" onclick="openDiagram('Atrium-Core', 'atrium-core.drawio')" class="btn-architecture mt-3">
+                            <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Architecture
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Universal-Desktop-Automator -->
+                <div class="glassmorphism rounded-2xl flex flex-col hover:border-sky-500/30 transition-colors overflow-hidden">
+                    <div class="w-full h-36 bg-gray-700/50 flex items-center justify-center">
+                        <img src="images/desktop-automator.png" alt="Universal Desktop Automator screenshot" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')">
+                        <span class="text-gray-500 text-xs img-placeholder">desktop-automator.png</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-white text-lg">Universal-Desktop-Automator</h4>
+                            <span class="bg-green-500/20 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i data-lucide="globe" class="w-3 h-3"></i> Public
+                            </span>
+                        </div>
+                        <p class="text-sm flex-grow mb-4">A universal bridge between command-line AI and a desktop GUI, enabling programmatic control of the mouse, keyboard, and applications.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <a href="https://github.com/wyofalcon/Universal-Desktop-Automator" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i> View
+                            </a>
+                        </div>
+                        <button type="button" onclick="openDiagram('Universal-Desktop-Automator', 'desktop-automator.drawio')" class="btn-architecture mt-3">
+                            <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Architecture
+                        </button>
+                    </div>
+                </div>
+
+                <!-- HoverChair -->
+                <div class="glassmorphism rounded-2xl flex flex-col hover:border-sky-500/30 transition-colors overflow-hidden">
+                    <div class="w-full h-36 bg-gray-700/50 flex items-center justify-center">
+                        <img src="images/hoverchair.png" alt="HoverChair screenshot" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')">
+                        <span class="text-gray-500 text-xs img-placeholder">hoverchair.png</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-white text-lg">HoverChair</h4>
+                            <span class="bg-green-500/20 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i data-lucide="globe" class="w-3 h-3"></i> Public
+                            </span>
+                        </div>
+                        <p class="text-sm flex-grow mb-4">Recycled hoverboard motors, wheels, and mainboards into an electric mobile computer chair. Used AI + Raspberry Pi to erase the stock board chips, added ESP32 dev boards, and wrote custom firmware — all with AI assistance from flashing to final code.</p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">ESP32</span>
+                                <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Raspberry Pi</span>
+                                <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">AI-Assisted</span>
+                            </div>
+                            <a href="https://github.com/wyofalcon/HoverChair" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i> View
+                            </a>
+                        </div>
+                        <button type="button" onclick="openDiagram('HoverChair', 'hoverchair.drawio')" class="btn-architecture mt-3">
+                            <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Architecture
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GitHub CTA -->
+            <div class="text-center mt-12">
+                <a href="https://github.com/wyofalcon" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-transform hover:scale-105">
+                    <i data-lucide="github" class="w-5 h-5"></i> View Full GitHub Profile
+                </a>
+            </div>
+        </section>
+
+        <!-- Hands-On Engineering Section -->
+        <section id="engineering" class="py-20 bg-gray-900/50">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Hands-On Engineering & Lab Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="glassmorphism p-6 rounded-2xl text-center">
                     <i data-lucide="zap" class="mx-auto text-sky-400 mb-3 h-8 w-8"></i>
                     <h4 class="font-bold text-white">Gas-Powered Air Compressor</h4>
                     <p class="text-sm">Designed and built a custom high-CFM compressor from scratch to overcome workshop power limitations.</p>
                 </div>
-                <!-- Other Project -->
                 <div class="glassmorphism p-6 rounded-2xl text-center">
                     <i data-lucide="cpu" class="mx-auto text-sky-400 mb-3 h-8 w-8"></i>
                     <h4 class="font-bold text-white">PCB Controller Rebuild</h4>
                     <p class="text-sm">Reconstructed a complex electronic controller, mastering component-level diagnostics and precision soldering.</p>
                 </div>
-                <!-- Other Project -->
                 <div class="glassmorphism p-6 rounded-2xl text-center">
                     <i data-lucide="shield-check" class="mx-auto text-sky-400 mb-3 h-8 w-8"></i>
                     <h4 class="font-bold text-white">Network-Wide Ad Blocker</h4>
                     <p class="text-sm">Configured a custom DNS-based ad blocker on a dedicated Linux device to improve network security and performance.</p>
                 </div>
-                <!-- Other Project -->
                 <div class="glassmorphism p-6 rounded-2xl text-center">
                     <i data-lucide="wind" class="mx-auto text-sky-400 mb-3 h-8 w-8"></i>
                     <h4 class="font-bold text-white">Integrated Fume Extractor</h4>
                     <p class="text-sm">Engineered a modular fume extraction system using a recycled furnace blower for a home workshop.</p>
                 </div>
-                <!-- Other Project -->
                 <div class="glassmorphism p-6 rounded-2xl text-center">
                     <i data-lucide="home" class="mx-auto text-sky-400 mb-3 h-8 w-8"></i>
                     <h4 class="font-bold text-white">Home Lab Renovation</h4>
                     <p class="text-sm">Executed a full room renovation, including framing, electrical, plumbing, and soundproofing to build a dream lab.</p>
-                </div>
-                <!-- Other Project -->
-                <div class="glassmorphism p-6 rounded-2xl text-center">
-                    <i data-lucide="bot" class="mx-auto text-sky-400 mb-3 h-8 w-8"></i>
-                    <h4 class="font-bold text-white">GUI Automation Agent</h4>
-                    <p class="text-sm">Developed a PoC AI agent to interact with the Windows GUI, automating tasks like file system reorganization.</p>
                 </div>
             </div>
         </section>
@@ -332,11 +659,11 @@
                     <i data-lucide="mail" class="w-8 h-8 text-gray-400 group-hover:text-sky-400 transition-colors"></i>
                     <span class="text-sm group-hover:text-sky-400 transition-colors">Email</span>
                 </a>
-                <a href="https://www.linkedin.com/in/Nolan-McIntyre" target="_blank" class="group flex flex-col items-center space-y-2">
+                <a href="https://www.linkedin.com/in/Nolan-McIntyre" target="_blank" rel="noopener" class="group flex flex-col items-center space-y-2">
                     <i data-lucide="linkedin" class="w-8 h-8 text-gray-400 group-hover:text-sky-400 transition-colors"></i>
                     <span class="text-sm group-hover:text-sky-400 transition-colors">LinkedIn</span>
                 </a>
-                <a href="https://github.com/wyofalcon" target="_blank" class="group flex flex-col items-center space-y-2">
+                <a href="https://github.com/wyofalcon" target="_blank" rel="noopener" class="group flex flex-col items-center space-y-2">
                     <i data-lucide="github" class="w-8 h-8 text-gray-400 group-hover:text-sky-400 transition-colors"></i>
                     <span class="text-sm group-hover:text-sky-400 transition-colors">GitHub</span>
                 </a>
@@ -346,8 +673,21 @@
     </main>
 
     <footer class="text-center py-8 border-t border-gray-800">
-        <p class="text-gray-500">&copy; 2025 Nolan McIntyre. Built with relentless curiosity.</p>
+        <p class="text-gray-500">&copy; 2026 Nolan McIntyre. Built with relentless curiosity.</p>
     </footer>
+
+    <!-- Architecture Diagram Modal -->
+    <div id="diagram-modal" class="diagram-modal">
+        <div class="diagram-modal-content">
+            <div class="diagram-modal-header">
+                <h3 id="diagram-modal-title" class="text-white font-bold text-lg"></h3>
+                <button type="button" id="diagram-modal-close" class="text-gray-400 hover:text-white transition-colors" title="Close diagram viewer">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <iframe id="diagram-modal-iframe" src="" title="Architecture Diagram"></iframe>
+        </div>
+    </div>
 
     <script>
         lucide.createIcons();
@@ -374,6 +714,35 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
+        });
+
+        // Architecture diagram viewer
+        const diagramModal = document.getElementById('diagram-modal');
+        const diagramTitle = document.getElementById('diagram-modal-title');
+        const diagramIframe = document.getElementById('diagram-modal-iframe');
+        const diagramClose = document.getElementById('diagram-modal-close');
+
+        function openDiagram(projectName, diagramFile) {
+            const rawUrl = `https://raw.githubusercontent.com/wyofalcon/Portfolio/main/diagrams/${diagramFile}`;
+            const viewerUrl = `https://viewer.diagrams.net/?lightbox=1&highlight=0000ff&nav=1&title=${projectName}&url=${encodeURIComponent(rawUrl)}`;
+            diagramTitle.textContent = `${projectName} — Architecture`;
+            diagramIframe.src = viewerUrl;
+            diagramModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDiagram() {
+            diagramModal.classList.remove('active');
+            diagramIframe.src = '';
+            document.body.style.overflow = '';
+        }
+
+        diagramClose.addEventListener('click', closeDiagram);
+        diagramModal.addEventListener('click', (e) => {
+            if (e.target === diagramModal) closeDiagram();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && diagramModal.classList.contains('active')) closeDiagram();
         });
     </script>
 </body>
