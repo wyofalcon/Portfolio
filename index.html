@@ -764,7 +764,7 @@
         const diagramClose = document.getElementById('diagram-modal-close');
 
         function openDiagram(projectName, diagramFile) {
-            const rawUrl = `https://raw.githubusercontent.com/wyofalcon/Portfolio/main/diagrams/${diagramFile}`;
+            const rawUrl = `https://raw.githubusercontent.com/wyofalcon/Portfolio/master/diagrams/${diagramFile}`;
             const viewerUrl = `https://viewer.diagrams.net/?lightbox=1&highlight=0000ff&nav=1&title=${projectName}&url=${encodeURIComponent(rawUrl)}`;
             diagramTitle.textContent = `${projectName} — Architecture`;
             diagramIframe.src = viewerUrl;
