@@ -298,19 +298,37 @@
                                 <i data-lucide="lock" class="w-3 h-3"></i> Private
                             </span>
                         </div>
-                        <p class="text-sky-400 font-semibold mb-3">SMS-First AI Personal Assistant</p>
-                        <p class="flex-grow mb-4 text-sm">
-                            Text anything to your NoteXT number — the system understands intent, learns your daily routine via passive location context, and delivers perfectly-timed, location-aware reminders. It calculates travel time, store visit duration, and your patterns to tell you exactly when to leave.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Twilio</span>
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Vertex AI / Gemini</span>
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Google Maps API</span>
-                            <span class="flex items-center gap-1 text-xs text-gray-400"><span class="w-3 h-3 rounded-full bg-yellow-300 inline-block"></span> JavaScript</span>
+                        <p class="text-sky-400 font-semibold mb-1">An intelligent AI agent that handles logistics. Notes are a byproduct.</p>
+                        <p class="text-sm italic text-gray-400 mb-4">Reverse-escalation alerts: push → SMS → persistent notif → call. First ack wins.</p>
+
+                        <!-- How-it-works sub-block (Will/donuts example) -->
+                        <div class="space-y-2 mb-4 text-sm border-l-2 border-sky-500/60 pl-3">
+                            <p><span class="text-sky-400 font-semibold">You text:</span> "Pick up donuts for Will's birthday Saturday at 9am."</p>
+                            <p><span class="text-sky-400 font-semibold">Agent:</span> extracts intent, asks a clarifying SMS if needed, learns the store's typical dwell time.</p>
+                            <p><span class="text-sky-400 font-semibold">Saturday morning:</span> calculates "leave by" time from Maps + Places + your routine, then alerts via the escalation chain until you acknowledge.</p>
                         </div>
-                        <button type="button" onclick="openDiagram('NoteXT', 'noteXT.drawio')" class="btn-architecture mt-3">
-                            <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Architecture
-                        </button>
+
+                        <div class="mb-3">
+                            <span class="bg-emerald-500/20 text-emerald-300 text-xs font-medium px-2.5 py-0.5 rounded-full inline-flex items-center gap-1">
+                                <i data-lucide="shield-check" class="w-3 h-3"></i> Provisional Patent Drafted · 237/237 server tests passing
+                            </span>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Express 5</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">React 19 PWA</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Expo SDK 55</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">PostgreSQL 16</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Twilio</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Gemini</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Web Push</span>
+                        </div>
+
+                        <div class="flex items-center gap-4 mt-auto">
+                            <button type="button" onclick="openDiagram('NoteXT', 'noteXT.drawio')" class="btn-architecture">
+                                <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Architecture
+                            </button>
+                        </div>
                     </div>
                 </div>
 
