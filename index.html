@@ -967,20 +967,39 @@
             if (e.target === betaModal) closeBetaModal();
         });
 
-        betaForm.addEventListener('submit', (e) => {
+        betaForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const email = document.getElementById('beta-email').value;
             const reason = document.getElementById('beta-reason').value;
-            
-            console.log('Beta Application:', { email, reason });
-            
-            betaForm.classList.add('hidden');
-            betaSuccess.classList.remove('hidden');
-            
-            setTimeout(() => {
-                closeBetaModal();
-                betaForm.reset();
-            }, 3000);
+            const submitBtn = betaForm.querySelector('button[type="submit"]');
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending…';
+
+            try {
+                const res = await fetch('https://formspree.io/f/xdaylqrz', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({ email, reason })
+                });
+
+                if (res.ok) {
+                    betaForm.classList.add('hidden');
+                    betaSuccess.classList.remove('hidden');
+                    setTimeout(() => {
+                        closeBetaModal();
+                        betaForm.reset();
+                    }, 3000);
+                } else {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Request Beta Access';
+                    alert('Something went wrong. Please try again or email wyofalcon@gmail.com directly.');
+                }
+            } catch {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Request Beta Access';
+                alert('Something went wrong. Please try again or email wyofalcon@gmail.com directly.');
+            }
         });
 
         diagramClose.addEventListener('click', closeDiagram);
