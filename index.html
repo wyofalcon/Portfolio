@@ -1002,8 +1002,12 @@
         const diagramIframe = document.getElementById('diagram-modal-iframe');
         const diagramClose = document.getElementById('diagram-modal-close');
 
+        function diagramUrl(diagramFile) {
+            return new URL(`diagrams/${diagramFile}`, window.location.href).href;
+        }
+
         function openDiagram(projectName, diagramFile) {
-            const rawUrl = `https://raw.githubusercontent.com/wyofalcon/Portfolio/master/diagrams/${diagramFile}`;
+            const rawUrl = diagramUrl(diagramFile);
             const viewerUrl = `https://viewer.diagrams.net/?lightbox=1&highlight=0000ff&nav=1&title=${projectName}&url=${encodeURIComponent(rawUrl)}`;
             diagramTitle.textContent = `${projectName} — Architecture`;
             diagramIframe.src = viewerUrl;
@@ -1092,8 +1096,8 @@
                 const match = onclickAttr.match(/'([^']+)',\s*'([^']+)'/);
                 if (match) {
                     const diagramFile = match[2];
-                    const rawUrl = `https://raw.githubusercontent.com/wyofalcon/Portfolio/master/diagrams/${diagramFile}`;
-                    
+                    const rawUrl = diagramUrl(diagramFile);
+
                     fetch(rawUrl, { method: 'HEAD' })
                         .then(response => {
                             if (!response.ok) {
