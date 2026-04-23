@@ -354,97 +354,6 @@
             <h2 class="text-3xl font-bold text-center text-white mb-4">GitHub Repositories</h2>
             <p class="text-center mb-12 max-w-2xl mx-auto text-[#8aacbf]">A look at what I'm building — from AI-powered apps to hardware controllers. Private repos are included to show the full scope of my work.</p>
 
-            <!-- Featured Tool: Daemonstrate (Claude Code Plugin) -->
-            <div class="mb-8 reveal">
-                <div class="glassmorphism rounded-2xl overflow-hidden group hover:border-sky-500/30 transition-colors">
-                    <div class="grid md:grid-cols-[1.1fr_1fr] gap-0">
-                        <!-- Left: pitch + pipeline -->
-                        <div class="p-6 md:p-8 border-b md:border-b-0 md:border-r border-white/5">
-                            <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
-                                <div class="flex items-center gap-2 flex-wrap">
-                                    <span class="bg-blue-500/20 text-blue-300 text-[10px] font-medium px-2 py-0.5 rounded-full uppercase tracking-wider">Claude Code Plugin</span>
-                                    <span class="bg-emerald-500/15 text-emerald-300 text-[10px] font-medium px-2 py-0.5 rounded-full inline-flex items-center gap-1">
-                                        <i data-lucide="globe" class="w-3 h-3"></i> Public
-                                    </span>
-                                    <span class="bg-purple-500/15 text-purple-300 text-[10px] font-medium px-2 py-0.5 rounded-full">stdlib only</span>
-                                </div>
-                                <code class="text-xs text-sky-300 bg-gray-900/60 px-2 py-0.5 rounded font-mono">/daemonstrate</code>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-1">Daemonstrate</h3>
-                            <p class="text-sky-400 font-semibold mb-1">Turn any codebase into three auto-maintained draw.io architecture diagrams.</p>
-                            <p class="text-sm italic text-gray-400 mb-4">Light-theme, Catppuccin-inspired. Post-commit hook keeps them current — only changed layers are re-explored.</p>
-
-                            <!-- Pipeline steps -->
-                            <div class="mb-4 text-xs">
-                                <p class="text-gray-400 font-medium mb-2">Pipeline <span class="text-gray-600">· pure Python stdlib</span></p>
-                                <div class="flex flex-wrap items-center gap-1 text-[10px]">
-                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">1. Detect stack</span>
-                                    <span class="text-gray-600">→</span>
-                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">2. Classify layers</span>
-                                    <span class="text-gray-600">→</span>
-                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">3. Explore layers</span>
-                                    <span class="text-gray-600">→</span>
-                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">4. graph-spec.json</span>
-                                    <span class="text-gray-600">→</span>
-                                    <span class="bg-gray-800 text-sky-300 px-2 py-0.5 rounded">5. drawio_builder.py</span>
-                                    <span class="text-gray-600">→</span>
-                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">6. Write state</span>
-                                </div>
-                                <p class="text-gray-500 mt-2 leading-relaxed">Incremental re-runs via <span class="font-mono text-gray-400">.daemonstrate-state.json</span> — node IDs preserved across generations so PR diffs stay minimal.</p>
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Draw.io XML</span>
-                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Python 3.8+</span>
-                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Post-commit hook</span>
-                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">graph-spec.json</span>
-                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Catppuccin light</span>
-                            </div>
-
-                            <div class="flex items-center gap-4 flex-wrap">
-                                <button type="button" onclick="openDiagram('Daemonstrate', 'daemonstrate.drawio')" class="btn-architecture">
-                                    <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Workflow
-                                </button>
-                                <a href="https://github.com/wyofalcon/daemonstrate" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
-                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i> View on GitHub
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Right: three outputs -->
-                        <div class="p-6 md:p-8 bg-gray-900/30">
-                            <p class="text-gray-400 text-xs font-medium uppercase tracking-wider mb-3">Three Outputs · docs/</p>
-                            <div class="space-y-3">
-                                <div class="rounded-lg border border-sky-500/20 bg-sky-500/[0.03] p-3">
-                                    <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
-                                        <code class="text-xs font-mono text-sky-300">architecture-portfolio.drawio</code>
-                                        <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">1 page</span>
-                                    </div>
-                                    <p class="text-xs text-gray-400"><span class="text-white font-medium">Recruiters &amp; stakeholders.</span> Pastel container per layer, capability pills, tech badges. Scannable in ~10 seconds.</p>
-                                </div>
-                                <div class="rounded-lg border border-emerald-500/20 bg-emerald-500/[0.03] p-3">
-                                    <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
-                                        <code class="text-xs font-mono text-emerald-300">architecture-detailed.drawio</code>
-                                        <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">1 + N pages</span>
-                                    </div>
-                                    <p class="text-xs text-gray-400"><span class="text-white font-medium">Collaborators &amp; AI agents.</span> Overview page plus one drill-down page per layer, with a clickable "Connects to" sidebar.</p>
-                                </div>
-                                <div class="rounded-lg border border-purple-500/20 bg-purple-500/[0.03] p-3">
-                                    <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
-                                        <div class="flex items-center gap-2">
-                                            <code class="text-xs font-mono text-purple-300">architecture-journey.drawio</code>
-                                            <span class="text-[10px] text-purple-300/80 bg-purple-500/10 px-1.5 py-0.5 rounded">opt-in</span>
-                                        </div>
-                                        <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">1 page</span>
-                                    </div>
-                                    <p class="text-xs text-gray-400"><span class="text-white font-medium">Family &amp; non-technical reviewers.</span> Vertical user-flow spine — user actions left, app actions right, rich hover tooltips.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- Featured Repos -->
             <div class="grid md:grid-cols-2 gap-8 mb-8 reveal-stagger">
                 <!-- NoteXT (Featured) -->
@@ -549,6 +458,92 @@
                             <a href="https://cvstomize.com" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-sky-400 hover:text-sky-300 text-sm font-medium">
                                 <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live Site
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Tool: Daemonstrate (Claude Code Plugin) -->
+            <div class="mb-8 reveal">
+                <div class="glassmorphism rounded-2xl overflow-hidden group hover:border-sky-500/30 transition-colors">
+                    <div class="grid md:grid-cols-[1.1fr_1fr] gap-0">
+                        <!-- Left: pitch + pipeline -->
+                        <div class="p-6 md:p-8 border-b md:border-b-0 md:border-r border-white/5">
+                            <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <span class="bg-blue-500/20 text-blue-300 text-[10px] font-medium px-2 py-0.5 rounded-full uppercase tracking-wider">Claude Code Skill</span>
+                                    <span class="bg-emerald-500/15 text-emerald-300 text-[10px] font-medium px-2 py-0.5 rounded-full inline-flex items-center gap-1">
+                                        <i data-lucide="globe" class="w-3 h-3"></i> Public
+                                    </span>
+                                    <span class="bg-purple-500/15 text-purple-300 text-[10px] font-medium px-2 py-0.5 rounded-full">stdlib only</span>
+                                </div>
+                                <code class="text-xs text-sky-300 bg-gray-900/60 px-2 py-0.5 rounded font-mono">/daemonstrate</code>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-1">Daemonstrate</h3>
+                            <p class="text-sky-400 font-semibold mb-1">Visualize any codebase top to bottom — scopes → components → functions → branches, down to the atomic statements where the source bottoms out.</p>
+                            <p class="text-sm italic text-gray-400 mb-4">Self-maintaining via post-commit hook — only changed scopes re-explored. Every page in paired Technical + Plain-English tabs, so a recruiter, a collaborator, or a non-technical stakeholder can open the same file and see the right view.</p>
+
+                            <!-- Pipeline steps -->
+                            <div class="mb-4 text-xs">
+                                <p class="text-gray-400 font-medium mb-2">Pipeline <span class="text-gray-600">· pure Python stdlib</span></p>
+                                <div class="flex flex-wrap items-center gap-1 text-[10px]">
+                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">1. Discover scopes</span>
+                                    <span class="text-gray-600">→</span>
+                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">2. Pick diagram type</span>
+                                    <span class="text-gray-600">→</span>
+                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">3. Pick page structure</span>
+                                    <span class="text-gray-600">→</span>
+                                    <span class="bg-gray-800 text-sky-300 px-2 py-0.5 rounded">4. Generate paired T/P</span>
+                                    <span class="text-gray-600">→</span>
+                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">5. Cache to catalog</span>
+                                </div>
+                                <p class="text-gray-500 mt-2 leading-relaxed">Three-level cache in <span class="font-mono text-gray-400">.daemonstrate-scopes.json</span> — scopes, sub-component trees, and plain-English translations invalidate independently, so most commits re-touch only what actually changed.</p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Draw.io XML</span>
+                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">8 diagram types</span>
+                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Paired T/P tabs</span>
+                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Recursive drill-down</span>
+                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Post-commit hook</span>
+                            </div>
+
+                            <div class="flex items-center gap-4 flex-wrap">
+                                <button type="button" onclick="openDiagram('Daemonstrate', 'daemonstrate.drawio')" class="btn-architecture">
+                                    <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Workflow
+                                </button>
+                                <a href="https://github.com/wyofalcon/daemonstrate" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right: three outputs -->
+                        <div class="p-6 md:p-8 bg-gray-900/30">
+                            <p class="text-gray-400 text-xs font-medium uppercase tracking-wider mb-3">Three Distinctive Features</p>
+                            <div class="space-y-3">
+                                <div class="rounded-lg border border-sky-500/20 bg-sky-500/[0.03] p-3">
+                                    <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
+                                        <code class="text-xs font-mono text-sky-300">architecture-detailed.drawio</code>
+                                        <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">overview + per-scope</span>
+                                    </div>
+                                    <p class="text-xs text-gray-400"><span class="text-white font-medium">Whole-repo mode.</span> Claude picks from 8 diagram types per scope — System, Swimlane, DFD, Process, Workflow, and more. Overview links to every scope's detail page.</p>
+                                </div>
+                                <div class="rounded-lg border border-emerald-500/20 bg-emerald-500/[0.03] p-3">
+                                    <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
+                                        <code class="text-xs font-mono text-emerald-300">drilldown-{trail}.drawio</code>
+                                        <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">per level · cap 6</span>
+                                    </div>
+                                    <p class="text-xs text-gray-400"><span class="text-white font-medium">Recursive drill-down.</span> Scope → component → function → branch → terminal op. One focused file per level; plain-English tab opens first for teaching context.</p>
+                                </div>
+                                <div class="rounded-lg border border-purple-500/20 bg-purple-500/[0.03] p-3">
+                                    <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
+                                        <code class="text-xs font-mono text-purple-300">Paired (T) / (P) tabs</code>
+                                        <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">every page</span>
+                                    </div>
+                                    <p class="text-xs text-gray-400"><span class="text-white font-medium">Two audiences, one file.</span> <span class="font-mono text-gray-300">POST /api/notes</span> on the Technical tab, "saves the note" on Plain-English. Readers pick at view time — no forked file to maintain.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
