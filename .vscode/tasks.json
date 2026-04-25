@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Serve portfolio (live reload)",
+      "type": "shell",
+      "command": "npx",
+      "args": [
+        "--yes",
+        "live-server",
+        "--port=8080",
+        "--no-browser",
+        "--wait=200",
+        "--watch=index.html,images,diagrams"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": {
+        "owner": "live-server",
+        "pattern": [
+          {
+            "regexp": "^(.*)$",
+            "file": 1,
+            "location": 1,
+            "message": 1
+          }
+        ],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^Serving \"|^Ready for changes",
+          "endsPattern": "^Serving \"|^Ready for changes"
+        }
+      }
+    }
+  ]
+}
