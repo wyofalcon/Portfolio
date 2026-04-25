@@ -196,6 +196,42 @@
         }
         .btn-architecture:hover { color: var(--accent); }
         .btn-architecture.disabled { opacity: 0.35; cursor: default; }
+
+        /* Progressive-disclosure card toggle */
+        .card-details { margin-bottom: 1rem; }
+        .card-details > summary {
+            list-style: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.75rem;
+            cursor: pointer;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            transition: color 0.2s, border-color 0.2s, background 0.2s;
+            user-select: none;
+        }
+        .card-details > summary::-webkit-details-marker { display: none; }
+        .card-details > summary::marker { content: ''; }
+        .card-details > summary::before { content: 'Show details'; }
+        .card-details[open] > summary::before { content: 'Hide details'; }
+        .card-details > summary:hover,
+        .card-details[open] > summary {
+            color: var(--accent);
+            border-color: rgba(56, 189, 248, 0.3);
+            background: rgba(56, 189, 248, 0.05);
+        }
+        .card-details > summary i,
+        .card-details > summary svg { transition: transform 0.25s; }
+        .card-details[open] > summary i,
+        .card-details[open] > summary svg { transform: rotate(180deg); }
+        .card-details > .card-details-body { animation: card-details-in 0.3s ease; }
+        @keyframes card-details-in {
+            from { opacity: 0; transform: translateY(-4px); }
+            to { opacity: 1; transform: none; }
+        }
     </style>
 </head>
 
@@ -371,28 +407,31 @@
                         <p class="text-sky-400 font-semibold mb-1">An intelligent AI agent that handles logistics. Notes are a byproduct.</p>
                         <p class="text-sm italic text-gray-400 mb-4">Reverse-escalation alerts: push → SMS → persistent notif → call. First ack wins.</p>
 
-                        <!-- How-it-works sub-block (Will/donuts example) -->
-                        <div class="space-y-2 mb-4 text-sm border-l-2 border-sky-500/60 pl-3">
-                            <p><span class="text-sky-400 font-semibold">You text:</span> "Pick up donuts for Will's birthday Saturday at 9am."</p>
-                            <p><span class="text-sky-400 font-semibold">Agent:</span> extracts intent, asks a clarifying SMS if needed, learns the store's typical dwell time.</p>
-                            <p><span class="text-sky-400 font-semibold">Saturday morning:</span> calculates "leave by" time from Maps + Places + your routine, then alerts via the escalation chain until you acknowledge.</p>
-                        </div>
-
                         <div class="mb-3">
                             <span class="bg-emerald-500/20 text-emerald-300 text-xs font-medium px-2.5 py-0.5 rounded-full inline-flex items-center gap-1">
                                 <i data-lucide="shield-check" class="w-3 h-3"></i> Provisional Patent Drafted · 237/237 server tests passing
                             </span>
                         </div>
 
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Express 5</span>
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">React 19 PWA</span>
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Expo SDK 55</span>
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">PostgreSQL 16</span>
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Twilio</span>
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Gemini</span>
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Web Push</span>
-                        </div>
+                        <details class="card-details group">
+                            <summary><i data-lucide="chevron-down" class="w-3.5 h-3.5"></i></summary>
+                            <div class="card-details-body pt-3">
+                                <div class="space-y-2 mb-4 text-sm border-l-2 border-sky-500/60 pl-3">
+                                    <p><span class="text-sky-400 font-semibold">You text:</span> "Pick up donuts for Will's birthday Saturday at 9am."</p>
+                                    <p><span class="text-sky-400 font-semibold">Agent:</span> extracts intent, asks a clarifying SMS if needed, learns the store's typical dwell time.</p>
+                                    <p><span class="text-sky-400 font-semibold">Saturday morning:</span> calculates "leave by" time from Maps + Places + your routine, then alerts via the escalation chain until you acknowledge.</p>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Express 5</span>
+                                    <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">React 19 PWA</span>
+                                    <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Expo SDK 55</span>
+                                    <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">PostgreSQL 16</span>
+                                    <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Twilio</span>
+                                    <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Gemini</span>
+                                    <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Web Push</span>
+                                </div>
+                            </div>
+                        </details>
 
                         <div class="flex items-center gap-4 mt-auto">
                             <button type="button" onclick="openDiagram('NoteXT', 'noteXT.drawio')" class="btn-architecture">
@@ -420,36 +459,39 @@
                         <p class="text-sky-400 font-semibold mb-1">Your professional identity, organized and shareable.</p>
                         <p class="text-sm italic text-gray-400 mb-4">CVstom Portfolios become the next resume.</p>
 
-                        <!-- Three-pillar sub-block -->
-                        <div class="space-y-3 mb-4 text-sm">
-                            <div class="border-l-2 border-sky-500/60 pl-3">
-                                <p class="font-semibold text-white">CV Wizard</p>
-                                <p class="text-gray-400">Conversational AI builds your profile through dialogue — no blank-page resume paralysis.</p>
-                            </div>
-                            <div class="border-l-2 border-sky-500/60 pl-3">
-                                <p class="font-semibold text-white">CVstom Profile</p>
-                                <p class="text-gray-400">Single source of truth for skills, experience, and projects. Update once, reflect everywhere.</p>
-                            </div>
-                            <div class="border-l-2 border-sky-500/60 pl-3">
-                                <p class="font-semibold text-white">CVstom Portfolio</p>
-                                <p class="text-gray-400">Shareable identity at <span class="text-sky-400">cvstomize.com/u/yourname</span> with viewer-toggleable lenses.</p>
-                            </div>
-                        </div>
-
                         <div class="mb-3">
                             <span class="bg-blue-500/20 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full inline-flex items-center gap-1">
                                 <i data-lucide="drafting-compass" class="w-3 h-3"></i> MVP in progress
                             </span>
                         </div>
 
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">React 18</span>
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Material-UI</span>
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Vertex AI (Gemini 2.5)</span>
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">GCP Cloud Run</span>
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">PostgreSQL</span>
-                            <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Firebase Auth</span>
-                        </div>
+                        <details class="card-details group">
+                            <summary><i data-lucide="chevron-down" class="w-3.5 h-3.5"></i></summary>
+                            <div class="card-details-body pt-3">
+                                <div class="space-y-3 mb-4 text-sm">
+                                    <div class="border-l-2 border-sky-500/60 pl-3">
+                                        <p class="font-semibold text-white">CV Wizard</p>
+                                        <p class="text-gray-400">Conversational AI builds your profile through dialogue — no blank-page resume paralysis.</p>
+                                    </div>
+                                    <div class="border-l-2 border-sky-500/60 pl-3">
+                                        <p class="font-semibold text-white">CVstom Profile</p>
+                                        <p class="text-gray-400">Single source of truth for skills, experience, and projects. Update once, reflect everywhere.</p>
+                                    </div>
+                                    <div class="border-l-2 border-sky-500/60 pl-3">
+                                        <p class="font-semibold text-white">CVstom Portfolio</p>
+                                        <p class="text-gray-400">Shareable identity at <span class="text-sky-400">cvstomize.com/u/yourname</span> with viewer-toggleable lenses.</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">React 18</span>
+                                    <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Material-UI</span>
+                                    <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Vertex AI (Gemini 2.5)</span>
+                                    <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">GCP Cloud Run</span>
+                                    <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">PostgreSQL</span>
+                                    <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Firebase Auth</span>
+                                </div>
+                            </div>
+                        </details>
 
                         <div class="flex items-center gap-4 mt-auto">
                             <button type="button" onclick="openDiagram('CVstomize', 'cvstomize.drawio')" class="btn-architecture">
@@ -463,87 +505,98 @@
                 </div>
             </div>
 
-            <!-- Featured Tool: Daemonstrate (Claude Code Plugin) -->
+            <!-- Featured Tool: HuminLoop -->
             <div class="mb-8 reveal">
                 <div class="glassmorphism rounded-2xl overflow-hidden group hover:border-sky-500/30 transition-colors">
-                    <div class="grid md:grid-cols-[1.1fr_1fr] gap-0">
-                        <!-- Left: pitch + pipeline -->
-                        <div class="p-6 md:p-8 border-b md:border-b-0 md:border-r border-white/5">
-                            <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
-                                <div class="flex items-center gap-2 flex-wrap">
-                                    <span class="bg-blue-500/20 text-blue-300 text-[10px] font-medium px-2 py-0.5 rounded-full uppercase tracking-wider">Claude Code Skill</span>
-                                    <span class="bg-emerald-500/15 text-emerald-300 text-[10px] font-medium px-2 py-0.5 rounded-full inline-flex items-center gap-1">
-                                        <i data-lucide="globe" class="w-3 h-3"></i> Public
-                                    </span>
-                                    <span class="bg-purple-500/15 text-purple-300 text-[10px] font-medium px-2 py-0.5 rounded-full">stdlib only</span>
-                                </div>
-                                <code class="text-xs text-sky-300 bg-gray-900/60 px-2 py-0.5 rounded font-mono">/daemonstrate</code>
+                    <div class="w-full h-48 bg-gray-700/50 flex items-center justify-center">
+                        <img src="images/huminloop.png" alt="HuminLoop screenshot" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')" onerror="this.parentElement.remove()">
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+                            <div class="flex items-center gap-2 flex-wrap">
+                                <span class="bg-blue-500/20 text-blue-300 text-[10px] font-medium px-2 py-0.5 rounded-full uppercase tracking-wider">Electron + MCP</span>
+                                <span class="bg-emerald-500/15 text-emerald-300 text-[10px] font-medium px-2 py-0.5 rounded-full inline-flex items-center gap-1">
+                                    <i data-lucide="globe" class="w-3 h-3"></i> Public
+                                </span>
+                                <span class="bg-purple-500/15 text-purple-300 text-[10px] font-medium px-2 py-0.5 rounded-full">ADHD-first</span>
                             </div>
-                            <h3 class="text-2xl font-bold text-white mb-1">Daemonstrate</h3>
-                            <p class="text-sky-400 font-semibold mb-1">Visualize any codebase top to bottom — scopes → components → functions → branches, down to the atomic statements where the source bottoms out.</p>
-                            <p class="text-sm italic text-gray-400 mb-4">Self-maintaining via post-commit hook — only changed scopes re-explored. Every page in paired Technical + Plain-English tabs, so a recruiter, a collaborator, or a non-technical stakeholder can open the same file and see the right view.</p>
-
-                            <!-- Pipeline steps -->
-                            <div class="mb-4 text-xs">
-                                <p class="text-gray-400 font-medium mb-2">Pipeline <span class="text-gray-600">· pure Python stdlib</span></p>
-                                <div class="flex flex-wrap items-center gap-1 text-[10px]">
-                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">1. Discover scopes</span>
-                                    <span class="text-gray-600">→</span>
-                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">2. Pick diagram type</span>
-                                    <span class="text-gray-600">→</span>
-                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">3. Pick page structure</span>
-                                    <span class="text-gray-600">→</span>
-                                    <span class="bg-gray-800 text-sky-300 px-2 py-0.5 rounded">4. Generate paired T/P</span>
-                                    <span class="text-gray-600">→</span>
-                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">5. Cache to catalog</span>
-                                </div>
-                                <p class="text-gray-500 mt-2 leading-relaxed">Three-level cache in <span class="font-mono text-gray-400">.daemonstrate-scopes.json</span> — scopes, sub-component trees, and plain-English translations invalidate independently, so most commits re-touch only what actually changed.</p>
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Draw.io XML</span>
-                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">8 diagram types</span>
-                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Paired T/P tabs</span>
-                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Recursive drill-down</span>
-                                <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Post-commit hook</span>
-                            </div>
-
-                            <div class="flex items-center gap-4 flex-wrap">
-                                <button type="button" onclick="openDiagram('Daemonstrate', 'daemonstrate.drawio')" class="btn-architecture">
-                                    <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Workflow
-                                </button>
-                                <a href="https://github.com/wyofalcon/daemonstrate" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
-                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i> View on GitHub
-                                </a>
-                            </div>
+                            <code class="text-xs text-sky-300 bg-gray-900/60 px-2 py-0.5 rounded font-mono">v2.0.0</code>
                         </div>
+                        <h3 class="text-2xl font-bold text-white mb-1">HuminLoop</h3>
+                        <p class="text-sky-400 font-semibold mb-1">A context-capture tool for developers, built for ADHD workflows — screenshots, clipboard, and annotations become structured AI coding prompts without breaking flow.</p>
+                        <p class="text-sm italic text-gray-400 mb-4">Hybrid Electron app + MCP server. Capture locally; consume from Claude Code, GitHub Copilot, or any MCP-compatible agent.</p>
 
-                        <!-- Right: three outputs -->
-                        <div class="p-6 md:p-8 bg-gray-900/30">
-                            <p class="text-gray-400 text-xs font-medium uppercase tracking-wider mb-3">Three Distinctive Features</p>
-                            <div class="space-y-3">
-                                <div class="rounded-lg border border-sky-500/20 bg-sky-500/[0.03] p-3">
-                                    <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
-                                        <code class="text-xs font-mono text-sky-300">architecture-detailed.drawio</code>
-                                        <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">overview + per-scope</span>
+                        <details class="card-details group">
+                            <summary><i data-lucide="chevron-down" class="w-3.5 h-3.5"></i></summary>
+                            <div class="card-details-body grid md:grid-cols-[1.1fr_1fr] gap-6 pt-4 border-t border-white/5">
+                                <!-- Left: flow + tech -->
+                                <div>
+                                    <div class="mb-4 text-xs">
+                                        <p class="text-gray-400 font-medium mb-2">Capture flow</p>
+                                        <div class="flex flex-wrap items-center gap-1 text-[10px]">
+                                            <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">1. Tray + hotkey</span>
+                                            <span class="text-gray-600">→</span>
+                                            <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">2. Classify (7-strategy chain)</span>
+                                            <span class="text-gray-600">→</span>
+                                            <span class="bg-gray-800 text-sky-300 px-2 py-0.5 rounded">3. Enrich (Gemini 2.5 Flash)</span>
+                                            <span class="text-gray-600">→</span>
+                                            <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">4. Store</span>
+                                            <span class="text-gray-600">→</span>
+                                            <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">5. Serve via MCP</span>
+                                        </div>
+                                        <p class="text-gray-500 mt-2 leading-relaxed">Clipboard watcher and global hotkey feed the capture popup; the rule engine routes each clip into the right category before enrichment, so context doesn't slip while you switch windows.</p>
                                     </div>
-                                    <p class="text-xs text-gray-400"><span class="text-white font-medium">Whole-repo mode.</span> Claude picks from 8 diagram types per scope — System, Swimlane, DFD, Process, Workflow, and more. Overview links to every scope's detail page.</p>
+
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Electron</span>
+                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">MCP Server</span>
+                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Gemini 2.5 Flash</span>
+                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">PostgreSQL / SQLite</span>
+                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">7-strategy rules</span>
+                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Tray + Hotkey</span>
+                                    </div>
                                 </div>
-                                <div class="rounded-lg border border-emerald-500/20 bg-emerald-500/[0.03] p-3">
-                                    <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
-                                        <code class="text-xs font-mono text-emerald-300">drilldown-{trail}.drawio</code>
-                                        <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">per level · cap 6</span>
+
+                                <!-- Right: three features -->
+                                <div>
+                                    <p class="text-gray-400 text-xs font-medium uppercase tracking-wider mb-3">Three Distinctive Features</p>
+                                    <div class="space-y-3">
+                                        <div class="rounded-lg border border-sky-500/20 bg-sky-500/[0.03] p-3">
+                                            <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
+                                                <code class="text-xs font-mono text-sky-300">Tray + Hotkey + Clipboard</code>
+                                                <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">capture</span>
+                                            </div>
+                                            <p class="text-xs text-gray-400"><span class="text-white font-medium">ADHD-first capture.</span> Global hotkey, tray icon, and clipboard watcher keep context pinned even when you context-switch mid-thought — no tool to open, no file to find.</p>
+                                        </div>
+                                        <div class="rounded-lg border border-emerald-500/20 bg-emerald-500/[0.03] p-3">
+                                            <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
+                                                <code class="text-xs font-mono text-emerald-300">mcp-server / 16 tools</code>
+                                                <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">consume anywhere</span>
+                                            </div>
+                                            <p class="text-xs text-gray-400"><span class="text-white font-medium">MCP integration.</span> 13 knowledge tools + 3 workflow tools callable from Claude Code, GitHub Copilot, or any MCP client. Devcontainer-aware — no port pinning needed.</p>
+                                        </div>
+                                        <div class="rounded-lg border border-purple-500/20 bg-purple-500/[0.03] p-3">
+                                            <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
+                                                <code class="text-xs font-mono text-purple-300">rules/ — 7-strategy chain</code>
+                                                <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">routing</span>
+                                            </div>
+                                            <p class="text-xs text-gray-400"><span class="text-white font-medium">Smart routing.</span> Seven ordered strategies decide how each clip is classified, enriched, and surfaced — deterministic rules run before the LLM, so costs stay bounded and behavior stays predictable.</p>
+                                        </div>
                                     </div>
-                                    <p class="text-xs text-gray-400"><span class="text-white font-medium">Recursive drill-down.</span> Scope → component → function → branch → terminal op. One focused file per level; plain-English tab opens first for teaching context.</p>
-                                </div>
-                                <div class="rounded-lg border border-purple-500/20 bg-purple-500/[0.03] p-3">
-                                    <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
-                                        <code class="text-xs font-mono text-purple-300">Paired (T) / (P) tabs</code>
-                                        <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">every page</span>
-                                    </div>
-                                    <p class="text-xs text-gray-400"><span class="text-white font-medium">Two audiences, one file.</span> <span class="font-mono text-gray-300">POST /api/notes</span> on the Technical tab, "saves the note" on Plain-English. Readers pick at view time — no forked file to maintain.</p>
                                 </div>
                             </div>
+                        </details>
+
+                        <div class="flex items-center gap-4 flex-wrap mt-2">
+                            <button type="button" onclick="openDiagram('HuminLoop', 'huminLoop.drawio')" class="btn-architecture">
+                                <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> View Workflow
+                            </button>
+                            <a href="https://github.com/wyofalcon/HuminLoop/releases/tag/v2.0.0" target="_blank" rel="noopener" class="text-green-400 hover:text-green-300 text-sm font-medium flex items-center gap-1">
+                                <i data-lucide="download" class="w-3.5 h-3.5"></i> Download
+                            </a>
+                            <a href="https://github.com/wyofalcon/HuminLoop" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i> View on GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -555,32 +608,50 @@
 
             <!-- All Repos Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- HuminLoop -->
+                <!-- Daemonstrate -->
                 <div class="glassmorphism rounded-2xl flex flex-col hover:border-sky-500/30 transition-colors overflow-hidden">
                     <div class="w-full h-36 bg-gray-700/50 flex items-center justify-center">
-                        <img src="images/huminloop.png" alt="HuminLoop screenshot" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')" onerror="this.parentElement.remove()">
+                        <img src="images/daemonstrate.png" alt="Daemonstrate screenshot" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')" onerror="this.parentElement.remove()">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex items-center justify-between mb-2">
-                            <h4 class="font-bold text-white text-lg">HuminLoop</h4>
+                        <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+                            <div class="flex items-center gap-2 flex-wrap">
+                                <h4 class="font-bold text-white text-lg">Daemonstrate</h4>
+                                <span class="bg-blue-500/20 text-blue-300 text-[10px] font-medium px-2 py-0.5 rounded-full uppercase tracking-wider">Claude Code Skill</span>
+                            </div>
                             <span class="bg-green-500/20 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1">
                                 <i data-lucide="globe" class="w-3 h-3"></i> Public
                             </span>
                         </div>
-                        <p class="text-sm flex-grow mb-4">A context-capture tool for developers (optimized for ADHD workflows) that transforms screenshots and annotations into structured AI coding prompts using Gemini 2.5 Flash and a smart rule engine.</p>
-                        <div class="flex items-center justify-between mt-auto flex-wrap gap-y-2">
-                            <div class="flex items-center gap-3">
-                                <span class="flex items-center gap-1 text-xs text-gray-400"><span class="w-3 h-3 rounded-full bg-yellow-300 inline-block"></span> JavaScript</span>
-                                <span class="text-xs text-gray-500">&#9733; 1</span>
+                        <p class="text-sm flex-grow mb-4">Visualizes any codebase top-to-bottom — scopes, components, functions, branches — as paired Technical / Plain-English <code class="text-xs bg-gray-800 px-1 rounded">.drawio</code> tabs. Pure Python stdlib; self-maintains via post-commit hook.</p>
+                        <details class="card-details group mb-3">
+                            <summary><i data-lucide="chevron-down" class="w-3.5 h-3.5"></i></summary>
+                            <div class="card-details-body space-y-3 pt-3 text-xs text-gray-400">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">1. Discover scopes</span>
+                                    <span class="text-gray-600">→</span>
+                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">2. Pick diagram type</span>
+                                    <span class="text-gray-600">→</span>
+                                    <span class="bg-gray-800 text-sky-300 px-2 py-0.5 rounded">3. Paired T/P</span>
+                                    <span class="text-gray-600">→</span>
+                                    <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">4. Cache</span>
+                                </div>
+                                <p>Three-level cache in <span class="font-mono text-gray-300">.daemonstrate-scopes.json</span> — scopes, sub-component trees, and plain-English translations invalidate independently.</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Draw.io XML</span>
+                                    <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">8 diagram types</span>
+                                    <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Paired T/P tabs</span>
+                                    <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Recursive drill-down</span>
+                                </div>
                             </div>
+                        </details>
+                        <div class="flex items-center justify-between mt-auto flex-wrap gap-y-2">
+                            <span class="flex items-center gap-1 text-xs text-gray-400"><span class="w-3 h-3 rounded-full bg-[#3572A5] inline-block"></span> Python</span>
                             <div class="flex items-center gap-3">
-                                <a href="https://github.com/wyofalcon/HuminLoop/releases/tag/v2.0.0" target="_blank" rel="noopener" class="text-green-400 hover:text-green-300 text-sm font-medium flex items-center gap-1">
-                                    <i data-lucide="download" class="w-3.5 h-3.5"></i> Download
-                                </a>
-                                <button type="button" onclick="openDiagram('HuminLoop', 'huminLoop.drawio')" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
+                                <button type="button" onclick="openDiagram('Daemonstrate', 'daemonstrate.drawio')" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
                                     <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> Workflow
                                 </button>
-                                <a href="https://github.com/wyofalcon/HuminLoop" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
+                                <a href="https://github.com/wyofalcon/daemonstrate" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
                                     <i data-lucide="external-link" class="w-3.5 h-3.5"></i> View
                                 </a>
                             </div>
