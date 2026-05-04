@@ -605,13 +605,6 @@
             </div> <!-- Closing the 'All Repos Grid' container -->
 
             </div> <!-- Closing the 'All Repos Grid' container -->
-
-            <!-- GitHub CTA -->
-            <div class="text-center mt-12">
-                <a href="https://github.com/wyofalcon" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-transform hover:scale-105">
-                    <i data-lucide="github" class="w-5 h-5"></i> View Full GitHub Profile
-                </a>
-            </div>
         </section>
 
         <!-- Claude Tools Section -->
@@ -830,6 +823,13 @@
                         <span class="flex items-center gap-1 text-[10px] text-gray-500"><span class="w-2 h-2 rounded-full bg-yellow-300 inline-block"></span> HTML</span>
                     </div>
                 </div>
+            </div>
+
+            <!-- GitHub CTA -->
+            <div class="text-center mt-12">
+                <a href="https://github.com/wyofalcon" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-transform hover:scale-105">
+                    <i data-lucide="github" class="w-5 h-5"></i> View Full GitHub Profile
+                </a>
             </div>
 
         </section>
@@ -1113,7 +1113,7 @@
 
         function openDiagram(projectName, diagramFile) {
             const rawUrl = diagramUrl(diagramFile);
-            const viewerUrl = `https://viewer.diagrams.net/?lightbox=1&highlight=0000ff&nav=1&title=${projectName}&url=${encodeURIComponent(rawUrl)}`;
+            const viewerUrl = `https://viewer.diagrams.net/?lightbox=1&highlight=0000ff&nav=1&dark=0&title=${projectName}&url=${encodeURIComponent(rawUrl)}`;
             diagramTitle.textContent = `${projectName} — Architecture`;
             diagramIframe.src = viewerUrl;
             diagramModal.classList.add('active');
