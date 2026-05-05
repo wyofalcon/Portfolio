@@ -1,258 +1,130 @@
 <mxfile host="65bd71144e">
-    <diagram id="current-state" name="Current State">
-        <mxGraphModel dx="1461" dy="766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+    <diagram name="Portfolio (T)" id="t-portfolio">
+        <mxGraphModel dx="1461" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="0" page="1" pageScale="1" pageWidth="1700" pageHeight="1050" background="#FFFFFF" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="title1" value="Sciurus! — Current State (Phase 1 Complete)" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;" parent="1" vertex="1">
-                    <mxGeometry x="400" y="20" width="500" height="40" as="geometry"/>
+                <mxCell id="hdr-title" value="HuminLoop" style="text;html=1;fontSize=34;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="20" width="1640" height="46" as="geometry"/>
                 </mxCell>
-                <mxCell id="electron-group" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8;dashed=0;" parent="1" vertex="1">
-                    <mxGeometry x="80" y="100" width="520" height="420" as="geometry"/>
+                <mxCell id="hdr-sub" value="Keeping humans in the loop — AI-powered knowledge capture for developers who build with AI" style="text;html=1;fontSize=16;fontStyle=2;align=center;verticalAlign=middle;fontColor=#5A6470;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="72" width="1640" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="electron-label" value="Sciurus! Electron App (Desktop)" style="text;html=1;fontSize=16;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
-                    <mxGeometry x="90" y="105" width="350" height="30" as="geometry"/>
+                <mxCell id="problem-strip" value="&lt;b style=&#39;color:#9F2D43;letter-spacing:1px;font-size:11px;&#39;&gt;THE PROBLEM&lt;/b&gt;&lt;br&gt;&lt;span style=&#39;font-size:14px;color:#3A4555;&#39;&gt;Developers using AI coding tools lose context every time a new bug catches their eye. Switching apps to retype what they just saw burns the focus they had — especially brutal for ADHD brains.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEBEF;strokeColor=#F38BA8;dashed=1;strokeWidth=2;fontSize=14;align=center;verticalAlign=middle;shadow=1;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="120" width="1380" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="renderer" value="&lt;b&gt;Renderer (UI)&lt;/b&gt;&lt;br&gt;Notes Viewer&lt;br&gt;Capture Popup&lt;br&gt;Setup Wizard&lt;br&gt;Settings" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="150" width="160" height="110" as="geometry"/>
+                <mxCell id="flow-header" value="How it works" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="222" width="1640" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="main-process" value="&lt;b&gt;Main Process&lt;/b&gt;&lt;br&gt;Tray + Hotkey&lt;br&gt;Clipboard Watcher&lt;br&gt;IPC Handlers (40+)&lt;br&gt;Window Metadata" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="300" y="150" width="160" height="110" as="geometry"/>
+                <mxCell id="pitch-stage-1" value="&lt;span style=&#39;font-size:10px;color:#526C96;letter-spacing:2px;&#39;&gt;STEP 1&lt;/span&gt;&lt;br&gt;&lt;b style=&#39;font-size:18px;color:#1E2933;&#39;&gt;Screenshot or annotate&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;color:#5A6470;&#39;&gt;Clipboard watcher polls 1s for new images.&lt;br&gt;Or draw red/green/pink on screen with the toolbar overlay.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5EEFD;strokeColor=#89B4FA;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=10;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="265" width="280" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="ipc-arrow" value="IPC (preload.js)" style="endArrow=classic;startArrow=classic;html=1;fontSize=13;strokeColor=#666666;" parent="1" source="renderer" target="main-process" edge="1">
+                <mxCell id="pitch-stage-2" value="&lt;span style=&#39;font-size:10px;color:#638860;letter-spacing:2px;&#39;&gt;STEP 2&lt;/span&gt;&lt;br&gt;&lt;b style=&#39;font-size:18px;color:#1E2933;&#39;&gt;Capture window context&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;color:#5A6470;&#39;&gt;Active window title, process, and repo path captured automatically (Win32 / xdotool / gdbus).&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF8EA;strokeColor=#A6E3A1;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=10;" parent="1" vertex="1">
+                    <mxGeometry x="365" y="265" width="280" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="pitch-stage-3" value="&lt;span style=&#39;font-size:10px;color:#796394;letter-spacing:2px;&#39;&gt;STEP 3&lt;/span&gt;&lt;br&gt;&lt;b style=&#39;font-size:18px;color:#1E2933;&#39;&gt;Rules + Gemini sort&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;color:#5A6470;&#39;&gt;7-strategy rule chain runs instantly.&lt;br&gt;Gemini 2.5 Flash enriches in the background — summary, tags, project match.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3EBFD;strokeColor=#CBA6F7;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=10;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="265" width="280" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="pitch-stage-4" value="&lt;span style=&#39;font-size:10px;color:#966B51;letter-spacing:2px;&#39;&gt;STEP 4&lt;/span&gt;&lt;br&gt;&lt;b style=&#39;font-size:18px;color:#1E2933;&#39;&gt;Generate coding prompt&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;color:#5A6470;&#39;&gt;Annotation colors decoded (red=remove, green=add, pink=ref).&lt;br&gt;Prompt enriched with SESSION.md + AUDIT_LOG context.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEEE4;strokeColor=#FAB387;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=10;" parent="1" vertex="1">
+                    <mxGeometry x="1055" y="265" width="280" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="pitch-stage-5" value="&lt;span style=&#39;font-size:10px;color:#958769;letter-spacing:2px;&#39;&gt;STEP 5&lt;/span&gt;&lt;br&gt;&lt;b style=&#39;font-size:18px;color:#1E2933;&#39;&gt;Send to IDE via MCP&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;color:#5A6470;&#39;&gt;Stages IDE_PROMPT.md to .ai-workflow/.&lt;br&gt;MCP server delivers one-shot to Claude Code or Gemini CLI.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDF8ED;strokeColor=#F9E2AF;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=10;" parent="1" vertex="1">
+                    <mxGeometry x="1400" y="265" width="280" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="pitch-flow-arrow-1" value="" style="endArrow=classic;html=1;strokeColor=#7E8590;strokeWidth=3;edgeStyle=none;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pitch-stage-1" target="pitch-stage-2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="db-layer" value="&lt;b&gt;Database Layer&lt;/b&gt;&lt;br&gt;db.js → db-pg.js | db-sqlite.js&lt;br&gt;PostgreSQL (Docker) or SQLite" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="290" width="220" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="ai-layer" value="&lt;b&gt;AI Module&lt;/b&gt;&lt;br&gt;Gemini 2.5 Flash&lt;br&gt;(API Key or Vertex AI)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="340" y="290" width="160" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="rules-layer" value="&lt;b&gt;Rules Engine&lt;/b&gt;&lt;br&gt;7-strategy chain" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="380" width="140" height="50" as="geometry"/>
-                </mxCell>
-                <mxCell id="images-layer" value="&lt;b&gt;Images&lt;/b&gt;&lt;br&gt;Disk storage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="260" y="380" width="110" height="50" as="geometry"/>
-                </mxCell>
-                <mxCell id="audit-layer" value="&lt;b&gt;Audit&lt;/b&gt;&lt;br&gt;200 entries" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="390" y="380" width="110" height="50" as="geometry"/>
-                </mxCell>
-                <mxCell id="http-api" value="&lt;b&gt;HTTP API&lt;/b&gt;&lt;br&gt;api-server.js&lt;br&gt;127.0.0.1:7277&lt;br&gt;&lt;font color=&quot;#00994c&quot;&gt;NEW — Phase 1&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=0;" parent="1" vertex="1">
-                    <mxGeometry x="500" y="150" width="140" height="90" as="geometry"/>
-                </mxCell>
-                <mxCell id="mcp-group" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=8;" parent="1" vertex="1">
-                    <mxGeometry x="720" y="100" width="300" height="220" as="geometry"/>
-                </mxCell>
-                <mxCell id="mcp-label" value="MCP Server (mcp-server/index.js)" style="text;html=1;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontColor=#00994c;" parent="1" vertex="1">
-                    <mxGeometry x="730" y="105" width="280" height="25" as="geometry"/>
-                </mxCell>
-                <mxCell id="mcp-new" value="&lt;font color=&quot;#00994c&quot;&gt;NEW — Phase 1&lt;/font&gt;" style="text;html=1;fontSize=13;align=left;spacingLeft=10;" parent="1" vertex="1">
-                    <mxGeometry x="730" y="128" width="120" height="15" as="geometry"/>
-                </mxCell>
-                <mxCell id="knowledge-tools" value="&lt;b&gt;Knowledge Tools (13)&lt;/b&gt;&lt;br&gt;clip_list, clip_create,&lt;br&gt;clip_search, clip_summarize,&lt;br&gt;project_list, project_create,&lt;br&gt;category_list, sciurus_health" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="740" y="150" width="200" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="workflow-tools" value="&lt;b&gt;Workflow Tools (3)&lt;/b&gt;&lt;br&gt;session_context&lt;br&gt;session_read&lt;br&gt;git_status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="740" y="240" width="200" height="65" as="geometry"/>
-                </mxCell>
-                <mxCell id="ide-group" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8;" parent="1" vertex="1">
-                    <mxGeometry x="1100" y="100" width="200" height="220" as="geometry"/>
-                </mxCell>
-                <mxCell id="ide-label" value="AI IDE Agents" style="text;html=1;fontSize=14;fontStyle=1;align=center;verticalAlign=top;spacingTop=5;" parent="1" vertex="1">
-                    <mxGeometry x="1100" y="105" width="200" height="25" as="geometry"/>
-                </mxCell>
-                <mxCell id="claude-code" value="&lt;b&gt;Claude Code&lt;/b&gt;&lt;br&gt;(VS Code)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="1120" y="145" width="160" height="45" as="geometry"/>
-                </mxCell>
-                <mxCell id="copilot" value="&lt;b&gt;GitHub Copilot&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="1120" y="200" width="160" height="35" as="geometry"/>
-                </mxCell>
-                <mxCell id="other-ide" value="&lt;b&gt;Any MCP Client&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="1120" y="245" width="160" height="35" as="geometry"/>
-                </mxCell>
-                <mxCell id="http-conn" value="HTTP&lt;br&gt;(localhost)" style="endArrow=classic;startArrow=classic;html=1;fontSize=13;strokeColor=#82b366;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="http-api" target="knowledge-tools" edge="1">
+                <mxCell id="pitch-flow-arrow-2" value="" style="endArrow=classic;html=1;strokeColor=#7E8590;strokeWidth=3;edgeStyle=none;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pitch-stage-2" target="pitch-stage-3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="stdio-conn" value="stdio&lt;br&gt;(MCP protocol)" style="endArrow=classic;startArrow=classic;html=1;fontSize=13;strokeColor=#b85450;strokeWidth=2;" parent="1" source="mcp-group" target="ide-group" edge="1">
+                <mxCell id="pitch-flow-arrow-3" value="" style="endArrow=classic;html=1;strokeColor=#7E8590;strokeWidth=3;edgeStyle=none;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pitch-stage-3" target="pitch-stage-4" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="local-conn" value="local&lt;br&gt;(git, fs)" style="endArrow=classic;html=1;fontSize=13;strokeColor=#666666;strokeWidth=1;dashed=1;" parent="1" source="workflow-tools" target="project-repo" edge="1">
+                <mxCell id="pitch-flow-arrow-4" value="" style="endArrow=classic;html=1;strokeColor=#7E8590;strokeWidth=3;edgeStyle=none;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pitch-stage-4" target="pitch-stage-5" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="project-repo" value="&lt;b&gt;Any Project Repo&lt;/b&gt;&lt;br&gt;.mcp.json&lt;br&gt;.ai-workflow/instructions/&lt;br&gt;.ai-workflow/context/&lt;br&gt;CLAUDE.md" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="720" y="400" width="220" height="100" as="geometry"/>
+                <mxCell id="produces-label" value="↓   produces   ↓" style="text;html=1;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;fontColor=#7E8590;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="455" width="300" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="container-note" value="⚠ In devcontainers: MCP server auto-detects&lt;br&gt;and uses host.docker.internal instead of 127.0.0.1" style="text;html=1;fontSize=13;align=center;fontColor=#666666;fontStyle=2;" parent="1" vertex="1">
-                    <mxGeometry x="620" y="340" width="300" height="30" as="geometry"/>
+                <mxCell id="outputs-header" value="Three audiences. One artifact." style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="495" width="1640" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="pitch-aud-1" value="&lt;span style=&#39;font-size:11px;color:#526C96;letter-spacing:2px;&#39;&gt;FOR RECRUITERS &amp;amp; STAKEHOLDERS&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;b style=&#39;font-size:17px;color:#1E2933;&#39;&gt;Shipped, cross-platform, opinionated&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#3A4555;&#39;&gt;An ADHD-friendly desktop app shipping NSIS / AppImage / deb / dmg installers from a single repo. Vanilla JS renderer. Native JWT for Vertex AI — no SDK dependencies. Multi-agent dev workflow baked in.&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#526C96;font-style:italic;&#39;&gt;“Wait, this guy actually shipped this?”&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5EEFD;strokeColor=#89B4FA;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=15;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="540" width="520" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="pitch-aud-2" value="&lt;span style=&#39;font-size:11px;color:#638860;letter-spacing:2px;&#39;&gt;FOR ENGINEERS &amp;amp; COLLABORATORS&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;b style=&#39;font-size:17px;color:#1E2933;&#39;&gt;Bridge between screen and AI&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#3A4555;&#39;&gt;Electron 33, dual-DB (Postgres or SQLite auto-fallback), Gemini 2.5 Flash, and an MCP server with 19 tools that lets any AI IDE talk to your clip database. Send-to-IDE uses a one-shot file bridge — staged and consumed atomically.&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#638860;font-style:italic;&#39;&gt;“I want to fork this and wire it into Claude Code.”&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF8EA;strokeColor=#A6E3A1;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=15;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="540" width="520" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="pitch-aud-3" value="&lt;span style=&#39;font-size:11px;color:#796394;letter-spacing:2px;&#39;&gt;FOR ANYONE ELSE&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;b style=&#39;font-size:17px;color:#1E2933;&#39;&gt;Like a sticky note, but smarter&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#3A4555;&#39;&gt;You see something that needs fixing. You snip a screenshot, jot what&amp;#x27;s wrong, and the app organizes it for you. If you have an AI helper, it writes the instruction so you can act on it later.&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#796394;font-style:italic;&#39;&gt;“It&amp;#x27;s Pinterest for things I want to fix later.”&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3EBFD;strokeColor=#CBA6F7;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=15;" parent="1" vertex="1">
+                    <mxGeometry x="1150" y="540" width="520" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="bet-footer" value="&lt;b style=&#39;color:#3F5566;letter-spacing:1px;font-size:11px;&#39;&gt;THE BET&lt;/b&gt;&lt;br&gt;&lt;span style=&#39;font-size:14px;color:#3A4555;&#39;&gt;Knowledge capture is the missing layer between AI coding tools and a developer&amp;#x27;s flow state. Every screenshot is a bug report waiting to be acted on — HuminLoop closes the loop in seconds, not minutes.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F6FA;strokeColor=#A8B3C2;dashed=1;strokeWidth=2;fontSize=14;align=center;verticalAlign=middle;shadow=1;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="800" width="1380" height="80" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
-    <diagram id="goal-state" name="Goal State (Post-MVP)">
-        <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+    <diagram name="Portfolio (P)" id="p-portfolio">
+        <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="0" page="1" pageScale="1" pageWidth="1700" pageHeight="1050" math="0" shadow="0" background="#FFFFFF">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="g-title" value="Sciurus! — Goal State (After Workflow MVP Extraction)" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;" parent="1" vertex="1">
-                    <mxGeometry x="350" y="20" width="550" height="40" as="geometry"/>
+                <mxCell id="hdr-title" value="HuminLoop" style="text;html=1;fontSize=34;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="20" width="1640" height="46" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-electron-group" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8;" parent="1" vertex="1">
-                    <mxGeometry x="80" y="90" width="520" height="500" as="geometry"/>
+                <mxCell id="hdr-sub" value="Keeping humans in the loop — AI-powered knowledge capture for developers who build with AI" style="text;html=1;fontSize=16;fontStyle=2;align=center;verticalAlign=middle;fontColor=#5A6470;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="72" width="1640" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-electron-label" value="Sciurus! Electron App" style="text;html=1;fontSize=16;fontStyle=1;align=left;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
-                    <mxGeometry x="90" y="95" width="300" height="25" as="geometry"/>
+                <mxCell id="problem-strip" value="&lt;b style=&#39;color:#9F2D43;letter-spacing:1px;font-size:11px;&#39;&gt;THE PROBLEM&lt;/b&gt;&lt;br&gt;&lt;span style=&#39;font-size:14px;color:#3A4555;&#39;&gt;When you spot a bug while coding with AI, you have to stop, switch apps, and retype what you saw. That breaks your focus every single time.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEBEF;strokeColor=#F38BA8;dashed=1;strokeWidth=2;fontSize=14;align=center;verticalAlign=middle;shadow=1;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="120" width="1380" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-tab-notes" value="&lt;b&gt;Notes Tab&lt;/b&gt;&lt;br&gt;Clips, Search,&lt;br&gt;Categories" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="135" width="110" height="65" as="geometry"/>
+                <mxCell id="flow-header" value="How it works" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="222" width="1640" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-tab-projects" value="&lt;b&gt;Projects Tab&lt;/b&gt;&lt;br&gt;Per-project clips,&lt;br&gt;Summaries" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="220" y="135" width="110" height="65" as="geometry"/>
+                <mxCell id="pitch-stage-1" value="&lt;span style=&#39;font-size:10px;color:#526C96;letter-spacing:2px;&#39;&gt;STEP 1&lt;/span&gt;&lt;br&gt;&lt;b style=&#39;font-size:18px;color:#1E2933;&#39;&gt;See an issue, mark it&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;color:#5A6470;&#39;&gt;HuminLoop notices any screenshot you take.&lt;br&gt;Or you scribble colors on the screen to mark what&amp;#x27;s wrong.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5EEFD;strokeColor=#89B4FA;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=10;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="265" width="280" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-tab-workflow" value="&lt;b&gt;Workflow Tab&lt;/b&gt;&lt;br&gt;Dashboard, Prompts,&lt;br&gt;Audit, Git Status&lt;br&gt;&lt;font color=&quot;#cc6600&quot;&gt;NEW&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="340" y="135" width="120" height="65" as="geometry"/>
+                <mxCell id="pitch-stage-2" value="&lt;span style=&#39;font-size:10px;color:#638860;letter-spacing:2px;&#39;&gt;STEP 2&lt;/span&gt;&lt;br&gt;&lt;b style=&#39;font-size:18px;color:#1E2933;&#39;&gt;App grabs the context&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;color:#5A6470;&#39;&gt;It also remembers what app and file you were looking at when you took the shot.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF8EA;strokeColor=#A6E3A1;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=10;" parent="1" vertex="1">
+                    <mxGeometry x="365" y="265" width="280" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-tab-settings" value="&lt;b&gt;Settings&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="470" y="135" width="80" height="65" as="geometry"/>
+                <mxCell id="pitch-stage-3" value="&lt;span style=&#39;font-size:10px;color:#796394;letter-spacing:2px;&#39;&gt;STEP 3&lt;/span&gt;&lt;br&gt;&lt;b style=&#39;font-size:18px;color:#1E2933;&#39;&gt;AI sorts and tags it&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;color:#5A6470;&#39;&gt;Sorts your note by project, adds tags, and writes a fix-it summary — without you doing anything.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3EBFD;strokeColor=#CBA6F7;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=10;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="265" width="280" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-main" value="&lt;b&gt;Main Process&lt;/b&gt;&lt;br&gt;Tray, Hotkey, Clipboard,&lt;br&gt;IPC + HTTP API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="220" width="180" height="65" as="geometry"/>
+                <mxCell id="pitch-stage-4" value="&lt;span style=&#39;font-size:10px;color:#966B51;letter-spacing:2px;&#39;&gt;STEP 4&lt;/span&gt;&lt;br&gt;&lt;b style=&#39;font-size:18px;color:#1E2933;&#39;&gt;Writes the AI prompt for you&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;color:#5A6470;&#39;&gt;Turns your scribble plus a one-line note into a ready-to-paste instruction for an AI coder.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEEE4;strokeColor=#FAB387;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=10;" parent="1" vertex="1">
+                    <mxGeometry x="1055" y="265" width="280" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-db" value="&lt;b&gt;Database&lt;/b&gt;&lt;br&gt;PG / SQLite" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="310" width="120" height="50" as="geometry"/>
+                <mxCell id="pitch-stage-5" value="&lt;span style=&#39;font-size:10px;color:#958769;letter-spacing:2px;&#39;&gt;STEP 5&lt;/span&gt;&lt;br&gt;&lt;b style=&#39;font-size:18px;color:#1E2933;&#39;&gt;Hands it to your AI tool&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;color:#5A6470;&#39;&gt;Your AI coding tool picks it up and starts fixing — you never broke focus.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDF8ED;strokeColor=#F9E2AF;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=10;" parent="1" vertex="1">
+                    <mxGeometry x="1400" y="265" width="280" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-ai" value="&lt;b&gt;AI Module&lt;/b&gt;&lt;br&gt;Gemini Flash" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="310" width="120" height="50" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-rules" value="&lt;b&gt;Rules&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="380" y="310" width="80" height="50" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-images" value="&lt;b&gt;Images&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="475" y="310" width="80" height="50" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-workflow-engine" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=8;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="385" width="455" height="185" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-workflow-label" value="Workflow Engine (extracted from .ai-workflow/scripts/)" style="text;html=1;fontSize=15;fontStyle=1;align=left;spacingLeft=10;spacingTop=3;fontColor=#cc6600;" parent="1" vertex="1">
-                    <mxGeometry x="110" y="388" width="400" height="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-prompt-tracker" value="&lt;b&gt;Prompt Tracker&lt;/b&gt;&lt;br&gt;ID generation,&lt;br&gt;lifecycle, log" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="115" y="415" width="125" height="55" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-code-auditor" value="&lt;b&gt;Code Auditor&lt;/b&gt;&lt;br&gt;Pattern checks,&lt;br&gt;AI screening" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="255" y="415" width="125" height="55" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-review" value="&lt;b&gt;Code Review&lt;/b&gt;&lt;br&gt;Model escalation,&lt;br&gt;PR review" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="395" y="415" width="125" height="55" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-context-sync" value="&lt;b&gt;Context Sync&lt;/b&gt;&lt;br&gt;Session state,&lt;br&gt;git monitoring" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="115" y="480" width="125" height="55" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-git-ops" value="&lt;b&gt;Git Ops&lt;/b&gt;&lt;br&gt;Branch suggest,&lt;br&gt;sync, stale detect" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="255" y="480" width="125" height="55" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-instructions" value="&lt;b&gt;Instructions&lt;/b&gt;&lt;br&gt;Compose shared&lt;br&gt;+ role-specific" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="395" y="480" width="125" height="55" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-mcp-group" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="690" y="100" width="300" height="330" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-mcp-label" value="MCP Server" style="text;html=1;fontSize=14;fontStyle=1;align=left;spacingLeft=10;spacingTop=5;fontColor=#00994c;" parent="1" vertex="1">
-                    <mxGeometry x="710" y="95" width="200" height="25" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-knowledge-tools" value="&lt;b&gt;Knowledge Tools&lt;/b&gt;&lt;br&gt;clip_list, clip_create,&lt;br&gt;clip_search, clip_summarize,&lt;br&gt;project_*, category_list" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="720" y="130" width="200" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-prompt-tools" value="&lt;b&gt;Prompt Tools&lt;/b&gt;&lt;br&gt;prompt_create, prompt_status,&lt;br&gt;prompt_list, prompt_audit&lt;br&gt;&lt;font color=&quot;#cc6600&quot;&gt;Phase 2&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="720" y="210" width="200" height="65" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-analysis-tools" value="&lt;b&gt;Analysis Tools&lt;/b&gt;&lt;br&gt;audit_staged, audit_file,&lt;br&gt;review_diff, review_pr&lt;br&gt;&lt;font color=&quot;#cc6600&quot;&gt;Phase 2&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="720" y="285" width="200" height="65" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-gitops-tools" value="&lt;b&gt;Git &amp; Session Tools&lt;/b&gt;&lt;br&gt;git_status, git_sync,&lt;br&gt;session_context, workflow_status&lt;br&gt;&lt;font color=&quot;#cc6600&quot;&gt;Phase 3&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="720" y="358" width="200" height="65" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-ide-group" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8;" parent="1" vertex="1">
-                    <mxGeometry x="1100" y="90" width="200" height="170" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-ide-label" value="AI IDE Agents" style="text;html=1;fontSize=14;fontStyle=1;align=center;verticalAlign=top;spacingTop=5;" parent="1" vertex="1">
-                    <mxGeometry x="1100" y="95" width="200" height="25" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-claude" value="Claude Code" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="1120" y="130" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-copilot2" value="GitHub Copilot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="1120" y="168" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-any" value="Cursor / Windsurf / etc." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="1120" y="206" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-http-conn" value="HTTP (localhost:7277)" style="endArrow=classic;startArrow=classic;html=1;fontSize=13;strokeColor=#82b366;strokeWidth=2;" parent="1" source="g-electron-group" target="g-mcp-group" edge="1">
+                <mxCell id="pitch-flow-arrow-1" value="" style="endArrow=classic;html=1;strokeColor=#7E8590;strokeWidth=3;edgeStyle=none;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" source="pitch-stage-1" target="pitch-stage-2">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-stdio-conn" value="stdio (MCP)" style="endArrow=classic;startArrow=classic;html=1;fontSize=13;strokeColor=#b85450;strokeWidth=2;" parent="1" source="g-mcp-group" target="g-ide-group" edge="1">
+                <mxCell id="pitch-flow-arrow-2" value="" style="endArrow=classic;html=1;strokeColor=#7E8590;strokeWidth=3;edgeStyle=none;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" source="pitch-stage-2" target="pitch-stage-3">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-repos" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;arcSize=8;" parent="1" vertex="1">
-                    <mxGeometry x="1110" y="370" width="300" height="250" as="geometry"/>
+                <mxCell id="pitch-flow-arrow-3" value="" style="endArrow=classic;html=1;strokeColor=#7E8590;strokeWidth=3;edgeStyle=none;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" source="pitch-stage-3" target="pitch-stage-4">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-repos-label" value="Any Project Repo (lightweight)" style="text;html=1;fontSize=13;fontStyle=1;align=center;spacingTop=5;" parent="1" vertex="1">
-                    <mxGeometry x="1110" y="375" width="300" height="20" as="geometry"/>
+                <mxCell id="pitch-flow-arrow-4" value="" style="endArrow=classic;html=1;strokeColor=#7E8590;strokeWidth=3;edgeStyle=none;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" source="pitch-stage-4" target="pitch-stage-5">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-mcp-json" value="&lt;b&gt;.mcp.json&lt;/b&gt;&lt;br&gt;Points to Sciurus! MCP server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="1130" y="405" width="180" height="40" as="geometry"/>
+                <mxCell id="produces-label" value="↓   produces   ↓" style="text;html=1;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;fontColor=#7E8590;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="455" width="300" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-claude-md" value="&lt;b&gt;CLAUDE.md / GEMINI.md&lt;/b&gt;&lt;br&gt;Project-specific conventions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="1130" y="455" width="180" height="40" as="geometry"/>
+                <mxCell id="outputs-header" value="Three audiences. One artifact." style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="495" width="1640" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-instructions-dir" value="&lt;b&gt;.ai-workflow/instructions/&lt;/b&gt;&lt;br&gt;SHARED.md, ARCHITECT.md,&lt;br&gt;BUILDER.md, REVIEWER.md" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="1130" y="505" width="180" height="55" as="geometry"/>
+                <mxCell id="pitch-aud-1" value="&lt;span style=&#39;font-size:11px;color:#526C96;letter-spacing:2px;&#39;&gt;FOR RECRUITERS &amp;amp; STAKEHOLDERS&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;b style=&#39;font-size:17px;color:#1E2933;&#39;&gt;Shipped, cross-platform, opinionated&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#3A4555;&#39;&gt;A working app for Windows, Linux, and Mac, built solo by one developer. The installers are already on GitHub.&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#526C96;font-style:italic;&#39;&gt;“Wait, one person built this whole thing?”&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5EEFD;strokeColor=#89B4FA;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=15;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="540" width="520" height="220" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-context-dir" value="&lt;b&gt;.ai-workflow/context/&lt;/b&gt;&lt;br&gt;SESSION.md, PROMPT_TRACKER.log" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="1130" y="570" width="180" height="40" as="geometry"/>
+                <mxCell id="pitch-aud-2" value="&lt;span style=&#39;font-size:11px;color:#638860;letter-spacing:2px;&#39;&gt;FOR ENGINEERS &amp;amp; COLLABORATORS&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;b style=&#39;font-size:17px;color:#1E2933;&#39;&gt;Bridge between screen and AI&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#3A4555;&#39;&gt;Built on Electron with a database that auto-picks Postgres or SQLite. Talks to Gemini for AI. Includes a server that hooks into Claude Code or other AI editors.&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#638860;font-style:italic;&#39;&gt;“I want to copy this and connect it to my AI tools.”&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF8EA;strokeColor=#A6E3A1;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=15;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="540" width="520" height="220" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-no-scripts" value="&lt;font color=&quot;#cc0000&quot;&gt;✗ No scripts/ directory&lt;br&gt;(all logic in Sciurus!)&lt;/font&gt;" style="text;html=1;fontSize=14;fontStyle=2;align=center;" parent="1" vertex="1">
-                    <mxGeometry x="1400" y="380" width="150" height="35" as="geometry"/>
+                <mxCell id="pitch-aud-3" value="&lt;span style=&#39;font-size:11px;color:#796394;letter-spacing:2px;&#39;&gt;FOR ANYONE ELSE&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;b style=&#39;font-size:17px;color:#1E2933;&#39;&gt;Like a sticky note, but smarter&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#3A4555;&#39;&gt;You take a screenshot, write a quick note, and the app sorts it. If you use an AI helper, it writes the fix-it message for you.&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#796394;font-style:italic;&#39;&gt;“It&amp;#x27;s Pinterest for things I want to fix later.”&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3EBFD;strokeColor=#CBA6F7;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=15;" parent="1" vertex="1">
+                    <mxGeometry x="1150" y="540" width="520" height="220" as="geometry"/>
                 </mxCell>
-                <mxCell id="g-local-conn" value="reads context +&lt;br&gt;instructions" style="endArrow=classic;html=1;fontSize=13;strokeColor=#666666;dashed=1;" parent="1" source="g-gitops-tools" target="g-repos" edge="1">
-                    <mxGeometry x="0.0337" y="8" relative="1" as="geometry">
-                        <mxPoint as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="g-legend-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#cccccc;" parent="1" vertex="1">
-                    <mxGeometry x="80" y="620" width="500" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-legend-title" value="Legend:" style="text;html=1;fontSize=14;fontStyle=1;" parent="1" vertex="1">
-                    <mxGeometry x="90" y="625" width="50" height="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-legend-blue" value="" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-                    <mxGeometry x="150" y="628" width="15" height="15" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-legend-blue-t" value="Existing" style="text;html=1;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="170" y="625" width="50" height="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-legend-green" value="" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-                    <mxGeometry x="230" y="628" width="15" height="15" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-legend-green-t" value="Phase 1 (done)" style="text;html=1;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="250" y="625" width="90" height="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-legend-orange" value="" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-                    <mxGeometry x="350" y="628" width="15" height="15" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-legend-orange-t" value="Phase 2/3 (planned)" style="text;html=1;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="370" y="625" width="120" height="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-legend-red" value="" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-                    <mxGeometry x="150" y="650" width="15" height="15" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-legend-red-t" value="IDE consumers" style="text;html=1;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="170" y="648" width="90" height="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-legend-gray" value="" style="rounded=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
-                    <mxGeometry x="270" y="650" width="15" height="15" as="geometry"/>
-                </mxCell>
-                <mxCell id="g-legend-gray-t" value="Per-project (lightweight)" style="text;html=1;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="290" y="648" width="140" height="20" as="geometry"/>
+                <mxCell id="bet-footer" value="&lt;b style=&#39;color:#3F5566;letter-spacing:1px;font-size:11px;&#39;&gt;THE BET&lt;/b&gt;&lt;br&gt;&lt;span style=&#39;font-size:14px;color:#3A4555;&#39;&gt;AI tools can write code fast — but you still have to tell them what to fix. HuminLoop makes that handoff take seconds, so you don&amp;#x27;t lose your train of thought.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F6FA;strokeColor=#A8B3C2;dashed=1;strokeWidth=2;fontSize=14;align=center;verticalAlign=middle;shadow=1;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="800" width="1380" height="80" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

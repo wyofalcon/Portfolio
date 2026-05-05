@@ -1,0 +1,453 @@
+<mxfile host="65bd71144e">
+    <diagram name="Portfolio (T)" id="t-portfolio">
+        <mxGraphModel dx="479" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="0" page="1" pageScale="1" pageWidth="1600" pageHeight="2072" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="hdr-title" value="Ainsworth — System Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#222222;fontSize=22;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="1520" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="hdr-sub" value="Always-listening AI mediator · Android-first Expo app with on-device + cloud inference" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#666666;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="54" width="1520" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="entry-pill" value="&lt;b&gt;Start here&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;An external trigger kicks off the flow below.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;shadow=1;fillColor=#F5F5F5;strokeColor=#999999;strokeWidth=1.5;dashed=1;dashPattern=4 4;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" tooltip="Something starts the flow below." vertex="1">
+                    <mxGeometry x="440" y="132" width="720" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-marketing" value="MARKETING SITE" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#E5EEFD;strokeColor=#89B4FA;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#89B4FA;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="268" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-marketing-badge-9f738ce8" value="HTML" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#89B4FA;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-marketing" vertex="1">
+                    <mxGeometry x="14" y="38" width="60" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-marketing-badge-b844c0ee" value="Tailwind CDN" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#89B4FA;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-marketing" vertex="1">
+                    <mxGeometry x="82" y="38" width="106" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-marketing-badge-f2560cbc" value="Nginx" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#89B4FA;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-marketing" vertex="1">
+                    <mxGeometry x="196" y="38" width="60" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-marketing-cap-4023ee40" value="Static landing page" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#89B4FA;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-marketing" vertex="1">
+                    <mxGeometry x="14" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-marketing-cap-d5aeea27" value="Tailwind via CDN" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#89B4FA;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-marketing" vertex="1">
+                    <mxGeometry x="318" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-marketing-cap-22c0cec5" value="Dockerized Nginx serve" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#89B4FA;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-marketing" vertex="1">
+                    <mxGeometry x="622" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile" value="MOBILE APP" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#EEF0FE;strokeColor=#B4BEFE;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#B4BEFE;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="520" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile-badge-ec2b17cf" value="Expo Router 6" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#B4BEFE;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-mobile" vertex="1">
+                    <mxGeometry x="14" y="38" width="114" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile-badge-cd656484" value="React Native 0.81" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#B4BEFE;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-mobile" vertex="1">
+                    <mxGeometry x="136" y="38" width="146" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile-badge-d39c9c67" value="React 19" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#B4BEFE;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-mobile" vertex="1">
+                    <mxGeometry x="290" y="38" width="74" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile-badge-d4a86cb9" value="TypeScript" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#B4BEFE;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-mobile" vertex="1">
+                    <mxGeometry x="372" y="38" width="90" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile-cap-9ae0fc37" value="Always-listening dashboard" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#B4BEFE;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-mobile" vertex="1">
+                    <mxGeometry x="14" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile-cap-318a72e4" value="Partner pairing UI" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#B4BEFE;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-mobile" vertex="1">
+                    <mxGeometry x="318" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile-cap-85bf16a6" value="Triggers configuration" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#B4BEFE;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-mobile" vertex="1">
+                    <mxGeometry x="622" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile-cap-a8efe88d" value="Sign-in or guest mode" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#B4BEFE;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-mobile" vertex="1">
+                    <mxGeometry x="14" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile-cap-3f5282cf" value="Cloud / on-device backend toggle" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#B4BEFE;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-mobile" vertex="1">
+                    <mxGeometry x="318" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-inference" value="INFERENCE" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#EBF8EA;strokeColor=#A6E3A1;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#A6E3A1;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="772" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-inference-badge-f056cd93" value="Gemini 2.5 Flash" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#A6E3A1;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-inference" vertex="1">
+                    <mxGeometry x="14" y="38" width="138" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-inference-badge-af4e5e0b" value="Gemini Nano" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#A6E3A1;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-inference" vertex="1">
+                    <mxGeometry x="160" y="38" width="98" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-inference-badge-427b8397" value="ML Kit GenAI" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#A6E3A1;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-inference" vertex="1">
+                    <mxGeometry x="266" y="38" width="106" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-inference-cap-627280ff" value="Cloud audio + text analysis" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#A6E3A1;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-inference" vertex="1">
+                    <mxGeometry x="14" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-inference-cap-ccbd9b9f" value="On-device text-only fallback" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#A6E3A1;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-inference" vertex="1">
+                    <mxGeometry x="318" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-inference-cap-d4fc2418" value="Conversation summaries" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#A6E3A1;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-inference" vertex="1">
+                    <mxGeometry x="622" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-inference-cap-202984ea" value="Conversation starters" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#A6E3A1;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-inference" vertex="1">
+                    <mxGeometry x="926" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio" value="AUDIO CAPTURE" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#FDEEE4;strokeColor=#FAB387;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#FAB387;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1024" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio-badge-4b97a1cc" value="Kotlin" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FAB387;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-audio" vertex="1">
+                    <mxGeometry x="14" y="38" width="60" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio-badge-df81142b" value="Foreground Service" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FAB387;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-audio" vertex="1">
+                    <mxGeometry x="82" y="38" width="154" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio-badge-f39a8d94" value="AudioRecord" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FAB387;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-audio" vertex="1">
+                    <mxGeometry x="244" y="38" width="98" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio-badge-427b8397" value="ML Kit GenAI" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FAB387;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-audio" vertex="1">
+                    <mxGeometry x="350" y="38" width="106" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio-cap-b9416824" value="30-min rolling buffer" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#FAB387;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-audio" vertex="1">
+                    <mxGeometry x="14" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio-cap-a728998d" value="100ms PCM frames @ 16kHz" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#FAB387;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-audio" vertex="1">
+                    <mxGeometry x="318" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio-cap-681f772a" value="Pause/resume with notification" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#FAB387;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-audio" vertex="1">
+                    <mxGeometry x="622" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio-cap-dd508175" value="Export last N seconds as WAV" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#FAB387;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-audio" vertex="1">
+                    <mxGeometry x="14" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio-cap-0058796e" value="On-device Gemini Nano bridge" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#FAB387;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-audio" vertex="1">
+                    <mxGeometry x="318" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data" value="FIREBASE / DATA" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#FDF8ED;strokeColor=#F9E2AF;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#F9E2AF;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1276" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data-badge-243d9557" value="Firebase Auth" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#F9E2AF;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-data" vertex="1">
+                    <mxGeometry x="14" y="38" width="114" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data-badge-bb4940c6" value="Firestore" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#F9E2AF;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-data" vertex="1">
+                    <mxGeometry x="136" y="38" width="82" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data-badge-68fa0303" value="Security Rules" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#F9E2AF;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-data" vertex="1">
+                    <mxGeometry x="226" y="38" width="122" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data-cap-960694da" value="Email/password sign-in" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F9E2AF;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-data" vertex="1">
+                    <mxGeometry x="14" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data-cap-ac6420cc" value="Pair invite codes (~1T)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F9E2AF;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-data" vertex="1">
+                    <mxGeometry x="318" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data-cap-280bbcc9" value="Session metadata sync" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F9E2AF;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-data" vertex="1">
+                    <mxGeometry x="622" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data-cap-f5ea7c74" value="Audio NEVER leaves device" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F9E2AF;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-data" vertex="1">
+                    <mxGeometry x="14" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data-cap-40d81ea7" value="Dual-consent enforcement" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F9E2AF;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-data" vertex="1">
+                    <mxGeometry x="318" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers" value="TRIGGERS" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#FCE5EB;strokeColor=#F38BA8;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#F38BA8;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1528" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers-badge-58c68bfa" value="expo-location" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#F38BA8;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-triggers" vertex="1">
+                    <mxGeometry x="14" y="38" width="114" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers-badge-791dab27" value="expo-task-manager" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#F38BA8;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-triggers" vertex="1">
+                    <mxGeometry x="136" y="38" width="146" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers-badge-eb61903a" value="Geofencing" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#F38BA8;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-triggers" vertex="1">
+                    <mxGeometry x="290" y="38" width="90" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers-cap-2ad0dfca" value="Geofence enter/exit handler" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F38BA8;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-triggers" vertex="1">
+                    <mxGeometry x="14" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers-cap-fb0f554d" value="Background location task" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F38BA8;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-triggers" vertex="1">
+                    <mxGeometry x="318" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers-cap-a5401b33" value="Tone activation (planned)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F38BA8;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-triggers" vertex="1">
+                    <mxGeometry x="622" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers-cap-a1958caf" value="Dual-voice gate (planned)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F38BA8;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-triggers" vertex="1">
+                    <mxGeometry x="14" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers-cap-7a3ffb6d" value="Time scheduling (planned)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F38BA8;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-triggers" vertex="1">
+                    <mxGeometry x="318" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-infra" value="INFRA" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#F3EBFD;strokeColor=#CBA6F7;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#CBA6F7;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1780" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-infra-badge-9f114154" value="Docker" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#CBA6F7;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-infra" vertex="1">
+                    <mxGeometry x="14" y="38" width="60" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-infra-badge-f2560cbc" value="Nginx" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#CBA6F7;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-infra" vertex="1">
+                    <mxGeometry x="82" y="38" width="60" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-infra-badge-c01b5393" value="Firebase Project" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#CBA6F7;strokeColor=none;fontColor=#FFFFFF;fontSize=9;fontStyle=1;spacingLeft=5;spacingRight=5;" parent="grp-p-infra" vertex="1">
+                    <mxGeometry x="150" y="38" width="138" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-infra-cap-91a805d1" value="Web prototype container" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#CBA6F7;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-infra" vertex="1">
+                    <mxGeometry x="14" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-infra-cap-0da77a85" value="Firebase project config" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#CBA6F7;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-infra" vertex="1">
+                    <mxGeometry x="318" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-infra-cap-34e3fdc2" value="Firestore rules + indexes" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#CBA6F7;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-infra" vertex="1">
+                    <mxGeometry x="622" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-flow-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=2.5;endArrow=classicThin;endSize=12;endFill=1;" parent="1" source="entry-pill" target="grp-p-marketing" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-step-1" value="1" style="ellipse;whiteSpace=wrap;html=1;shadow=1;fillColor=#333333;strokeColor=#333333;fontColor=#FFFFFF;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="782" y="214" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-flow-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=2.5;endArrow=classicThin;endSize=12;endFill=1;" parent="1" source="grp-p-marketing" target="grp-p-mobile" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-step-2" value="2" style="ellipse;whiteSpace=wrap;html=1;shadow=1;fillColor=#333333;strokeColor=#333333;fontColor=#FFFFFF;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="782" y="466" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-flow-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=2.5;endArrow=classicThin;endSize=12;endFill=1;" parent="1" source="grp-p-mobile" target="grp-p-inference" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-step-3" value="3" style="ellipse;whiteSpace=wrap;html=1;shadow=1;fillColor=#333333;strokeColor=#333333;fontColor=#FFFFFF;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="782" y="718" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-flow-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=2.5;endArrow=classicThin;endSize=12;endFill=1;" parent="1" source="grp-p-inference" target="grp-p-audio" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-step-4" value="4" style="ellipse;whiteSpace=wrap;html=1;shadow=1;fillColor=#333333;strokeColor=#333333;fontColor=#FFFFFF;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="782" y="970" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-flow-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=2.5;endArrow=classicThin;endSize=12;endFill=1;" parent="1" source="grp-p-audio" target="grp-p-data" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-step-5" value="5" style="ellipse;whiteSpace=wrap;html=1;shadow=1;fillColor=#333333;strokeColor=#333333;fontColor=#FFFFFF;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="782" y="1222" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-flow-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=2.5;endArrow=classicThin;endSize=12;endFill=1;" parent="1" source="grp-p-data" target="grp-p-triggers" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-step-6" value="6" style="ellipse;whiteSpace=wrap;html=1;shadow=1;fillColor=#333333;strokeColor=#333333;fontColor=#FFFFFF;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="782" y="1474" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-flow-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=2.5;endArrow=classicThin;endSize=12;endFill=1;" parent="1" source="grp-p-triggers" target="grp-p-infra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-step-7" value="7" style="ellipse;whiteSpace=wrap;html=1;shadow=1;fillColor=#333333;strokeColor=#333333;fontColor=#FFFFFF;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="782" y="1726" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="ep-3401fc56" value="startService / getStatus / exportRecent" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B4BEFE;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontColor=#555555;fontSize=11;labelBackgroundColor=#FFFFFF;labelBorderColor=none;spacingLeft=6;spacingRight=6;spacingTop=2;spacingBottom=2;" parent="1" source="grp-p-mobile" target="grp-p-audio" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ep-976eeec0" value="analyzeAudio(uri, mime) / setBackend / analyzeText" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B4BEFE;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontColor=#555555;fontSize=11;labelBackgroundColor=#FFFFFF;labelBorderColor=none;spacingLeft=6;spacingRight=6;spacingTop=2;spacingBottom=2;" parent="1" source="grp-p-mobile" target="grp-p-inference" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ep-7ade054b" value="signIn / signUp / createPair / acceptPairInvite" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B4BEFE;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontColor=#555555;fontSize=11;labelBackgroundColor=#FFFFFF;labelBorderColor=none;spacingLeft=6;spacingRight=6;spacingTop=2;spacingBottom=2;" parent="1" source="grp-p-mobile" target="grp-p-data" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ep-1f3193e1" value="startGeofencing(regions)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B4BEFE;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontColor=#555555;fontSize=11;labelBackgroundColor=#FFFFFF;labelBorderColor=none;spacingLeft=6;spacingRight=6;spacingTop=2;spacingBottom=2;" parent="1" source="grp-p-mobile" target="grp-p-triggers" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ep-71cbeb93" value="generateOnDevice(prompt)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A6E3A1;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontColor=#555555;fontSize=11;labelBackgroundColor=#FFFFFF;labelBorderColor=none;spacingLeft=6;spacingRight=6;spacingTop=2;spacingBottom=2;" parent="1" source="grp-p-inference" target="grp-p-audio" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ep-17061eb3" value="deploys rules" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#CBA6F7;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontColor=#555555;fontSize=11;labelBackgroundColor=#FFFFFF;labelBorderColor=none;spacingLeft=6;spacingRight=6;spacingTop=2;spacingBottom=2;" parent="1" source="grp-p-infra" target="grp-p-data" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ep-2a36db5f" value="serves public/" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#CBA6F7;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontColor=#555555;fontSize=11;labelBackgroundColor=#FFFFFF;labelBorderColor=none;spacingLeft=6;spacingRight=6;spacingTop=2;spacingBottom=2;" parent="1" source="grp-p-infra" target="grp-p-marketing" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="Portfolio (P)" id="p-portfolio">
+        <mxGraphModel dx="955" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="0" page="1" pageScale="1" pageWidth="1600" pageHeight="2072" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="hdr-title" value="Ainsworth — How it&amp;#x27;s built" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#222222;fontSize=22;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="1520" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="hdr-sub" value="An app that listens during conversations and helps you communicate better" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#666666;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="54" width="1520" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="entry-pill" value="&lt;b&gt;Start here&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;An external trigger kicks off the flow below.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;shadow=1;fillColor=#F5F5F5;strokeColor=#999999;strokeWidth=1.5;dashed=1;dashPattern=4 4;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" tooltip="Something starts the flow below." vertex="1">
+                    <mxGeometry x="440" y="132" width="720" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-marketing" value="THE WEBSITE" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#E5EEFD;strokeColor=#89B4FA;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#89B4FA;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="268" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-marketing-cap-12265608" value="Public landing page" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#89B4FA;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-marketing" vertex="1">
+                    <mxGeometry x="14" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-marketing-cap-dce4c14e" value="Styled with Tailwind" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#89B4FA;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-marketing" vertex="1">
+                    <mxGeometry x="318" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-marketing-cap-9fd54caa" value="Runs in a small container" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#89B4FA;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-marketing" vertex="1">
+                    <mxGeometry x="622" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile" value="THE PHONE APP" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#EEF0FE;strokeColor=#B4BEFE;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#B4BEFE;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="520" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile-cap-01843510" value="Listens during your conversations" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#B4BEFE;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-mobile" vertex="1">
+                    <mxGeometry x="14" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile-cap-ae4e4116" value="Connect with your partner" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#B4BEFE;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-mobile" vertex="1">
+                    <mxGeometry x="318" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile-cap-58444cb2" value="Choose when it should listen" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#B4BEFE;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-mobile" vertex="1">
+                    <mxGeometry x="622" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile-cap-bffd0ab4" value="Sign in or use as guest" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#B4BEFE;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-mobile" vertex="1">
+                    <mxGeometry x="14" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-mobile-cap-77598742" value="Pick where the AI runs" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#B4BEFE;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-mobile" vertex="1">
+                    <mxGeometry x="318" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-inference" value="WHAT UNDERSTANDS YOU" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#EBF8EA;strokeColor=#A6E3A1;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#A6E3A1;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="772" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-inference-cap-6e6c3946" value="Reviews recordings with cloud AI" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#A6E3A1;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-inference" vertex="1">
+                    <mxGeometry x="14" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-inference-cap-270a6196" value="Can analyze text without internet" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#A6E3A1;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-inference" vertex="1">
+                    <mxGeometry x="318" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-inference-cap-8069855d" value="Summarizes what was said" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#A6E3A1;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-inference" vertex="1">
+                    <mxGeometry x="622" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-inference-cap-d67d0bc1" value="Suggests ways to talk things through" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#A6E3A1;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-inference" vertex="1">
+                    <mxGeometry x="926" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio" value="WHAT RECORDS YOU" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#FDEEE4;strokeColor=#FAB387;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#FAB387;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1024" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio-cap-b865ab5a" value="Keeps the last 30 minutes" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#FAB387;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-audio" vertex="1">
+                    <mxGeometry x="14" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio-cap-37f98f23" value="Records small chunks continuously" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#FAB387;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-audio" vertex="1">
+                    <mxGeometry x="318" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio-cap-e8500046" value="Pause anytime — you stay in control" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#FAB387;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-audio" vertex="1">
+                    <mxGeometry x="622" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio-cap-effea5e3" value="Save the last few minutes for review" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#FAB387;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-audio" vertex="1">
+                    <mxGeometry x="14" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-audio-cap-77f1c11c" value="Talks to the on-device AI" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#FAB387;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-audio" vertex="1">
+                    <mxGeometry x="318" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data" value="WHERE YOUR ACCOUNT LIVES" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#FDF8ED;strokeColor=#F9E2AF;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#F9E2AF;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1276" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data-cap-83576a83" value="Sign in with your email" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F9E2AF;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-data" vertex="1">
+                    <mxGeometry x="14" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data-cap-6e86b599" value="Invite your partner with a short code" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F9E2AF;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-data" vertex="1">
+                    <mxGeometry x="318" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data-cap-65e5acf8" value="Saves session notes (not the audio)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F9E2AF;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-data" vertex="1">
+                    <mxGeometry x="622" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data-cap-1392787e" value="Recordings stay on your phone" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F9E2AF;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-data" vertex="1">
+                    <mxGeometry x="14" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-data-cap-88c50dfe" value="Both partners must agree" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F9E2AF;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-data" vertex="1">
+                    <mxGeometry x="318" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers" value="WHAT TURNS IT ON" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#FCE5EB;strokeColor=#F38BA8;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#F38BA8;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1528" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers-cap-b25bd8ab" value="Activates when you arrive somewhere" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F38BA8;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-triggers" vertex="1">
+                    <mxGeometry x="14" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers-cap-ae44f3ba" value="Watches in the background" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F38BA8;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-triggers" vertex="1">
+                    <mxGeometry x="318" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers-cap-3ed42833" value="Reacts to argumentative tone (planned)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F38BA8;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-triggers" vertex="1">
+                    <mxGeometry x="622" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers-cap-422448cd" value="Listens only when both voices are present (planned)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F38BA8;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-triggers" vertex="1">
+                    <mxGeometry x="14" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-triggers-cap-50fff646" value="Run on a schedule (planned)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#F38BA8;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-triggers" vertex="1">
+                    <mxGeometry x="318" y="132" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-infra" value="HOW IT&amp;#x27;S HOSTED" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#F3EBFD;strokeColor=#CBA6F7;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#CBA6F7;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1780" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-infra-cap-562e5b5e" value="Website runs in a small container" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#CBA6F7;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-infra" vertex="1">
+                    <mxGeometry x="14" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-infra-cap-6f03146e" value="Firebase hosts your account data" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#CBA6F7;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-infra" vertex="1">
+                    <mxGeometry x="318" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp-p-infra-cap-6bc1284d" value="Security rules guard your information" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;shadow=1;fillColor=#CBA6F7;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;spacingLeft=10;spacingRight=10;" parent="grp-p-infra" vertex="1">
+                    <mxGeometry x="622" y="72" width="280" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-flow-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=2.5;endArrow=classicThin;endSize=12;endFill=1;" parent="1" source="entry-pill" target="grp-p-marketing" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-step-1" value="1" style="ellipse;whiteSpace=wrap;html=1;shadow=1;fillColor=#333333;strokeColor=#333333;fontColor=#FFFFFF;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="782" y="214" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-flow-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=2.5;endArrow=classicThin;endSize=12;endFill=1;" parent="1" source="grp-p-marketing" target="grp-p-mobile" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-step-2" value="2" style="ellipse;whiteSpace=wrap;html=1;shadow=1;fillColor=#333333;strokeColor=#333333;fontColor=#FFFFFF;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="782" y="466" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-flow-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=2.5;endArrow=classicThin;endSize=12;endFill=1;" parent="1" source="grp-p-mobile" target="grp-p-inference" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-step-3" value="3" style="ellipse;whiteSpace=wrap;html=1;shadow=1;fillColor=#333333;strokeColor=#333333;fontColor=#FFFFFF;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="782" y="718" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-flow-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=2.5;endArrow=classicThin;endSize=12;endFill=1;" parent="1" source="grp-p-inference" target="grp-p-audio" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-step-4" value="4" style="ellipse;whiteSpace=wrap;html=1;shadow=1;fillColor=#333333;strokeColor=#333333;fontColor=#FFFFFF;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="782" y="970" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-flow-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=2.5;endArrow=classicThin;endSize=12;endFill=1;" parent="1" source="grp-p-audio" target="grp-p-data" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-step-5" value="5" style="ellipse;whiteSpace=wrap;html=1;shadow=1;fillColor=#333333;strokeColor=#333333;fontColor=#FFFFFF;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="782" y="1222" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-flow-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=2.5;endArrow=classicThin;endSize=12;endFill=1;" parent="1" source="grp-p-data" target="grp-p-triggers" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-step-6" value="6" style="ellipse;whiteSpace=wrap;html=1;shadow=1;fillColor=#333333;strokeColor=#333333;fontColor=#FFFFFF;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="782" y="1474" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-flow-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=2.5;endArrow=classicThin;endSize=12;endFill=1;" parent="1" source="grp-p-triggers" target="grp-p-infra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pf-step-7" value="7" style="ellipse;whiteSpace=wrap;html=1;shadow=1;fillColor=#333333;strokeColor=#333333;fontColor=#FFFFFF;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="782" y="1726" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="ep-3401fc56" value="controls the listener" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B4BEFE;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontColor=#555555;fontSize=11;labelBackgroundColor=#FFFFFF;labelBorderColor=none;spacingLeft=6;spacingRight=6;spacingTop=2;spacingBottom=2;" parent="1" source="grp-p-mobile" target="grp-p-audio" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ep-976eeec0" value="asks the AI to analyze / tests AI text analysis" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B4BEFE;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontColor=#555555;fontSize=11;labelBackgroundColor=#FFFFFF;labelBorderColor=none;spacingLeft=6;spacingRight=6;spacingTop=2;spacingBottom=2;" parent="1" source="grp-p-mobile" target="grp-p-inference" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ep-7ade054b" value="authenticates / creates or joins a pair" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B4BEFE;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontColor=#555555;fontSize=11;labelBackgroundColor=#FFFFFF;labelBorderColor=none;spacingLeft=6;spacingRight=6;spacingTop=2;spacingBottom=2;" parent="1" source="grp-p-mobile" target="grp-p-data" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ep-1f3193e1" value="registers location triggers" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B4BEFE;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontColor=#555555;fontSize=11;labelBackgroundColor=#FFFFFF;labelBorderColor=none;spacingLeft=6;spacingRight=6;spacingTop=2;spacingBottom=2;" parent="1" source="grp-p-mobile" target="grp-p-triggers" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ep-71cbeb93" value="asks the on-device model" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A6E3A1;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontColor=#555555;fontSize=11;labelBackgroundColor=#FFFFFF;labelBorderColor=none;spacingLeft=6;spacingRight=6;spacingTop=2;spacingBottom=2;" parent="1" source="grp-p-inference" target="grp-p-audio" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ep-17061eb3" value="deploys security rules" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#CBA6F7;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontColor=#555555;fontSize=11;labelBackgroundColor=#FFFFFF;labelBorderColor=none;spacingLeft=6;spacingRight=6;spacingTop=2;spacingBottom=2;" parent="1" source="grp-p-infra" target="grp-p-data" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ep-2a36db5f" value="serves the landing page" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#CBA6F7;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontColor=#555555;fontSize=11;labelBackgroundColor=#FFFFFF;labelBorderColor=none;spacingLeft=6;spacingRight=6;spacingTop=2;spacingBottom=2;" parent="1" source="grp-p-infra" target="grp-p-marketing" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
