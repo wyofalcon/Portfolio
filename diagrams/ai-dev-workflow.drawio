@@ -4,7 +4,7 @@
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="title" value="&lt;b&gt;AI Dev Workflow&lt;/b&gt;&lt;br&gt;Multi-Agent Orchestration System" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=18;fontColor=#333333;" parent="1" vertex="1">
+                <mxCell id="title" value="&lt;b&gt;AI Dev Workflow&lt;/b&gt;&lt;br&gt;Multi-Agent Orchestration System" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=18;fontColor=#D1D5DB;" parent="1" vertex="1">
                     <mxGeometry x="420" y="-70" width="400" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="user" value="&lt;b&gt;Developer&lt;/b&gt;&lt;br&gt;(Claude Code in VS Code)" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;" parent="1" vertex="1">
@@ -49,7 +49,7 @@
                 <mxCell id="arch_direct" value="&lt;b&gt;Architect Handles&lt;/b&gt;&lt;br&gt;Questions, git ops,&lt;br&gt;code reviews" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;" parent="1" vertex="1">
                     <mxGeometry x="780" y="130" width="150" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_route_direct" value="(no prefix)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#666666;fontSize=14;" parent="1" source="routing" target="arch_direct" edge="1">
+                <mxCell id="e_route_direct" value="(no prefix)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#9CA3AF;fontSize=14;" parent="1" source="routing" target="arch_direct" edge="1">
                     <mxGeometry x="0.85" y="300" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
@@ -57,7 +57,7 @@
                 <mxCell id="workflow_config" value="&lt;b&gt;Workflow Config&lt;/b&gt;&lt;br&gt;Modify .ai-workflow/&lt;br&gt;hooks, instructions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;" parent="1" vertex="1">
                     <mxGeometry x="780" y="220" width="150" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_route_config" value="?" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#666666;fontStyle=1;fontSize=15;strokeWidth=1;" parent="1" source="3" target="workflow_config" edge="1">
+                <mxCell id="e_route_config" value="?" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#9CA3AF;fontStyle=1;fontSize=15;strokeWidth=1;" parent="1" source="3" target="workflow_config" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="e_route_direct_builder" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontColor=#d79b00;fontStyle=1;fontSize=14;curved=1;" parent="1" source="8" target="relay_decision" edge="1">
@@ -172,7 +172,7 @@
                 <mxCell id="context_store" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;dashed=1;opacity=40;" parent="1" vertex="1">
                     <mxGeometry x="860" y="350" width="200" height="230" as="geometry"/>
                 </mxCell>
-                <mxCell id="context_title" value="&lt;b&gt;.ai-workflow/context/&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#666666;" parent="1" vertex="1">
+                <mxCell id="context_title" value="&lt;b&gt;.ai-workflow/context/&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#9CA3AF;" parent="1" vertex="1">
                     <mxGeometry x="870" y="355" width="180" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="ctx_session" value="&lt;b&gt;SESSION.md&lt;/b&gt;&lt;br&gt;Branch, commits, state" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=13;" parent="1" vertex="1">
@@ -187,7 +187,7 @@
                 <mxCell id="ctx_audit" value="&lt;b&gt;AUDIT_WATCH_MODE&lt;/b&gt;&lt;br&gt;on | off" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=13;" parent="1" vertex="1">
                     <mxGeometry x="875" y="530" width="170" height="35" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_arch_ctx" value="reads" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;strokeColor=#999999;fontColor=#999999;fontSize=12;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="arch_session" target="ctx_session" edge="1">
+                <mxCell id="e_arch_ctx" value="reads" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;strokeColor=#999999;fontColor=#9CA3AF;fontSize=12;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="arch_session" target="ctx_session" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="490" y="225"/>
@@ -218,7 +218,7 @@
                 <mxCell id="prompt_id_box" value="&lt;b&gt;Prompt ID Format&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font face=&quot;Courier New&quot;&gt;scope:HHMM:MMDD:letter&lt;/font&gt;&lt;br&gt;&lt;br&gt;Example:&lt;br&gt;&lt;font face=&quot;Courier New&quot;&gt;viewer:1415:0330:a&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;scope = component label&lt;br&gt;HHMM = Central Time&lt;br&gt;MMDD = month/day&lt;br&gt;letter = sequential in batch&lt;/font&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;align=left;spacingLeft=8;" parent="1" vertex="1">
                     <mxGeometry x="1000" y="-270" width="220" height="210" as="geometry"/>
                 </mxCell>
-                <mxCell id="status_box" value="&lt;b&gt;Prompt Status Lifecycle&lt;/b&gt;" style="text;html=1;align=center;fontSize=14;fontColor=#333333;" parent="1" vertex="1">
+                <mxCell id="status_box" value="&lt;b&gt;Prompt Status Lifecycle&lt;/b&gt;" style="text;html=1;align=center;fontSize=14;fontColor=#D1D5DB;" parent="1" vertex="1">
                     <mxGeometry x="130" y="1040" width="730" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="st_crafted" value="CRAFTED" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;" parent="1" vertex="1">
@@ -254,7 +254,7 @@
                 <mxCell id="e_st5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" source="st_done" target="st_partial" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="instr_title" value="&lt;b&gt;Instruction Composition&lt;/b&gt;" style="text;html=1;align=center;fontSize=14;fontColor=#333333;" parent="1" vertex="1">
+                <mxCell id="instr_title" value="&lt;b&gt;Instruction Composition&lt;/b&gt;" style="text;html=1;align=center;fontSize=14;fontColor=#D1D5DB;" parent="1" vertex="1">
                     <mxGeometry x="860" y="870" width="200" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="instr_template" value="&lt;b&gt;workflow/templates/&lt;/b&gt;&lt;br&gt;*.md.template&lt;br&gt;{{VARIABLE}} placeholders" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=13;" parent="1" vertex="1">
@@ -263,13 +263,13 @@
                 <mxCell id="instr_compiled" value="&lt;b&gt;.ai-workflow/instructions/&lt;/b&gt;&lt;br&gt;SHARED.md + ROLE.md&lt;br&gt;(project-specific values)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;" parent="1" vertex="1">
                     <mxGeometry x="870" y="975" width="170" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_template_compiled" value="compile" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999999;fontColor=#999999;fontSize=12;" parent="1" source="instr_template" target="instr_compiled" edge="1">
+                <mxCell id="e_template_compiled" value="compile" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999999;fontColor=#9CA3AF;fontSize=12;" parent="1" source="instr_template" target="instr_compiled" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="legend_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999;dashed=1;" parent="1" vertex="1">
                     <mxGeometry x="860" y="1050" width="200" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="legend_title" value="&lt;b&gt;Legend&lt;/b&gt;" style="text;html=1;align=left;fontSize=13;fontColor=#333333;" parent="1" vertex="1">
+                <mxCell id="legend_title" value="&lt;b&gt;Legend&lt;/b&gt;" style="text;html=1;align=left;fontSize=13;fontColor=#D1D5DB;" parent="1" vertex="1">
                     <mxGeometry x="870" y="1055" width="50" height="15" as="geometry"/>
                 </mxCell>
                 <mxCell id="legend_arch" value="Architect (Sonnet 4.6)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" parent="1" vertex="1">
@@ -302,7 +302,7 @@
                 <mxCell id="arch_preflight" value="&lt;b&gt;1. Pre-flight&lt;/b&gt;&lt;br&gt;prompt-tracker&lt;br&gt;last-pending" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" parent="1" vertex="1">
                     <mxGeometry x="150" y="195" width="130" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#666666;fontStyle=1;fontSize=15;strokeWidth=1;" edge="1" parent="1" source="routing" target="3">
+                <mxCell id="4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#9CA3AF;fontStyle=1;fontSize=15;strokeWidth=1;" edge="1" parent="1" source="routing" target="3">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="690" y="237" as="sourcePoint"/>
                         <mxPoint x="780" y="250" as="targetPoint"/>

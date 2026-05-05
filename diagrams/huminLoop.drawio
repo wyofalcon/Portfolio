@@ -1,10 +1,10 @@
 <mxfile host="65bd71144e">
     <diagram name="Portfolio (T)" id="t-portfolio">
-        <mxGraphModel dx="1461" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="0" page="1" pageScale="1" pageWidth="1700" pageHeight="1050" background="#FFFFFF" math="0" shadow="0">
+        <mxGraphModel dx="1461" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="0" page="1" pageScale="1" pageWidth="1700" pageHeight="1050" background="#1a2235" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="hdr-title" value="HuminLoop" style="text;html=1;fontSize=34;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                <mxCell id="hdr-title" value="HuminLoop" style="text;html=1;fontSize=34;fontStyle=1;align=center;verticalAlign=middle;fontColor=#E5E7EB;" parent="1" vertex="1">
                     <mxGeometry x="30" y="20" width="1640" height="46" as="geometry"/>
                 </mxCell>
                 <mxCell id="hdr-sub" value="Keeping humans in the loop — AI-powered knowledge capture for developers who build with AI" style="text;html=1;fontSize=16;fontStyle=2;align=center;verticalAlign=middle;fontColor=#5A6470;" parent="1" vertex="1">
@@ -13,7 +13,7 @@
                 <mxCell id="problem-strip" value="&lt;b style=&#39;color:#9F2D43;letter-spacing:1px;font-size:11px;&#39;&gt;THE PROBLEM&lt;/b&gt;&lt;br&gt;&lt;span style=&#39;font-size:14px;color:#3A4555;&#39;&gt;Developers using AI coding tools lose context every time a new bug catches their eye. Switching apps to retype what they just saw burns the focus they had — especially brutal for ADHD brains.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEBEF;strokeColor=#F38BA8;dashed=1;strokeWidth=2;fontSize=14;align=center;verticalAlign=middle;shadow=1;arcSize=8;" parent="1" vertex="1">
                     <mxGeometry x="160" y="120" width="1380" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="flow-header" value="How it works" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                <mxCell id="flow-header" value="How it works" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#E5E7EB;" parent="1" vertex="1">
                     <mxGeometry x="30" y="222" width="1640" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="pitch-stage-1" value="&lt;span style=&#39;font-size:10px;color:#526C96;letter-spacing:2px;&#39;&gt;STEP 1&lt;/span&gt;&lt;br&gt;&lt;b style=&#39;font-size:18px;color:#1E2933;&#39;&gt;Screenshot or annotate&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;color:#5A6470;&#39;&gt;Clipboard watcher polls 1s for new images.&lt;br&gt;Or draw red/green/pink on screen with the toolbar overlay.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5EEFD;strokeColor=#89B4FA;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=10;" parent="1" vertex="1">
@@ -46,7 +46,7 @@
                 <mxCell id="produces-label" value="↓   produces   ↓" style="text;html=1;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;fontColor=#7E8590;" parent="1" vertex="1">
                     <mxGeometry x="700" y="455" width="300" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="outputs-header" value="Three audiences. One artifact." style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                <mxCell id="outputs-header" value="Three audiences. One artifact." style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#E5E7EB;" parent="1" vertex="1">
                     <mxGeometry x="30" y="495" width="1640" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="pitch-aud-1" value="&lt;span style=&#39;font-size:11px;color:#526C96;letter-spacing:2px;&#39;&gt;FOR RECRUITERS &amp;amp; STAKEHOLDERS&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;b style=&#39;font-size:17px;color:#1E2933;&#39;&gt;Shipped, cross-platform, opinionated&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#3A4555;&#39;&gt;An ADHD-friendly desktop app shipping NSIS / AppImage / deb / dmg installers from a single repo. Vanilla JS renderer. Native JWT for Vertex AI — no SDK dependencies. Multi-agent dev workflow baked in.&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#526C96;font-style:italic;&#39;&gt;“Wait, this guy actually shipped this?”&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5EEFD;strokeColor=#89B4FA;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=15;" parent="1" vertex="1">
@@ -65,11 +65,11 @@
         </mxGraphModel>
     </diagram>
     <diagram name="Portfolio (P)" id="p-portfolio">
-        <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="0" page="1" pageScale="1" pageWidth="1700" pageHeight="1050" math="0" shadow="0" background="#FFFFFF">
+        <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="0" page="1" pageScale="1" pageWidth="1700" pageHeight="1050" math="0" shadow="0" background="#1a2235">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="hdr-title" value="HuminLoop" style="text;html=1;fontSize=34;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                <mxCell id="hdr-title" value="HuminLoop" style="text;html=1;fontSize=34;fontStyle=1;align=center;verticalAlign=middle;fontColor=#E5E7EB;" parent="1" vertex="1">
                     <mxGeometry x="30" y="20" width="1640" height="46" as="geometry"/>
                 </mxCell>
                 <mxCell id="hdr-sub" value="Keeping humans in the loop — AI-powered knowledge capture for developers who build with AI" style="text;html=1;fontSize=16;fontStyle=2;align=center;verticalAlign=middle;fontColor=#5A6470;" parent="1" vertex="1">
@@ -78,7 +78,7 @@
                 <mxCell id="problem-strip" value="&lt;b style=&#39;color:#9F2D43;letter-spacing:1px;font-size:11px;&#39;&gt;THE PROBLEM&lt;/b&gt;&lt;br&gt;&lt;span style=&#39;font-size:14px;color:#3A4555;&#39;&gt;When you spot a bug while coding with AI, you have to stop, switch apps, and retype what you saw. That breaks your focus every single time.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEBEF;strokeColor=#F38BA8;dashed=1;strokeWidth=2;fontSize=14;align=center;verticalAlign=middle;shadow=1;arcSize=8;" parent="1" vertex="1">
                     <mxGeometry x="160" y="120" width="1380" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="flow-header" value="How it works" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                <mxCell id="flow-header" value="How it works" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#E5E7EB;" parent="1" vertex="1">
                     <mxGeometry x="30" y="222" width="1640" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="pitch-stage-1" value="&lt;span style=&#39;font-size:10px;color:#526C96;letter-spacing:2px;&#39;&gt;STEP 1&lt;/span&gt;&lt;br&gt;&lt;b style=&#39;font-size:18px;color:#1E2933;&#39;&gt;See an issue, mark it&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;color:#5A6470;&#39;&gt;HuminLoop notices any screenshot you take.&lt;br&gt;Or you scribble colors on the screen to mark what&amp;#x27;s wrong.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5EEFD;strokeColor=#89B4FA;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=10;" parent="1" vertex="1">
@@ -111,7 +111,7 @@
                 <mxCell id="produces-label" value="↓   produces   ↓" style="text;html=1;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;fontColor=#7E8590;" parent="1" vertex="1">
                     <mxGeometry x="700" y="455" width="300" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="outputs-header" value="Three audiences. One artifact." style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                <mxCell id="outputs-header" value="Three audiences. One artifact." style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#E5E7EB;" parent="1" vertex="1">
                     <mxGeometry x="30" y="495" width="1640" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="pitch-aud-1" value="&lt;span style=&#39;font-size:11px;color:#526C96;letter-spacing:2px;&#39;&gt;FOR RECRUITERS &amp;amp; STAKEHOLDERS&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;b style=&#39;font-size:17px;color:#1E2933;&#39;&gt;Shipped, cross-platform, opinionated&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#3A4555;&#39;&gt;A working app for Windows, Linux, and Mac, built solo by one developer. The installers are already on GitHub.&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#526C96;font-style:italic;&#39;&gt;“Wait, one person built this whole thing?”&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5EEFD;strokeColor=#89B4FA;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=15;" parent="1" vertex="1">

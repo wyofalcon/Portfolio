@@ -1,10 +1,10 @@
 <mxfile host="65bd71144e">
     <diagram name="Portfolio (T)" id="t-portfolio">
-        <mxGraphModel dx="1461" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="0" page="1" pageScale="1" pageWidth="1700" pageHeight="1050" background="#FFFFFF" math="0" shadow="0">
+        <mxGraphModel dx="1461" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="0" page="1" pageScale="1" pageWidth="1700" pageHeight="1050" background="#1a2235" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="hdr-title" value="TTYL — Talk To You Later" style="text;html=1;fontSize=34;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                <mxCell id="hdr-title" value="TTYL — Talk To You Later" style="text;html=1;fontSize=34;fontStyle=1;align=center;verticalAlign=middle;fontColor=#E5E7EB;" parent="1" vertex="1">
                     <mxGeometry x="30" y="20" width="1640" height="46" as="geometry"/>
                 </mxCell>
                 <mxCell id="hdr-sub" value="Claude Code plugin: live prompt-cache TTL in the status line, plus an optional Windows desktop tile that flashes when Claude finishes a turn" style="text;html=1;fontSize=16;fontStyle=2;align=center;verticalAlign=middle;fontColor=#5A6470;" parent="1" vertex="1">
@@ -13,7 +13,7 @@
                 <mxCell id="problem-strip" value="&lt;b style=&#39;color:#9F2D43;letter-spacing:1px;font-size:11px;&#39;&gt;THE PROBLEM&lt;/b&gt;&lt;br&gt;&lt;span style=&#39;font-size:14px;color:#3A4555;&#39;&gt;Anthropic&amp;#x27;s prompt cache lapses every 5 minutes. Let it expire and the next prompt re-pays full input-token cost. Across parallel Claude Code sessions on different virtual desktops, it&amp;#x27;s easy to lose track of which is about to lapse — or which one just finished talking to you.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEBEF;strokeColor=#F38BA8;dashed=1;strokeWidth=2;fontSize=14;align=center;verticalAlign=middle;shadow=1;arcSize=8;" parent="1" vertex="1">
                     <mxGeometry x="160" y="120" width="1380" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="flow-header" value="How it works" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                <mxCell id="flow-header" value="How it works" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#E5E7EB;" parent="1" vertex="1">
                     <mxGeometry x="30" y="222" width="1640" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="pitch-stage-1" value="&lt;span style=&#39;font-size:10px;color:#526C96;letter-spacing:2px;&#39;&gt;STEP 1&lt;/span&gt;&lt;br&gt;&lt;b style=&#39;font-size:18px;color:#1E2933;&#39;&gt;Hook fires&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;color:#5A6470;&#39;&gt;SessionStart, UserPromptSubmit,&lt;br&gt;PreCompact, Stop, SessionEnd —&lt;br&gt;all route to one bash script.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5EEFD;strokeColor=#89B4FA;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=10;" parent="1" vertex="1">
@@ -46,7 +46,7 @@
                 <mxCell id="produces-label" value="↓   produces   ↓" style="text;html=1;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;fontColor=#7E8590;" parent="1" vertex="1">
                     <mxGeometry x="700" y="455" width="300" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="outputs-header" value="Three audiences. One artifact." style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                <mxCell id="outputs-header" value="Three audiences. One artifact." style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#E5E7EB;" parent="1" vertex="1">
                     <mxGeometry x="30" y="495" width="1640" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="pitch-aud-1" value="&lt;span style=&#39;font-size:11px;color:#526C96;letter-spacing:2px;&#39;&gt;FOR RECRUITERS &amp;amp; STAKEHOLDERS&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;b style=&#39;font-size:17px;color:#1E2933;&#39;&gt;A Windows-native productivity tool, end-to-end&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#3A4555;&#39;&gt;Demonstrates full-stack range: bash hooks, JSON state design, PyQt6 desktop UI, Win32 + IVirtualDesktopManager COM, PyInstaller packaging, and a Claude Code plugin manifest — all built solo and shipped as one cohesive piece.&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#526C96;font-style:italic;&#39;&gt;“Solo dev who can ship a desktop app, a plugin, and a marketplace listing in one weekend.”&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5EEFD;strokeColor=#89B4FA;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=15;" parent="1" vertex="1">
@@ -65,11 +65,11 @@
         </mxGraphModel>
     </diagram>
     <diagram name="Portfolio (P)" id="p-portfolio">
-        <mxGraphModel dx="1461" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="0" page="1" pageScale="1" pageWidth="1700" pageHeight="1050" background="#FFFFFF" math="0" shadow="0">
+        <mxGraphModel dx="1461" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="0" page="1" pageScale="1" pageWidth="1700" pageHeight="1050" background="#1a2235" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="hdr-title" value="TTYL — &amp;quot;Talk To You Later&amp;quot;" style="text;html=1;fontSize=34;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                <mxCell id="hdr-title" value="TTYL — &amp;quot;Talk To You Later&amp;quot;" style="text;html=1;fontSize=34;fontStyle=1;align=center;verticalAlign=middle;fontColor=#E5E7EB;" parent="1" vertex="1">
                     <mxGeometry x="30" y="20" width="1640" height="46" as="geometry"/>
                 </mxCell>
                 <mxCell id="hdr-sub" value="Knows when Claude is working vs. waiting, so you don&amp;#x27;t lose your speed-up cache or miss a finished reply" style="text;html=1;fontSize=16;fontStyle=2;align=center;verticalAlign=middle;fontColor=#5A6470;" parent="1" vertex="1">
@@ -78,7 +78,7 @@
                 <mxCell id="problem-strip" value="&lt;b style=&#39;color:#9F2D43;letter-spacing:1px;font-size:11px;&#39;&gt;THE PROBLEM&lt;/b&gt;&lt;br&gt;&lt;span style=&#39;font-size:14px;color:#3A4555;&#39;&gt;Claude has a speed-up cache that resets every 5 minutes. If you don&amp;#x27;t reply in time, your next message gets slow and expensive. Worse: with several Claude tabs open at once, it&amp;#x27;s hard to tell which is about to expire — or which is even still thinking.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEBEF;strokeColor=#F38BA8;dashed=1;strokeWidth=2;fontSize=14;align=center;verticalAlign=middle;shadow=1;arcSize=8;" parent="1" vertex="1">
                     <mxGeometry x="160" y="120" width="1380" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="flow-header" value="How it works" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                <mxCell id="flow-header" value="How it works" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#E5E7EB;" parent="1" vertex="1">
                     <mxGeometry x="30" y="222" width="1640" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="pitch-stage-1" value="&lt;span style=&#39;font-size:10px;color:#526C96;letter-spacing:2px;&#39;&gt;STEP 1&lt;/span&gt;&lt;br&gt;&lt;b style=&#39;font-size:18px;color:#1E2933;&#39;&gt;Claude says something&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;color:#5A6470;&#39;&gt;Claude tells the plugin&lt;br&gt;what just happened —&lt;br&gt;started, replied, or stopped.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5EEFD;strokeColor=#89B4FA;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=10;" parent="1" vertex="1">
@@ -111,7 +111,7 @@
                 <mxCell id="produces-label" value="↓   produces   ↓" style="text;html=1;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;fontColor=#7E8590;" parent="1" vertex="1">
                     <mxGeometry x="700" y="455" width="300" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="outputs-header" value="Three audiences. One artifact." style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1E2933;" parent="1" vertex="1">
+                <mxCell id="outputs-header" value="Three audiences. One artifact." style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#E5E7EB;" parent="1" vertex="1">
                     <mxGeometry x="30" y="495" width="1640" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="pitch-aud-1" value="&lt;span style=&#39;font-size:11px;color:#526C96;letter-spacing:2px;&#39;&gt;FOR RECRUITERS &amp;amp; STAKEHOLDERS&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;b style=&#39;font-size:17px;color:#1E2933;&#39;&gt;A small productivity tool, built top to bottom&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#3A4555;&#39;&gt;Shows range: a script that listens to events, a file format for sharing state, a floating window on Windows, an installer, and a plugin — all built solo as one piece.&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&#39;font-size:12px;color:#526C96;font-style:italic;&#39;&gt;“Solo dev who can ship a desktop app, a plugin, and a marketplace listing in one weekend.”&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5EEFD;strokeColor=#89B4FA;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;arcSize=8;spacing=15;" parent="1" vertex="1">

@@ -184,18 +184,37 @@
         .btn-architecture {
             display: inline-flex;
             align-items: center;
-            gap: 0.25rem;
-            font-size: 0.75rem;
-            color: var(--text-muted);
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #ffffff;
             cursor: pointer;
-            transition: color 0.2s;
-            background: none;
-            border: none;
-            padding: 0;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+            background: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+            border: 1px solid rgba(125, 211, 252, 0.45);
+            padding: 0.55rem 1.1rem;
+            border-radius: 0.6rem;
             font-family: 'IBM Plex Sans', sans-serif;
+            letter-spacing: 0.01em;
+            box-shadow: 0 4px 16px -4px rgba(56, 189, 248, 0.45),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.12);
         }
-        .btn-architecture:hover { color: var(--accent); }
-        .btn-architecture.disabled { opacity: 0.35; cursor: default; }
+        .btn-architecture:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 22px -4px rgba(56, 189, 248, 0.6),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+            color: #ffffff;
+        }
+        .btn-architecture:active { transform: translateY(0); }
+        .btn-architecture .lucide { width: 1rem; height: 1rem; }
+        .btn-architecture.disabled {
+            opacity: 0.35;
+            cursor: default;
+            transform: none;
+            box-shadow: none;
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.08);
+        }
 
         /* Progressive-disclosure card toggle */
         .card-details { margin-bottom: 1rem; }
@@ -723,7 +742,7 @@
                                 <i data-lucide="globe" class="w-3 h-3"></i> Public
                             </span>
                         </div>
-                        <p class="text-sm flex-grow mb-4">Visualizes any codebase top-to-bottom — scopes, components, functions, branches — as paired Technical / Plain-English <code class="text-xs bg-gray-800 px-1 rounded">.drawio</code> tabs. Pure Python stdlib; self-maintains via post-commit hook.</p>
+                        <p class="text-sm flex-grow mb-4">Visualizes any codebase top-to-bottom — scopes, components, functions, branches — as paired Technical / Plain-English <code class="text-xs bg-gray-800 px-1 rounded">.drawio</code> tabs. Pure Python stdlib, no runtime dependencies.</p>
                         <details class="card-details group mb-3">
                             <summary><i data-lucide="chevron-down" class="w-3.5 h-3.5"></i></summary>
                             <div class="card-details-body space-y-3 pt-3 text-xs text-gray-400">
@@ -748,8 +767,8 @@
                         <div class="flex items-center justify-between mt-auto flex-wrap gap-y-2">
                             <span class="flex items-center gap-1 text-xs text-gray-400"><span class="w-3 h-3 rounded-full bg-[#3572A5] inline-block"></span> Python</span>
                             <div class="flex items-center gap-3">
-                                <button type="button" onclick="openDiagram('Daemonstrate', 'daemonstrate.drawio')" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
-                                    <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> What it does
+                                <button type="button" onclick="openDiagram('Daemonstrate', 'daemonstrate.drawio')" class="btn-architecture">
+                                    <i data-lucide="git-branch"></i> What it does
                                 </button>
                                 <a href="https://github.com/wyofalcon/daemonstrate" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
                                     <i data-lucide="external-link" class="w-3.5 h-3.5"></i> View
@@ -800,8 +819,8 @@
                                 <span class="flex items-center gap-1 text-xs text-gray-400"><span class="w-3 h-3 rounded-full bg-[#89e051] inline-block"></span> Shell</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <button type="button" onclick="openDiagram('TTYL', 'TTYL.drawio')" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
-                                    <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> What it does
+                                <button type="button" onclick="openDiagram('TTYL', 'TTYL.drawio')" class="btn-architecture">
+                                    <i data-lucide="git-branch"></i> What it does
                                 </button>
                                 <a href="https://github.com/wyofalcon/ttyl" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
                                     <i data-lucide="external-link" class="w-3.5 h-3.5"></i> View
@@ -840,8 +859,8 @@
                                     <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Multi-Model</span>
                                 </div>
                                 <div class="flex items-center gap-3">
-                                    <button type="button" onclick="openDiagram('ai-dev-workflow', 'ai-dev-workflow.drawio')" class="text-sky-400 hover:text-sky-300 text-xs font-medium flex items-center gap-1">
-                                        <i data-lucide="git-branch" class="w-3 h-3"></i> What it does
+                                    <button type="button" onclick="openDiagram('ai-dev-workflow', 'ai-dev-workflow.drawio')" class="btn-architecture">
+                                        <i data-lucide="git-branch"></i> What it does
                                     </button>
                                     <a href="https://github.com/wyofalcon/ai-dev-workflow" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-xs font-medium flex items-center gap-1">
                                         <i data-lucide="external-link" class="w-3 h-3"></i> View
@@ -1184,7 +1203,7 @@
 
         function openDiagram(projectName, diagramFile) {
             const rawUrl = diagramUrl(diagramFile);
-            const viewerUrl = `https://viewer.diagrams.net/?lightbox=1&highlight=0000ff&nav=1&dark=0&title=${projectName}&url=${encodeURIComponent(rawUrl)}`;
+            const viewerUrl = `https://viewer.diagrams.net/?lightbox=1&highlight=0000ff&nav=1&dark=1&title=${projectName}&url=${encodeURIComponent(rawUrl)}`;
             diagramTitle.textContent = `${projectName} — What it does`;
             diagramIframe.src = viewerUrl;
             diagramModal.classList.add('active');
