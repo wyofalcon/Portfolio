@@ -392,11 +392,11 @@
                     <div class="glassmorphism p-6 rounded-lg">
                         <h5 class="text-lg font-bold text-white">Ainsworth (Proof of Concept)</h5>
                         <p class="text-sm leading-relaxed mt-2">
-                            <span class="font-semibold">Challenge:</span> Architect a privacy-preserving mediation app with modular smart triggers and ethical safeguards.
+                            <span class="font-semibold">Challenge:</span> Validate an attachment-theory coaching loop — could an LLM usefully classify activations and surface reflective prompts before committing to expensive native infrastructure?
                             <br>
-                            <span class="font-semibold">DIRTEE in Action:</span> Sketched and prototyped modular trigger flows to test feasibility early and incorporated perspectives on privacy, autonomy, and dignity from the start.
+                            <span class="font-semibold">DIRTEE in Action:</span> Shipped a single-page web prototype (Tailwind + Firebase Auth + Gemini) to test the analysis loop end-to-end with real conversations; designed the all-party-consent legal premise up front rather than bolting it on later.
                             <br>
-                            <span class="font-semibold">Outcome:</span> A proof of concept showing how DIRTEE guides not just technical builds, but also sensitive, human-centered systems.
+                            <span class="font-semibold">Outcome:</span> Real-world results greenlit the native build. DIRTEE de-risked the *uncertain* piece (does the loop produce useful insight?) before the *expensive* piece (Android foreground capture + on-device speaker ID).
                         </p>
                     </div>
                 </div>
@@ -537,44 +537,46 @@
                                 <span class="bg-yellow-500/20 text-yellow-300 text-[10px] font-medium px-2 py-0.5 rounded-full flex items-center gap-1 uppercase tracking-wider">
                                     <i data-lucide="lock" class="w-3 h-3"></i> Private
                                 </span>
-                                <span class="bg-purple-500/15 text-purple-300 text-[10px] font-medium px-2 py-0.5 rounded-full uppercase tracking-wider">Couples Tech</span>
+                                <span class="bg-purple-500/15 text-purple-300 text-[10px] font-medium px-2 py-0.5 rounded-full uppercase tracking-wider">Attachment Coach</span>
                             </div>
                             <span class="bg-pink-500/20 text-pink-300 text-xs font-medium px-2.5 py-0.5 rounded-full inline-flex items-center gap-1">
-                                <i data-lucide="users" class="w-3 h-3"></i> Closed beta · friends &amp; family
+                                <i data-lucide="flask-conical" class="w-3 h-3"></i> Pre-alpha · web prototype validated
                             </span>
                         </div>
-                        <p class="text-sky-400 font-semibold mb-1">An AI-powered relationship mediator that turns conflict into connection — inspired by Mary Ainsworth.</p>
-                        <p class="text-sm italic text-gray-400 mb-4">Privacy-first by design: audio never leaves the device. Dual-consent. Cloud or on-device AI — your choice.</p>
+                        <p class="text-sky-400 font-semibold mb-1">An attachment-theory coaching app that helps you hear your own activations — anxious protest, avoidant withdrawal, repair attempts, bids for connection — in real conversations.</p>
+                        <p class="text-sm italic text-gray-400 mb-4">Single-device, owner-focused by default. A speaker-ID gate drops anyone-but-you in RAM before audio touches disk. Couples mediation is opt-in, not the core.</p>
 
                         <details class="card-details group">
                             <summary><i data-lucide="chevron-down" class="w-3.5 h-3.5"></i></summary>
                             <div class="card-details-body grid md:grid-cols-[1.1fr_1fr] gap-6 pt-4 border-t border-white/5">
-                                <!-- Left: listen flow + tech -->
+                                <!-- Left: gate flow + tech -->
                                 <div>
                                     <div class="mb-4 text-xs">
-                                        <p class="text-gray-400 font-medium mb-2">Listen flow</p>
+                                        <p class="text-gray-400 font-medium mb-2">Consent gate (per ~1.5s window, in RAM)</p>
                                         <div class="flex flex-wrap items-center gap-1 text-[10px]">
-                                            <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">1. Trigger fires</span>
+                                            <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">1. Mic frame</span>
                                             <span class="text-gray-600">→</span>
-                                            <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">2. Foreground service</span>
+                                            <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">2. VAD</span>
                                             <span class="text-gray-600">→</span>
-                                            <span class="bg-gray-800 text-sky-300 px-2 py-0.5 rounded">3. 30-min ring buffer</span>
+                                            <span class="bg-gray-800 text-sky-300 px-2 py-0.5 rounded">3. ECAPA-TDNN embedding</span>
                                             <span class="text-gray-600">→</span>
-                                            <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">4. Export last N</span>
+                                            <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">4. Cosine vs. enrolled profile</span>
                                             <span class="text-gray-600">→</span>
-                                            <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">5. Cloud or on-device AI</span>
+                                            <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">5. Match? persist : drop</span>
+                                            <span class="text-gray-600">→</span>
+                                            <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded">6. Gemini Nano classifies</span>
                                         </div>
-                                        <p class="text-gray-500 mt-2 leading-relaxed">A native Kotlin foreground service captures 100ms PCM frames at 16kHz into a rolling 30-minute buffer. Only when both partners consent does the app export a window for review — audio never auto-uploads.</p>
+                                        <p class="text-gray-500 mt-2 leading-relaxed">Disk only ever sees consented audio. Cloud Gemini cannot serve as the gate — that would mean transmitting unconsented audio off-device, defeating the all-party-consent legal premise (CA, FL, PA, …). Cloud Gemini 2.5 Pro is reserved for user-initiated deep insight: at most one paid call per session, never in the background.</p>
                                     </div>
 
                                     <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Expo Router 6</span>
-                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">React Native 0.81</span>
+                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Expo Router · React Native 0.81</span>
                                         <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Kotlin Foreground Service</span>
-                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Gemini 2.5 Flash</span>
-                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Gemini Nano (AICore)</span>
-                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Firebase / Firestore</span>
-                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">expo-location · task-manager</span>
+                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">WeSpeaker ECAPA-TDNN-512 · TFLite</span>
+                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">ML Kit GenAI · Gemini Nano</span>
+                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Gemini 2.5 Pro (deep insight)</span>
+                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Whisper.cpp / SpeechRecognizer</span>
+                                        <span class="bg-gray-700 text-sky-300 text-[10px] font-medium px-2 py-0.5 rounded-full">Firebase Auth</span>
                                     </div>
                                 </div>
 
@@ -584,24 +586,24 @@
                                     <div class="space-y-3">
                                         <div class="rounded-lg border border-pink-500/20 bg-pink-500/[0.03] p-3">
                                             <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
-                                                <code class="text-xs font-mono text-pink-300">live / tone / voice / geofence / schedule</code>
-                                                <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">triggers</span>
+                                                <code class="text-xs font-mono text-pink-300">VAD → ECAPA → cosine · in RAM</code>
+                                                <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">consent gate</span>
                                             </div>
-                                            <p class="text-xs text-gray-400"><span class="text-white font-medium">You decide when it listens.</span> Modular triggers — including geofenced regions and tone-based detection — keep the listener inert by default and predictable in use.</p>
+                                            <p class="text-xs text-gray-400"><span class="text-white font-medium">Speaker-gated capture.</span> Only your voice (and explicitly enrolled partners) ever touches disk. Gate fails safe — missing model, missing profile, or gate disabled means everything is dropped.</p>
                                         </div>
                                         <div class="rounded-lg border border-emerald-500/20 bg-emerald-500/[0.03] p-3">
                                             <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
-                                                <code class="text-xs font-mono text-emerald-300">cloud OR on-device · text fallback</code>
-                                                <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">backend toggle</span>
+                                                <code class="text-xs font-mono text-emerald-300">attachment-theory taxonomy</code>
+                                                <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">on-device</span>
                                             </div>
-                                            <p class="text-xs text-gray-400"><span class="text-white font-medium">Your data, your choice.</span> A single router swaps Gemini 2.5 Flash for on-device Gemini Nano via AICore — same prompts, no cloud round trip when you flip the switch.</p>
+                                            <p class="text-xs text-gray-400"><span class="text-white font-medium">Hear your own activations.</span> On-device Gemini Nano classifies each utterance — anxious protest, avoidant withdrawal, repair attempts, bids for connection — with short reflective prompts and per-session summaries.</p>
                                         </div>
                                         <div class="rounded-lg border border-sky-500/20 bg-sky-500/[0.03] p-3">
                                             <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
-                                                <code class="text-xs font-mono text-sky-300">pairs/{pairId} · dual-consent rules</code>
-                                                <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">privacy</span>
+                                                <code class="text-xs font-mono text-sky-300">on-device default · ≤1 paid call/session</code>
+                                                <span class="text-[10px] text-gray-400 bg-gray-800 px-1.5 py-0.5 rounded">cost bounded</span>
                                             </div>
-                                            <p class="text-xs text-gray-400"><span class="text-white font-medium">Built for two.</span> Firestore security rules gate everything behind <span class="font-mono">isPairMember</span> — only conversation summaries sync; raw audio stays on the phone.</p>
+                                            <p class="text-xs text-gray-400"><span class="text-white font-medium">Inference is split.</span> The always-on path is free — Gemini Nano on every session. Cloud Gemini 2.5 Pro is reserved for user-initiated deep synthesis across transcripts; never background, never automatic.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -613,7 +615,7 @@
                                 <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> What it does
                             </button>
                             <span class="text-gray-500 text-sm font-medium flex items-center gap-1">
-                                <i data-lucide="lock" class="w-3.5 h-3.5"></i> Beta access by invitation
+                                <i data-lucide="lock" class="w-3.5 h-3.5"></i> Pre-alpha · access on request
                             </span>
                         </div>
                     </div>
