@@ -318,16 +318,16 @@
                 </div>
                 <div>
                 <p class="text-lg leading-relaxed">
-                    It took me 25 years to figure out how I learn. The realization came during an Xbox session — playlist ended, a TED Talk started playing, and for some reason I didn’t skip it. The gist: turn your weaknesses into strengths. As I sat there still holding a controller, I realized my weakness <em>was</em> the controller. But it wasn’t really the games. It was the dopamine.
+                    It took me 25 years to figure out how I learn. The realization came during an Xbox session: playlist ended, a TED Talk started playing, and for some reason I didn’t skip it. The gist: turn your weaknesses into strengths. As I sat there still holding a controller, I realized my weakness <em>was</em> the controller. But it wasn’t really the games. It was the dopamine.
                 </p>
                 <p class="text-lg leading-relaxed mt-4">
-                    So I reverse-engineered it. If I could trick my brain into getting those same hits from <em>building things</em>, I’d never stop learning. It worked. What followed was obsessive, project-driven self-education: plumbing fundamentals, building a high-CFM air compressor from scratch, becoming a committed right-to-repair advocate. I nearly burned down my house trying to wire 159 5V aRGB LEDs into a single motherboard header — that’s when I got obsessed with electricity. Understanding Ohm’s law and how components interact on a PCBA opened entirely new doors. From there: Python. Then automation. Then AI — which didn’t just accelerate the learning, it changed its shape entirely.
+                    So I reverse-engineered it. If I could trick my brain into getting those same hits from <em>building things</em>, I’d never stop learning. It worked. What followed was obsessive, project-driven self-education: plumbing fundamentals, building a high-CFM air compressor from scratch, becoming a committed right-to-repair advocate. I nearly burned down my house trying to wire 159 5V aRGB LEDs into a single motherboard header. That’s when I got obsessed with electricity. Understanding Ohm’s law and how components interact on a PCBA opened entirely new doors. From there: Python. Then automation. Then AI, which didn’t just accelerate the learning, it changed its shape entirely.
                 </p>
                 <p class="text-lg leading-relaxed mt-4">
                     That curiosity never came from a classroom. It came from the same kid who used to lie awake trying to truly comprehend the concept of "infinite" in relation to the universe. School suppressed it for a while. A TED Talk and a near-electrical-fire brought it back for good.
                 </p>
                 <p class="text-lg leading-relaxed mt-4">
-                    Today I build production software — CVstomize, NoteXT, a stack of internal tools — using AI as both teacher and collaborator. My one formal credential is the DOL-recognized IBM Systems Support Apprenticeship, but the work came first; the credential just caught up. I’m resourceful, cross-disciplinary, and convinced that the ability to view a problem from multiple angles and throw creative solutions into the mix is the real skill. I’m going to build something that helps change lives. One way or another.
+                    Today I build production software (CVstomize, NoteXT, a stack of internal tools) using AI as both teacher and collaborator. My one formal credential is the DOL-recognized IBM Systems Support Apprenticeship, but the work came first; the credential just caught up. I’m resourceful, cross-disciplinary, and convinced that the ability to view a problem from multiple angles and throw creative solutions into the mix is the real skill. I’m going to build something that helps change lives. One way or another.
                 </p>
                 </div>
             </div>
@@ -339,9 +339,9 @@
             <h2 class="text-3xl font-bold text-center text-white mb-12">AI Advocacy & Influence</h2>
             <div class="glassmorphism p-8 rounded-2xl max-w-4xl mx-auto reveal">
                 <p class="text-lg leading-relaxed">
-                    The fastest way to convert someone into an AI user is to solve one of their actual problems in front of them. I've had coworkers, friends, and even my IBM mentor go from skeptical to daily users that way — no pitch, no training deck, just "here's the five-minute version of what you spent an hour on."
+                    The fastest way to convert someone into an AI user is to solve one of their actual problems in front of them. I've had coworkers, friends, and even my IBM mentor go from skeptical to daily users that way. No pitch, no training deck, just "here's the five-minute version of what you spent an hour on."
                     <br><br>
-                    At work it reached the point where the team joke became "why don't we just get Nolan to automate it with AI?" — which tracks, because that's roughly my mental default now. Not as a replacement for thinking, but as the way to compress the boring parts of a workflow so the interesting parts get more attention.
+                    At work it reached the point where the team joke became "why don't we just get Nolan to automate it with AI?" That tracks, because that's roughly my mental default now. Not as a replacement for thinking, but as the way to compress the boring parts of a workflow so the interesting parts get more attention.
                 </p>
             </div>
         </section>
@@ -464,7 +464,7 @@
                 </div>
 
                 <!-- CVstomize (Featured) -->
-                <div class="glassmorphism rounded-2xl flex flex-col group hover:border-sky-500/30 transition-colors overflow-hidden">
+                <div id="cvstomize" class="glassmorphism rounded-2xl flex flex-col group hover:border-sky-500/30 transition-colors overflow-hidden scroll-mt-24">
                     <div class="w-full h-48 bg-gray-700/50 flex items-center justify-center">
                         <img src="images/cvstomize.png" alt="CVstomize screenshot" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')" onerror="this.parentElement.remove()">
                     </div>
@@ -476,7 +476,8 @@
                             </span>
                         </div>
                         <p class="text-sky-400 font-semibold mb-1">Your professional identity, organized and shareable.</p>
-                        <p class="text-sm italic text-gray-400 mb-4">CVstom Portfolios become the next resume.</p>
+                        <p class="text-sm italic text-gray-400 mb-1">CVstom Portfolios become the next resume.</p>
+                        <p class="text-xs text-gray-500 mb-4">Founded and built by me; <a href="https://github.com/ShotenX1" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300">@ShotenX1</a> joined after the platform was largely built and contributed across the codebase — CV Wizard is solo.</p>
 
                         <div class="mb-3">
                             <span class="bg-blue-500/20 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full inline-flex items-center gap-1">
@@ -508,6 +509,16 @@
                                     <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">GCP Cloud Run</span>
                                     <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">PostgreSQL</span>
                                     <span class="bg-gray-700 text-sky-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Firebase Auth</span>
+                                </div>
+
+                                <div class="mt-5 pt-5 border-t border-white/5">
+                                    <p class="text-xs uppercase tracking-wider text-gray-400 font-medium mb-2">Behind the Build · AI Dev Workflow</p>
+                                    <p class="text-sm text-gray-400 mb-3">Developed inside CVstomize: a TUI orchestration layer where an Architect routes tasks to Opus / Sonnet / Haiku builders by complexity, audit-on-save watches every write with <code class="text-sky-300">inotifywait</code>, and GitHub issues pipe straight into branch + builder context. Now the workflow I run on every build — later extracted from CVstomize and embedded inside <a href="#huminloop" class="text-sky-400 hover:text-sky-300 font-medium">HuminLoop</a>, where it gained a Windows-native GUI (no WSL required).</p>
+                                    <div class="grid sm:grid-cols-2 gap-3">
+                                        <img src="images/cvstomize-workflow-dashboard.png" alt="CVstomize Workflow Dashboard: relay mode, audit watch, project status with docker services, branch, git status, last commit, and hotkey bar" class="rounded-lg border border-white/5 w-full hidden" onload="this.classList.remove('hidden')" onerror="this.remove()">
+                                        <img src="images/cvstomize-workflow-help.png" alt="AI Dev Workflow help screen — task complexity routes to Architect / Opus / Sonnet / Haiku, dashboard sections, keyboard controls, builder tmux scripts" class="rounded-lg border border-white/5 w-full hidden" onload="this.classList.remove('hidden')" onerror="this.remove()">
+                                    </div>
+                                    <p class="text-[11px] text-gray-500 italic mt-2">Dashboard shown is the CVstomize / HuminLoop iteration. The public <a href="https://github.com/wyofalcon/ai-dev-workflow" target="_blank" rel="noopener" class="text-gray-400 hover:text-sky-300">ai-dev-workflow</a> template repo is the earlier Gemini + Copilot version.</p>
                                 </div>
                             </div>
                         </details>
@@ -623,7 +634,7 @@
             </div>
 
             <!-- Featured Tool: HuminLoop -->
-            <div class="mb-8 reveal">
+            <div id="huminloop" class="mb-8 reveal scroll-mt-24">
                 <div class="glassmorphism rounded-2xl overflow-hidden group hover:border-sky-500/30 transition-colors">
                     <div class="w-full h-48 bg-gray-700/50 flex items-center justify-center">
                         <img src="images/huminloop.png" alt="HuminLoop screenshot" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')" onerror="this.parentElement.remove()">
@@ -640,6 +651,7 @@
                             <code class="text-xs text-sky-300 bg-gray-900/60 px-2 py-0.5 rounded font-mono">v2.0.0</code>
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-1">HuminLoop</h3>
+                        <p class="text-xs text-gray-500 italic mb-2">"<span class="text-sky-300 not-italic font-semibold">Hum</span><span class="not-italic font-semibold">an </span><span class="text-sky-300 not-italic font-semibold">in</span><span class="not-italic font-semibold"> the </span><span class="text-sky-300 not-italic font-semibold">Loop</span>" — you stay in it; the AI fills around you.</p>
                         <p class="text-sky-400 font-semibold mb-1">A context-capture tool for developers, built for ADHD workflows — screenshots, clipboard, and annotations become structured AI coding prompts without breaking flow.</p>
                         <p class="text-sm italic text-gray-400 mb-4">Hybrid Electron app + MCP server. Capture locally; consume from Claude Code, GitHub Copilot, or any MCP-compatible agent.</p>
 
@@ -700,6 +712,11 @@
                                             <p class="text-xs text-gray-400"><span class="text-white font-medium">Smart routing.</span> Seven ordered strategies decide how each clip is classified, enriched, and surfaced — deterministic rules run before the LLM, so costs stay bounded and behavior stays predictable.</p>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="md:col-span-2 mt-2 pt-5 border-t border-white/5">
+                                    <p class="text-xs uppercase tracking-wider text-gray-400 font-medium mb-2">Inside HuminLoop · AI Dev Workflow</p>
+                                    <p class="text-sm text-gray-400">Hosts my AI Dev Workflow — an Architect dispatcher routing tasks to Opus / Sonnet / Haiku builders by complexity, with audit-on-save and GitHub issue intake. Originally built as a TUI inside <a href="#cvstomize" class="text-sky-400 hover:text-sky-300 font-medium">CVstomize</a>; extracted and embedded here, where it runs Windows-native (no WSL required).</p>
                                 </div>
                             </div>
                         </details>
@@ -1027,10 +1044,10 @@
                 <div class="relative mb-12">
                     <div class="absolute left-1/2 -translate-x-1/2 mt-2 w-4 h-4 bg-sky-500 rounded-full border-4 border-gray-800"></div>
                     <div class="md:ml-auto md:w-5/12 p-6 glassmorphism rounded-2xl md:text-right">
-                        <h3 class="text-xl font-bold text-white">Founder</h3>
-                        <p class="text-sky-400 font-medium mb-2">CVstomize.com</p>
-                        <p class="text-sm text-gray-400 mb-3">July 2025 - Present</p>
-                        <p>Architected and launched an AI-driven resume and portfolio platform. Developed custom multi-agent workflows to automate professional identity generation and deployment.</p>
+                        <h3 class="text-xl font-bold text-white">Independent AI Developer</h3>
+                        <p class="text-sky-400 font-medium mb-2">Self-Directed</p>
+                        <p class="text-sm text-gray-400 mb-3">April 2026 - Present</p>
+                        <p>Full-time independent development of AI-native applications. Live work includes <a href="https://cvstomize.com" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300">CVstomize.com</a> (AI-driven resume and portfolio platform with a multi-agent CV Wizard, hosted as a portfolio piece) and <a href="#huminloop" class="text-sky-400 hover:text-sky-300">HuminLoop</a> (developer context-capture for ADHD workflows), with additional products in active development. Open to full-time roles where AI-augmented engineering accelerates the work.</p>
                     </div>
                 </div>
 
