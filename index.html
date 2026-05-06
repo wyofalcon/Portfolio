@@ -181,6 +181,81 @@
             height: calc(100% - 3.5rem);
             border: none;
         }
+
+        /* Image lightbox */
+        .image-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 110;
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(6px);
+        }
+        .image-lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: auto;
+        }
+        .image-lightbox img {
+            max-width: 95vw;
+            max-height: 95vh;
+            object-fit: contain;
+            cursor: zoom-in;
+            user-select: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        }
+        .image-lightbox.zoomed {
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 2rem;
+        }
+        .image-lightbox.zoomed img {
+            max-width: none;
+            max-height: none;
+            cursor: zoom-out;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .image-lightbox-close {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1;
+            color: #d1d5db;
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 9999px;
+            padding: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            cursor: pointer;
+            transition: color 0.15s ease, background 0.15s ease;
+        }
+        .image-lightbox-close:hover {
+            color: #fff;
+            background: rgba(15, 23, 42, 0.95);
+        }
+        .image-lightbox-hint {
+            position: fixed;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #94a3b8;
+            font-size: 0.75rem;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 0.35rem 0.75rem;
+            border-radius: 9999px;
+            pointer-events: none;
+        }
+        .lightbox-trigger {
+            cursor: zoom-in;
+            transition: transform 0.15s ease, border-color 0.15s ease;
+        }
+        .lightbox-trigger:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: scale(1.01);
+        }
         .btn-architecture {
             display: inline-flex;
             align-items: center;
@@ -311,7 +386,7 @@
             <p class="text-center mb-12 max-w-2xl mx-auto text-[#8aacbf]">A look at what I'm building — from AI-powered apps to hardware controllers. Private repos are included to show the full scope of my work.</p>
 
             <!-- Featured Repos -->
-            <div class="grid md:grid-cols-2 gap-8 mb-8 reveal-stagger">
+            <div class="grid md:grid-cols-2 gap-8 mb-8 reveal-stagger items-start">
                 <!-- NoteXT (Featured) -->
                 <div class="glassmorphism rounded-2xl flex flex-col group hover:border-sky-500/30 transition-colors overflow-hidden">
                     <div class="w-full h-48 bg-gray-700/50 flex items-center justify-center">
@@ -416,8 +491,8 @@
                                     <p class="text-xs uppercase tracking-wider text-gray-400 font-medium mb-2">Behind the Build · AI Dev Workflow</p>
                                     <p class="text-sm text-gray-400 mb-3">Developed inside CVstomize: a TUI orchestration layer where an Architect routes tasks to Opus / Sonnet / Haiku builders by complexity, audit-on-save watches every write with <code class="text-sky-300">inotifywait</code>, and GitHub issues pipe straight into branch + builder context. Now the workflow I run on every build — later extracted from CVstomize and embedded inside <a href="#huminloop" class="text-sky-400 hover:text-sky-300 font-medium">HuminLoop</a>, where it gained a Windows-native GUI (no WSL required).</p>
                                     <div class="grid sm:grid-cols-2 gap-3">
-                                        <img src="images/cvstomize-workflow-dashboard.png" alt="CVstomize Workflow Dashboard: relay mode, audit watch, project status with docker services, branch, git status, last commit, and hotkey bar" class="rounded-lg border border-white/5 w-full hidden" onload="this.classList.remove('hidden')" onerror="this.remove()">
-                                        <img src="images/cvstomize-workflow-help.png" alt="AI Dev Workflow help screen — task complexity routes to Architect / Opus / Sonnet / Haiku, dashboard sections, keyboard controls, builder tmux scripts" class="rounded-lg border border-white/5 w-full hidden" onload="this.classList.remove('hidden')" onerror="this.remove()">
+                                        <img src="images/cvstomize-workflow-dashboard.png" alt="CVstomize Workflow Dashboard: relay mode, audit watch, project status with docker services, branch, git status, last commit, and hotkey bar" class="lightbox-trigger rounded-lg border border-white/5 w-full hidden" onload="this.classList.remove('hidden')" onerror="this.remove()" onclick="openImage(this.src, this.alt)">
+                                        <img src="images/cvstomize-workflow-help.png" alt="AI Dev Workflow help screen — task complexity routes to Architect / Opus / Sonnet / Haiku, dashboard sections, keyboard controls, builder tmux scripts" class="lightbox-trigger rounded-lg border border-white/5 w-full hidden" onload="this.classList.remove('hidden')" onerror="this.remove()" onclick="openImage(this.src, this.alt)">
                                     </div>
                                     <p class="text-[11px] text-gray-500 italic mt-2">Dashboard shown is the CVstomize / HuminLoop iteration. The public <a href="https://github.com/wyofalcon/ai-dev-workflow" target="_blank" rel="noopener" class="text-gray-400 hover:text-sky-300">ai-dev-workflow</a> template repo is the earlier Gemini + Copilot version.</p>
                                 </div>
@@ -617,7 +692,12 @@
 
                                 <div class="md:col-span-2 mt-2 pt-5 border-t border-white/5">
                                     <p class="text-xs uppercase tracking-wider text-gray-400 font-medium mb-2">Inside HuminLoop · AI Dev Workflow</p>
-                                    <p class="text-sm text-gray-400">Hosts my AI Dev Workflow — an Architect dispatcher routing tasks to Opus / Sonnet / Haiku builders by complexity, with audit-on-save and GitHub issue intake. Originally built as a TUI inside <a href="#cvstomize" class="text-sky-400 hover:text-sky-300 font-medium">CVstomize</a>; extracted and embedded here, where it runs Windows-native (no WSL required).</p>
+                                    <p class="text-sm text-gray-400 mb-3">Hosts my AI Dev Workflow — an Architect dispatcher routing tasks to Opus / Sonnet / Haiku builders by complexity, with audit-on-save and GitHub issue intake. Originally built as a TUI inside <a href="#cvstomize" class="text-sky-400 hover:text-sky-300 font-medium">CVstomize</a>; extracted and embedded here, where it runs Windows-native (no WSL required).</p>
+                                    <div class="grid sm:grid-cols-2 gap-3">
+                                        <img src="images/Screenshot%202026-05-06%20005233.png" alt="HuminLoop application screenshot 1" class="lightbox-trigger rounded-lg border border-white/5 w-full hidden" onload="this.classList.remove('hidden')" onerror="this.remove()" onclick="openImage(this.src, this.alt)">
+                                        <img src="images/Screenshot%202026-05-06%20010634.png" alt="HuminLoop application screenshot 2" class="lightbox-trigger rounded-lg border border-white/5 w-full hidden" onload="this.classList.remove('hidden')" onerror="this.remove()" onclick="openImage(this.src, this.alt)">
+                                    </div>
+                                    <p class="text-[11px] text-gray-500 italic mt-2">Click any screenshot to expand — click again to zoom in.</p>
                                 </div>
                             </div>
                         </details>
@@ -1138,6 +1218,15 @@
         </div>
     </div>
 
+    <!-- Image Lightbox -->
+    <div id="image-lightbox" class="image-lightbox" role="dialog" aria-label="Image viewer">
+        <button type="button" id="image-lightbox-close" class="image-lightbox-close" title="Close (Esc)">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <img id="image-lightbox-img" src="" alt="">
+        <div class="image-lightbox-hint">Click image to zoom · Esc to close</div>
+    </div>
+
     <!-- Beta Signup Modal -->
     <div id="beta-modal" class="diagram-modal">
         <div class="diagram-modal-content max-w-lg h-auto">
@@ -1302,6 +1391,37 @@
         });
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && diagramModal.classList.contains('active')) closeDiagram();
+        });
+
+        // Image lightbox
+        const imageLightbox = document.getElementById('image-lightbox');
+        const imageLightboxImg = document.getElementById('image-lightbox-img');
+        const imageLightboxClose = document.getElementById('image-lightbox-close');
+
+        function openImage(src, alt) {
+            imageLightboxImg.src = src;
+            imageLightboxImg.alt = alt || '';
+            imageLightbox.classList.remove('zoomed');
+            imageLightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeImage() {
+            imageLightbox.classList.remove('active');
+            imageLightbox.classList.remove('zoomed');
+            imageLightboxImg.src = '';
+            document.body.style.overflow = '';
+        }
+        imageLightboxClose.addEventListener('click', closeImage);
+        imageLightbox.addEventListener('click', (e) => {
+            if (e.target === imageLightboxImg) {
+                imageLightbox.classList.toggle('zoomed');
+                if (imageLightbox.classList.contains('zoomed')) imageLightbox.scrollTo(0, 0);
+                return;
+            }
+            if (e.target === imageLightbox) closeImage();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && imageLightbox.classList.contains('active')) closeImage();
         });
 
         // Check for diagram existence and hide buttons if missing
