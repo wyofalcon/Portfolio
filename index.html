@@ -304,105 +304,6 @@
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-20">
-            <span class="eyebrow">origin story</span>
-            <h2 class="text-3xl font-bold text-center text-white mb-12">About Me</h2>
-            <div class="glassmorphism p-8 rounded-2xl max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center reveal">
-                <!-- Headshot -->
-                <div class="flex-shrink-0">
-                    <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-sky-500/50 bg-gray-700/50 flex items-center justify-center">
-                        <img src="images/headshot.jpg" alt="Nolan McIntyre" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')" onerror="this.closest('.flex-shrink-0').remove()">
-                        <span class="text-gray-500 text-xs img-placeholder">headshot.jpg</span>
-                    </div>
-                </div>
-                <div>
-                <p class="text-lg leading-relaxed">
-                    It took me 25 years to figure out how I learn. The realization came during an Xbox session: playlist ended, a TED Talk started playing, and for some reason I didn’t skip it. The gist: turn your weaknesses into strengths. As I sat there still holding a controller, I realized my weakness <em>was</em> the controller. But it wasn’t really the games. It was the dopamine.
-                </p>
-                <p class="text-lg leading-relaxed mt-4">
-                    So I reverse-engineered it. If I could trick my brain into getting those same hits from <em>building things</em>, I’d never stop learning. It worked. What followed was obsessive, project-driven self-education: plumbing fundamentals, building a high-CFM air compressor from scratch, becoming a committed right-to-repair advocate. I nearly burned down my house trying to wire 159 5V aRGB LEDs into a single motherboard header. That’s when I got obsessed with electricity. Understanding Ohm’s law and how components interact on a PCBA opened entirely new doors. From there: Python. Then automation. Then AI, which didn’t just accelerate the learning, it changed its shape entirely.
-                </p>
-                <p class="text-lg leading-relaxed mt-4">
-                    That curiosity never came from a classroom. It came from the same kid who used to lie awake trying to truly comprehend the concept of "infinite" in relation to the universe. School suppressed it for a while. A TED Talk and a near-electrical-fire brought it back for good.
-                </p>
-                <p class="text-lg leading-relaxed mt-4">
-                    Today I build production software (CVstomize, NoteXT, a stack of internal tools) using AI as both teacher and collaborator. My one formal credential is the DOL-recognized IBM Systems Support Apprenticeship, but the work came first; the credential just caught up. I’m resourceful, cross-disciplinary, and convinced that the ability to view a problem from multiple angles and throw creative solutions into the mix is the real skill. I’m going to build something that helps change lives. One way or another.
-                </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI Advocacy Section -->
-        <section id="advocacy" class="py-20 bg-gray-900/30">
-            <span class="eyebrow">influence</span>
-            <h2 class="text-3xl font-bold text-center text-white mb-12">AI Advocacy & Influence</h2>
-            <div class="glassmorphism p-8 rounded-2xl max-w-4xl mx-auto reveal">
-                <p class="text-lg leading-relaxed">
-                    The fastest way to convert someone into an AI user is to solve one of their actual problems in front of them. I've had coworkers, friends, and even my IBM mentor go from skeptical to daily users that way. No pitch, no training deck, just "here's the five-minute version of what you spent an hour on."
-                    <br><br>
-                    At work it reached the point where the team joke became "why don't we just get Nolan to automate it with AI?" That tracks, because that's roughly my mental default now. Not as a replacement for thinking, but as the way to compress the boring parts of a workflow so the interesting parts get more attention.
-                </p>
-            </div>
-        </section>
-
-        <!-- DIRTEE Methodology Section -->
-        <section id="dirtee" class="py-12">
-            <div class="flex justify-center mb-12">
-                <button onclick="toggleDirtee()" class="flex items-center gap-3 glassmorphism border border-sky-500/30 hover:border-sky-400/60 transition-colors px-6 py-3 rounded-xl group">
-                    <h2 class="text-3xl font-bold text-white">The DIRTEE Methodology</h2>
-                    <i data-lucide="chevron-down" id="dirtee-chevron" class="w-6 h-6 text-sky-400 group-hover:text-sky-300 transition-colors"></i>
-                </button>
-            </div>
-            <div id="dirtee-content" class="glassmorphism p-8 rounded-2xl max-w-4xl mx-auto" style="display:none">
-                <h3 class="text-2xl font-bold text-white mb-4 text-center">Design In Real Time, Early Engagement</h3>
-                <p class="text-lg leading-relaxed mb-8">
-                    DIRTEE is my signature approach to building systems, workflows, and prototypes. It collapses the gap between idea and execution, while ensuring stakeholders are involved from the very beginning. By designing in real time and engaging early, I create solutions that are technically sound, trusted, and aligned with real needs.
-                </p>
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div>
-                        <h4 class="text-xl font-bold text-white mb-2">Core Principles</h4>
-                        <ul class="list-disc list-inside">
-                            <li><span class="font-semibold">Design in Real Time:</span> Move from concept to prototype quickly, using modular builds and rapid iteration.</li>
-                            <li><span class="font-semibold">Early Engagement:</span> Involve stakeholders and users at the start, building trust and catching misalignments early.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold text-white mb-2">Why DIRTEE Matters</h4>
-                        <ul class="list-disc list-inside">
-                            <li><span class="font-semibold">Speed with Substance:</span> Accelerates innovation without sacrificing rigor.</li>
-                            <li><span class="font-semibold">Trust by Design:</span> Early engagement ensures solutions are ethical, usable, and embraced.</li>
-                            <li><span class="font-semibold">Cross-Disciplinary Fit:</span> Works equally well for software, hardware, and workflow design.</li>
-                            <li><span class="font-semibold">Evidence of Mastery:</span> Demonstrates adaptability, systems thinking, and collaborative leadership.</li>
-                        </ul>
-                    </div>
-                </div>
-                <h4 class="text-xl font-bold text-white mb-4 text-center">DIRTEE in Action</h4>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="glassmorphism p-6 rounded-lg">
-                        <h5 class="text-lg font-bold text-white">CVstomize.com</h5>
-                        <p class="text-sm leading-relaxed mt-2">
-                            <span class="font-semibold">Challenge:</span> Build a customizable resume-portfolio generator.
-                            <br>
-                            <span class="font-semibold">DIRTEE in Action:</span> Prototyped live components directly in the browser and gathered peer and user feedback while features were still malleable.
-                            <br>
-                            <span class="font-semibold">Outcome:</span> A functional, user-driven platform demonstrating how rapid iteration and early feedback create trust and usability.
-                        </p>
-                    </div>
-                    <div class="glassmorphism p-6 rounded-lg">
-                        <h5 class="text-lg font-bold text-white">Ainsworth (Proof of Concept)</h5>
-                        <p class="text-sm leading-relaxed mt-2">
-                            <span class="font-semibold">Challenge:</span> Validate an attachment-theory coaching loop — could an LLM usefully classify activations and surface reflective prompts before committing to expensive native infrastructure?
-                            <br>
-                            <span class="font-semibold">DIRTEE in Action:</span> Shipped a single-page web prototype (Tailwind + Firebase Auth + Gemini) to test the analysis loop end-to-end with real conversations; designed the all-party-consent legal premise up front rather than bolting it on later.
-                            <br>
-                            <span class="font-semibold">Outcome:</span> Real-world results greenlit the native build. DIRTEE de-risked the *uncertain* piece (does the loop produce useful insight?) before the *expensive* piece (Android foreground capture + on-device speaker ID).
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- GitHub Repositories Section -->
         <section id="projects" class="py-20">
             <span class="eyebrow">work</span>
@@ -851,6 +752,63 @@
             </div>
         </section>
 
+        <!-- DIRTEE Methodology Section -->
+        <section id="dirtee" class="py-12">
+            <div class="flex justify-center mb-12">
+                <button onclick="toggleDirtee()" class="flex items-center gap-3 glassmorphism border border-sky-500/30 hover:border-sky-400/60 transition-colors px-6 py-3 rounded-xl group">
+                    <h2 class="text-3xl font-bold text-white">The DIRTEE Methodology</h2>
+                    <i data-lucide="chevron-down" id="dirtee-chevron" class="w-6 h-6 text-sky-400 group-hover:text-sky-300 transition-colors"></i>
+                </button>
+            </div>
+            <div id="dirtee-content" class="glassmorphism p-8 rounded-2xl max-w-4xl mx-auto" style="display:none">
+                <h3 class="text-2xl font-bold text-white mb-4 text-center">Design In Real Time, Early Engagement</h3>
+                <p class="text-lg leading-relaxed mb-8">
+                    DIRTEE is my signature approach to building systems, workflows, and prototypes. It collapses the gap between idea and execution, while ensuring stakeholders are involved from the very beginning. By designing in real time and engaging early, I create solutions that are technically sound, trusted, and aligned with real needs.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">Core Principles</h4>
+                        <ul class="list-disc list-inside">
+                            <li><span class="font-semibold">Design in Real Time:</span> Move from concept to prototype quickly, using modular builds and rapid iteration.</li>
+                            <li><span class="font-semibold">Early Engagement:</span> Involve stakeholders and users at the start, building trust and catching misalignments early.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">Why DIRTEE Matters</h4>
+                        <ul class="list-disc list-inside">
+                            <li><span class="font-semibold">Speed with Substance:</span> Accelerates innovation without sacrificing rigor.</li>
+                            <li><span class="font-semibold">Trust by Design:</span> Early engagement ensures solutions are ethical, usable, and embraced.</li>
+                            <li><span class="font-semibold">Cross-Disciplinary Fit:</span> Works equally well for software, hardware, and workflow design.</li>
+                            <li><span class="font-semibold">Evidence of Mastery:</span> Demonstrates adaptability, systems thinking, and collaborative leadership.</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4 class="text-xl font-bold text-white mb-4 text-center">DIRTEE in Action</h4>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glassmorphism p-6 rounded-lg">
+                        <h5 class="text-lg font-bold text-white">CVstomize.com</h5>
+                        <p class="text-sm leading-relaxed mt-2">
+                            <span class="font-semibold">Challenge:</span> Build a customizable resume-portfolio generator.
+                            <br>
+                            <span class="font-semibold">DIRTEE in Action:</span> Prototyped live components directly in the browser and gathered peer and user feedback while features were still malleable.
+                            <br>
+                            <span class="font-semibold">Outcome:</span> A functional, user-driven platform demonstrating how rapid iteration and early feedback create trust and usability.
+                        </p>
+                    </div>
+                    <div class="glassmorphism p-6 rounded-lg">
+                        <h5 class="text-lg font-bold text-white">Ainsworth (Proof of Concept)</h5>
+                        <p class="text-sm leading-relaxed mt-2">
+                            <span class="font-semibold">Challenge:</span> Validate an attachment-theory coaching loop — could an LLM usefully classify activations and surface reflective prompts before committing to expensive native infrastructure?
+                            <br>
+                            <span class="font-semibold">DIRTEE in Action:</span> Shipped a single-page web prototype (Tailwind + Firebase Auth + Gemini) to test the analysis loop end-to-end with real conversations; designed the all-party-consent legal premise up front rather than bolting it on later.
+                            <br>
+                            <span class="font-semibold">Outcome:</span> Real-world results greenlit the native build. DIRTEE de-risked the *uncertain* piece (does the loop produce useful insight?) before the *expensive* piece (Android foreground capture + on-device speaker ID).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- PoC / Prototypes Section -->
         <section id="poc-prototypes" class="py-20">
             <span class="eyebrow">first iterations</span>
@@ -1092,6 +1050,51 @@
                         <p>Developed and executed training programs for onboarding new staff on technical processes and service protocols, ensuring high operational standards.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <span class="eyebrow">origin story</span>
+            <h2 class="text-3xl font-bold text-center text-white mb-12">About Me</h2>
+            <div class="glassmorphism p-8 rounded-2xl max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center reveal">
+                <!-- Headshot -->
+                <div class="flex-shrink-0">
+                    <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-sky-500/50 bg-gray-700/50 flex items-center justify-center">
+                        <img src="images/headshot.jpg" alt="Nolan McIntyre" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')" onerror="this.closest('.flex-shrink-0').remove()">
+                        <span class="text-gray-500 text-xs img-placeholder">headshot.jpg</span>
+                    </div>
+                </div>
+                <div>
+                <p class="text-lg leading-relaxed">
+                    It took me 25 years to figure out how I learn. The realization came during an Xbox session: playlist ended, a TED Talk started playing, and for some reason I didn’t skip it. The gist: turn your weaknesses into strengths. As I sat there still holding a controller, I realized my weakness <em>was</em> the controller. But it wasn’t really the games. It was the dopamine.
+                </p>
+                <p class="text-lg leading-relaxed mt-4">
+                    So I reverse-engineered it. If I could trick my brain into getting those same hits from <em>building things</em>, I’d never stop learning. It worked. What followed was obsessive, project-driven self-education: plumbing fundamentals, building a high-CFM air compressor from scratch, becoming a committed right-to-repair advocate. I nearly burned down my house trying to wire 159 5V aRGB LEDs into a single motherboard header. That’s when I got obsessed with electricity. Understanding Ohm’s law and how components interact on a PCBA opened entirely new doors. From there: Python. Then automation. Then AI, which didn’t just accelerate the learning, it changed its shape entirely.
+                </p>
+                <p class="text-lg leading-relaxed mt-4">
+                    That curiosity never came from a classroom. It came from the same kid who used to lie awake trying to truly comprehend the concept of "infinite" in relation to the universe. School suppressed it for a while. A TED Talk and a near-electrical-fire brought it back for good.
+                </p>
+                <p class="text-lg leading-relaxed mt-4">
+                    Today I build production software (CVstomize, NoteXT, a stack of internal tools) using AI as both teacher and collaborator. My one formal credential is the DOL-recognized IBM Systems Support Apprenticeship, but the work came first; the credential just caught up. I’m resourceful, cross-disciplinary, and convinced that the ability to view a problem from multiple angles and throw creative solutions into the mix is the real skill. I’m going to build something that helps change lives. One way or another.
+                </p>
+                <p class="text-lg leading-relaxed mt-4">
+                    And how I get there matters. I won’t work somewhere with a toxic culture, and money isn’t the biggest factor in my decisions. I don’t believe in work-life balance, or in keeping the two completely separate. That framing always sounded like <em>Severance</em> to me, and I’m not interested in being a different person from 9 to 5. We spend a massive chunk of our waking lives working. If I’m passionate about the work, a 65-hour week doesn’t feel different from a 40-hour one. I’m not spending another minute making a business money on something I’m not passionate about. Every minute on the job won’t be one I enjoy. That’s reality. But the majority better be, because the whole point of being alive is to enjoy as much of it as possible.
+                </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Advocacy Section -->
+        <section id="advocacy" class="py-20 bg-gray-900/30">
+            <span class="eyebrow">influence</span>
+            <h2 class="text-3xl font-bold text-center text-white mb-12">AI Advocacy & Influence</h2>
+            <div class="glassmorphism p-8 rounded-2xl max-w-4xl mx-auto reveal">
+                <p class="text-lg leading-relaxed">
+                    The fastest way to convert someone into an AI user is to solve one of their actual problems in front of them. I've had coworkers, friends, and even my IBM mentor go from skeptical to daily users that way. No pitch, no training deck, just "here's the five-minute version of what you spent an hour on."
+                    <br><br>
+                    At work it reached the point where the team joke became "why don't we just get Nolan to automate it with AI?" That tracks, because that's roughly my mental default now. Not as a replacement for thinking, but as the way to compress the boring parts of a workflow so the interesting parts get more attention.
+                </p>
             </div>
         </section>
 
