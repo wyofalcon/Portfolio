@@ -379,6 +379,38 @@
             </div>
         </section>
 
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <span class="eyebrow">origin story</span>
+            <h2 class="text-3xl font-bold text-center text-white mb-12">About Me</h2>
+            <div class="glassmorphism p-8 rounded-2xl max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center reveal">
+                <!-- Headshot -->
+                <div class="flex-shrink-0">
+                    <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-sky-500/50 bg-gray-700/50 flex items-center justify-center">
+                        <img src="images/headshot.jpg" alt="Nolan McIntyre" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')" onerror="this.closest('.flex-shrink-0').remove()">
+                        <span class="text-gray-500 text-xs img-placeholder">headshot.jpg</span>
+                    </div>
+                </div>
+                <div>
+                <p class="text-lg leading-relaxed">
+                    It took me 25 years to figure out how I learn. The realization came during an Xbox session: playlist ended, a TED Talk started playing, and for some reason I didn’t skip it. The gist: turn your weaknesses into strengths. As I sat there still holding a controller, I realized my weakness <em>was</em> the controller. But it wasn’t really the games. It was the dopamine.
+                </p>
+                <p class="text-lg leading-relaxed mt-4">
+                    So I reverse-engineered it. If I could trick my brain into getting those same hits from <em>building things</em>, I’d never stop learning. It worked. What followed was obsessive, project-driven self-education: plumbing fundamentals, building a high-CFM air compressor from scratch, becoming a committed right-to-repair advocate. I nearly burned down my house trying to wire 159 5V aRGB LEDs into a single motherboard header. That’s when I got obsessed with electricity. Understanding Ohm’s law and how components interact on a PCBA opened entirely new doors. From there: Python. Then automation. Then AI, which didn’t just accelerate the learning, it changed its shape entirely.
+                </p>
+                <p class="text-lg leading-relaxed mt-4">
+                    That curiosity never came from a classroom. It came from the same kid who used to lie awake trying to truly comprehend the concept of "infinite" in relation to the universe. School suppressed it for a while. A TED Talk and a near-electrical-fire brought it back for good.
+                </p>
+                <p class="text-lg leading-relaxed mt-4">
+                    Today I build production software (CVstomize, NoteXT, a stack of internal tools) using AI as both teacher and collaborator. My one formal credential is the DOL-recognized IBM Systems Support Apprenticeship, but the work came first; the credential just caught up. I’m resourceful, cross-disciplinary, and convinced that the ability to view a problem from multiple angles and throw creative solutions into the mix is the real skill. I’m going to build something that helps change lives. One way or another.
+                </p>
+                <p class="text-lg leading-relaxed mt-4">
+                    And how I get there matters. I won’t work somewhere with a toxic culture, and money isn’t the biggest factor in my decisions. I don’t believe in work-life balance, or in keeping the two completely separate. That framing always sounded like <em>Severance</em> to me, and I’m not interested in being a different person from 9 to 5. We spend a massive chunk of our waking lives working. If I’m passionate about the work, a 65-hour week doesn’t feel different from a 40-hour one. I’m not spending another minute making a business money on something I’m not passionate about. Every minute on the job won’t be one I enjoy. That’s reality. But the majority better be, because the whole point of being alive is to enjoy as much of it as possible.
+                </p>
+                </div>
+            </div>
+        </section>
+
         <!-- GitHub Repositories Section -->
         <section id="projects" class="py-20">
             <span class="eyebrow">work</span>
@@ -719,6 +751,12 @@
                                 <i data-lucide="external-link" class="w-3.5 h-3.5"></i> View on GitHub
                             </a>
                         </div>
+                        <div class="mt-4">
+                            <p class="text-[11px] uppercase tracking-wider text-gray-400 font-medium mb-1 flex items-center gap-1.5">
+                                <i data-lucide="terminal" class="w-3 h-3"></i> Install on Linux (.deb)
+                            </p>
+                            <code class="block w-full text-[11px] text-sky-300 bg-gray-900/60 border border-white/5 px-3 py-2 rounded font-mono whitespace-pre-wrap break-all">curl -LO https://github.com/wyofalcon/HuminLoop/releases/download/v2.0.0/huminloop_2.0.0_amd64.deb && sudo apt install ./huminloop_2.0.0_amd64.deb</code>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -776,6 +814,9 @@
                                 <button type="button" onclick="openDiagram('Daemonstrate', 'daemonstrate.drawio')" class="btn-architecture">
                                     <i data-lucide="git-branch"></i> What it does
                                 </button>
+                                <button type="button" onclick="openInstall('daemonstrate')" class="text-emerald-400 hover:text-emerald-300 text-sm font-medium flex items-center gap-1">
+                                    <i data-lucide="download" class="w-3.5 h-3.5"></i> Install
+                                </button>
                                 <a href="https://github.com/wyofalcon/daemonstrate" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
                                     <i data-lucide="external-link" class="w-3.5 h-3.5"></i> View
                                 </a>
@@ -828,68 +869,14 @@
                                 <button type="button" onclick="openDiagram('TTYL', 'TTYL.drawio')" class="btn-architecture">
                                     <i data-lucide="git-branch"></i> What it does
                                 </button>
+                                <button type="button" onclick="openInstall('ttyl')" class="text-emerald-400 hover:text-emerald-300 text-sm font-medium flex items-center gap-1">
+                                    <i data-lucide="download" class="w-3.5 h-3.5"></i> Install
+                                </button>
                                 <a href="https://github.com/wyofalcon/ttyl" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1">
                                     <i data-lucide="external-link" class="w-3.5 h-3.5"></i> View
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- DIRTEE Methodology Section -->
-        <section id="dirtee" class="py-12">
-            <div class="flex justify-center mb-12">
-                <button onclick="toggleDirtee()" class="flex items-center gap-3 glassmorphism border border-sky-500/30 hover:border-sky-400/60 transition-colors px-6 py-3 rounded-xl group">
-                    <h2 class="text-3xl font-bold text-white">The DIRTEE Methodology</h2>
-                    <i data-lucide="chevron-down" id="dirtee-chevron" class="w-6 h-6 text-sky-400 group-hover:text-sky-300 transition-colors"></i>
-                </button>
-            </div>
-            <div id="dirtee-content" class="glassmorphism p-8 rounded-2xl max-w-4xl mx-auto" style="display:none">
-                <h3 class="text-2xl font-bold text-white mb-4 text-center">Design In Real Time, Early Engagement</h3>
-                <p class="text-lg leading-relaxed mb-8">
-                    DIRTEE is my signature approach to building systems, workflows, and prototypes. It collapses the gap between idea and execution, while ensuring stakeholders are involved from the very beginning. By designing in real time and engaging early, I create solutions that are technically sound, trusted, and aligned with real needs.
-                </p>
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div>
-                        <h4 class="text-xl font-bold text-white mb-2">Core Principles</h4>
-                        <ul class="list-disc list-inside">
-                            <li><span class="font-semibold">Design in Real Time:</span> Move from concept to prototype quickly, using modular builds and rapid iteration.</li>
-                            <li><span class="font-semibold">Early Engagement:</span> Involve stakeholders and users at the start, building trust and catching misalignments early.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold text-white mb-2">Why DIRTEE Matters</h4>
-                        <ul class="list-disc list-inside">
-                            <li><span class="font-semibold">Speed with Substance:</span> Accelerates innovation without sacrificing rigor.</li>
-                            <li><span class="font-semibold">Trust by Design:</span> Early engagement ensures solutions are ethical, usable, and embraced.</li>
-                            <li><span class="font-semibold">Cross-Disciplinary Fit:</span> Works equally well for software, hardware, and workflow design.</li>
-                            <li><span class="font-semibold">Evidence of Mastery:</span> Demonstrates adaptability, systems thinking, and collaborative leadership.</li>
-                        </ul>
-                    </div>
-                </div>
-                <h4 class="text-xl font-bold text-white mb-4 text-center">DIRTEE in Action</h4>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="glassmorphism p-6 rounded-lg">
-                        <h5 class="text-lg font-bold text-white">CVstomize.com</h5>
-                        <p class="text-sm leading-relaxed mt-2">
-                            <span class="font-semibold">Challenge:</span> Build a customizable resume-portfolio generator.
-                            <br>
-                            <span class="font-semibold">DIRTEE in Action:</span> Prototyped live components directly in the browser and gathered peer and user feedback while features were still malleable.
-                            <br>
-                            <span class="font-semibold">Outcome:</span> A functional, user-driven platform demonstrating how rapid iteration and early feedback create trust and usability.
-                        </p>
-                    </div>
-                    <div class="glassmorphism p-6 rounded-lg">
-                        <h5 class="text-lg font-bold text-white">Ainsworth (Proof of Concept)</h5>
-                        <p class="text-sm leading-relaxed mt-2">
-                            <span class="font-semibold">Challenge:</span> Validate an attachment-theory coaching loop — could an LLM usefully classify activations and surface reflective prompts before committing to expensive native infrastructure?
-                            <br>
-                            <span class="font-semibold">DIRTEE in Action:</span> Shipped a single-page web prototype (Tailwind + Firebase Auth + Gemini) to test the analysis loop end-to-end with real conversations; designed the all-party-consent legal premise up front rather than bolting it on later.
-                            <br>
-                            <span class="font-semibold">Outcome:</span> Real-world results greenlit the native build. DIRTEE de-risked the *uncertain* piece (does the loop produce useful insight?) before the *expensive* piece (Android foreground capture + on-device speaker ID).
-                        </p>
                     </div>
                 </div>
             </div>
@@ -1139,38 +1126,6 @@
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-20">
-            <span class="eyebrow">origin story</span>
-            <h2 class="text-3xl font-bold text-center text-white mb-12">About Me</h2>
-            <div class="glassmorphism p-8 rounded-2xl max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center reveal">
-                <!-- Headshot -->
-                <div class="flex-shrink-0">
-                    <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-sky-500/50 bg-gray-700/50 flex items-center justify-center">
-                        <img src="images/headshot.jpg" alt="Nolan McIntyre" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')" onerror="this.closest('.flex-shrink-0').remove()">
-                        <span class="text-gray-500 text-xs img-placeholder">headshot.jpg</span>
-                    </div>
-                </div>
-                <div>
-                <p class="text-lg leading-relaxed">
-                    It took me 25 years to figure out how I learn. The realization came during an Xbox session: playlist ended, a TED Talk started playing, and for some reason I didn’t skip it. The gist: turn your weaknesses into strengths. As I sat there still holding a controller, I realized my weakness <em>was</em> the controller. But it wasn’t really the games. It was the dopamine.
-                </p>
-                <p class="text-lg leading-relaxed mt-4">
-                    So I reverse-engineered it. If I could trick my brain into getting those same hits from <em>building things</em>, I’d never stop learning. It worked. What followed was obsessive, project-driven self-education: plumbing fundamentals, building a high-CFM air compressor from scratch, becoming a committed right-to-repair advocate. I nearly burned down my house trying to wire 159 5V aRGB LEDs into a single motherboard header. That’s when I got obsessed with electricity. Understanding Ohm’s law and how components interact on a PCBA opened entirely new doors. From there: Python. Then automation. Then AI, which didn’t just accelerate the learning, it changed its shape entirely.
-                </p>
-                <p class="text-lg leading-relaxed mt-4">
-                    That curiosity never came from a classroom. It came from the same kid who used to lie awake trying to truly comprehend the concept of "infinite" in relation to the universe. School suppressed it for a while. A TED Talk and a near-electrical-fire brought it back for good.
-                </p>
-                <p class="text-lg leading-relaxed mt-4">
-                    Today I build production software (CVstomize, NoteXT, a stack of internal tools) using AI as both teacher and collaborator. My one formal credential is the DOL-recognized IBM Systems Support Apprenticeship, but the work came first; the credential just caught up. I’m resourceful, cross-disciplinary, and convinced that the ability to view a problem from multiple angles and throw creative solutions into the mix is the real skill. I’m going to build something that helps change lives. One way or another.
-                </p>
-                <p class="text-lg leading-relaxed mt-4">
-                    And how I get there matters. I won’t work somewhere with a toxic culture, and money isn’t the biggest factor in my decisions. I don’t believe in work-life balance, or in keeping the two completely separate. That framing always sounded like <em>Severance</em> to me, and I’m not interested in being a different person from 9 to 5. We spend a massive chunk of our waking lives working. If I’m passionate about the work, a 65-hour week doesn’t feel different from a 40-hour one. I’m not spending another minute making a business money on something I’m not passionate about. Every minute on the job won’t be one I enjoy. That’s reality. But the majority better be, because the whole point of being alive is to enjoy as much of it as possible.
-                </p>
-                </div>
-            </div>
-        </section>
-
         <!-- AI Advocacy Section -->
         <section id="advocacy" class="py-20 bg-gray-900/30">
             <span class="eyebrow">influence</span>
@@ -1233,6 +1188,19 @@
         <div class="image-lightbox-hint">Click image to zoom · Esc to close</div>
     </div>
 
+    <!-- Install Modal -->
+    <div id="install-modal" class="diagram-modal">
+        <div class="diagram-modal-content max-w-2xl h-auto max-h-[85vh] overflow-y-auto">
+            <div class="diagram-modal-header">
+                <h3 id="install-modal-title" class="text-white font-bold text-lg">Install</h3>
+                <button type="button" id="install-modal-close" class="text-gray-400 hover:text-white transition-colors" title="Close">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div id="install-modal-body" class="p-6 space-y-5"></div>
+        </div>
+    </div>
+
     <!-- Beta Signup Modal -->
     <div id="beta-modal" class="diagram-modal">
         <div class="diagram-modal-content max-w-lg h-auto">
@@ -1267,15 +1235,6 @@
     </div>
 
     <script>
-        function toggleDirtee() {
-            const content = document.getElementById('dirtee-content');
-            const chevron = document.getElementById('dirtee-chevron');
-            const hidden = content.style.display === 'none';
-            content.style.display = hidden ? '' : 'none';
-            chevron.setAttribute('data-lucide', hidden ? 'chevron-up' : 'chevron-down');
-            lucide.createIcons();
-        }
-
         lucide.createIcons();
 
         // Scroll reveal
@@ -1397,6 +1356,151 @@
         });
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && diagramModal.classList.contains('active')) closeDiagram();
+        });
+
+        // Install modal
+        const installModal = document.getElementById('install-modal');
+        const installTitle = document.getElementById('install-modal-title');
+        const installBody = document.getElementById('install-modal-body');
+        const installClose = document.getElementById('install-modal-close');
+
+        const installSnippets = {
+            daemonstrate: {
+                title: 'Install Daemonstrate',
+                blurb: 'Daemonstrate is a Claude Code skill. Drop it in your skills directory and invoke it.',
+                steps: [
+                    {
+                        label: '1. Clone into your skills directory',
+                        code: 'git clone https://github.com/wyofalcon/daemonstrate ~/.claude/skills/daemonstrate'
+                    },
+                    {
+                        label: '2. In Claude Code, invoke the skill',
+                        code: '/daemonstrate'
+                    }
+                ],
+                docsUrl: 'https://github.com/wyofalcon/daemonstrate#installation',
+                docsLabel: 'Full README'
+            },
+            ttyl: {
+                title: 'Install TTYL',
+                blurb: 'TTYL is a Claude Code plugin (Windows 10/11 for the floating tile). Add the marketplace entry to enable it.',
+                steps: [
+                    {
+                        label: 'Add to ~/.claude/settings.json',
+                        code: '{\n  "extraKnownMarketplaces": {\n    "ttyl": {\n      "source": {\n        "source": "github",\n        "repo": "wyofalcon/ttyl"\n      }\n    }\n  },\n  "enabledPlugins": {\n    "ttyl@ttyl": true\n  }\n}'
+                    }
+                ],
+                note: 'Optional: wire the cache-TTL countdown into your status line. See the README for the snippet (skip if you only use the VSCode extension — the floating tile is the indicator there).',
+                docsUrl: 'https://github.com/wyofalcon/ttyl#install',
+                docsLabel: 'Full install guide'
+            }
+        };
+
+        function makeIcon(name, classes) {
+            const i = document.createElement('i');
+            i.setAttribute('data-lucide', name);
+            if (classes) i.className = classes;
+            return i;
+        }
+
+        function buildInstallStep(step) {
+            const wrapper = document.createElement('div');
+
+            const header = document.createElement('div');
+            header.className = 'flex items-center justify-between mb-2 gap-3';
+
+            const label = document.createElement('span');
+            label.className = 'text-xs uppercase tracking-wider text-gray-400 font-semibold';
+            label.textContent = step.label;
+            header.appendChild(label);
+
+            const copyBtn = document.createElement('button');
+            copyBtn.type = 'button';
+            copyBtn.className = 'install-copy-btn text-xs text-sky-400 hover:text-sky-300 font-medium flex items-center gap-1 shrink-0';
+            copyBtn.appendChild(makeIcon('copy', 'w-3.5 h-3.5'));
+            const copyLabel = document.createElement('span');
+            copyLabel.className = 'install-copy-label';
+            copyLabel.textContent = 'Copy';
+            copyBtn.appendChild(document.createTextNode(' '));
+            copyBtn.appendChild(copyLabel);
+            copyBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(step.code).then(() => {
+                    const original = copyLabel.textContent;
+                    copyLabel.textContent = 'Copied!';
+                    copyBtn.classList.add('text-emerald-400');
+                    copyBtn.classList.remove('text-sky-400');
+                    setTimeout(() => {
+                        copyLabel.textContent = original;
+                        copyBtn.classList.remove('text-emerald-400');
+                        copyBtn.classList.add('text-sky-400');
+                    }, 1500);
+                }).catch(() => {
+                    alert('Copy failed — please select and copy manually.');
+                });
+            });
+            header.appendChild(copyBtn);
+
+            wrapper.appendChild(header);
+
+            const pre = document.createElement('pre');
+            pre.className = 'bg-gray-900/80 border border-white/5 rounded-lg p-3 text-xs font-mono text-sky-200 overflow-x-auto whitespace-pre';
+            const code = document.createElement('code');
+            code.textContent = step.code;
+            pre.appendChild(code);
+            wrapper.appendChild(pre);
+
+            return wrapper;
+        }
+
+        function openInstall(key) {
+            const cfg = installSnippets[key];
+            if (!cfg) return;
+            installTitle.textContent = cfg.title;
+
+            while (installBody.firstChild) installBody.removeChild(installBody.firstChild);
+
+            const blurb = document.createElement('p');
+            blurb.className = 'text-sm text-gray-300';
+            blurb.textContent = cfg.blurb;
+            installBody.appendChild(blurb);
+
+            cfg.steps.forEach(step => installBody.appendChild(buildInstallStep(step)));
+
+            if (cfg.note) {
+                const note = document.createElement('p');
+                note.className = 'text-xs text-gray-500 italic';
+                note.textContent = cfg.note;
+                installBody.appendChild(note);
+            }
+
+            if (cfg.docsUrl) {
+                const docsLink = document.createElement('a');
+                docsLink.href = cfg.docsUrl;
+                docsLink.target = '_blank';
+                docsLink.rel = 'noopener';
+                docsLink.className = 'text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center gap-1 mt-1';
+                docsLink.appendChild(makeIcon('external-link', 'w-3.5 h-3.5'));
+                docsLink.appendChild(document.createTextNode(' ' + (cfg.docsLabel || 'Docs')));
+                installBody.appendChild(docsLink);
+            }
+
+            lucide.createIcons();
+            installModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeInstall() {
+            installModal.classList.remove('active');
+            while (installBody.firstChild) installBody.removeChild(installBody.firstChild);
+            document.body.style.overflow = '';
+        }
+
+        installClose.addEventListener('click', closeInstall);
+        installModal.addEventListener('click', (e) => {
+            if (e.target === installModal) closeInstall();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && installModal.classList.contains('active')) closeInstall();
         });
 
         // Image lightbox
